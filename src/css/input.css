@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+/* Design tokens (colors, borders, gradients) */
+
+@font-face {
+  font-family: "inter";
+  src: url("../../font/Inter-VariableFont_opsz\,wght.ttf");
+}
+
+@font-face {
+  font-family: "manrope";
+  src: url("../../font/Manrope-Regular.ttf");
+}
+
+@layer base {
+  html,
+  body {
+    height: 100%;
+  }
+  body {
+    background-color: var(--bg);
+    color: var(--text-primary);
+    background-image: linear-gradient(
+      180deg,
+      var(--gradient-from) 0%,
+      var(--gradient-to) 100%
+    );
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  a {
+    color: var(--primary);
+  }
+  hr {
+    border-color: var(--border);
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-4 py-2 rounded-md font-semibold text-white;
+    background-color: var(--primary);
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-4 py-2 rounded-md font-semibold text-white;
+    background-color: var(--secondary);
+  }
+
+  .card {
+    @apply bg-white border rounded-lg shadow-sm;
+    border-color: var(--border);
+  }
+}
+
+@layer utilities {
+  .bg-primary {
+    background-color: var(--primary) !important;
+  }
+  .text-primary {
+    color: var(--primary) !important;
+  }
+  .text-secondary {
+    color: var(--secondary) !important;
+  }
+  .border-custom {
+    border-color: var(--border) !important;
+  }
+  .gradient-custom {
+    background-image: linear-gradient(
+      180deg,
+      var(--gradient-from),
+      var(--gradient-to)
+    ) !important;
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      /* PENTING: Ubah ke -50% karena container memuat 2 set gambar */
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-marquee {
+    animation: marquee 20s linear infinite;
+  }
+
+  /* Disable marquee on large screens (desktop) */
+  @media (min-width: 1024px) {
+    .animate-marquee {
+      animation: none !important;
+    }
+  }
+}
+
+@theme {
+  --bg: #f5f4fa;
+  --border: #e2e1e6;
+  --primary: #211591;
+  --secondary: #fa9a07;
+  --text-primary: #1a1a1a;
+  --text-secondary: #2e2e2e;
+  --gradient-from: #ffffff;
+  --gradient-to: #dfe1f2;
+  --font-inter: "inter", sans-serif;
+  --font-manrope: "manrope", sans-serif;
+
+  --color-background: #f5f4fa;
+  --color-border: #e2e1e6;
+  --color-primary: #211591;
+  --color-secondary: #fa9a07;
+  --color-text-primary: #1a1a1a;
+  --color-text-secondary: #2e2e2e;
+}
