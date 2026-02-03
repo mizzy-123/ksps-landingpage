@@ -75,6 +75,20 @@ document.addEventListener("DOMContentLoaded", () => {
     if (overlay) overlay.classList.add("hidden", "opacity-0");
 
     const openSidebar = () => {
+      // Reset mobile dropdown to closed state before opening sidebar
+      const dropdownMobile = document.getElementById("menu-dropdown-mobile");
+      const labelMobile = document.getElementById("menu-label-mobile");
+      const iconMobile = document.getElementById("menu-icon-mobile");
+
+      if (dropdownMobile && labelMobile && iconMobile) {
+        dropdownMobile.classList.add("hidden");
+        dropdownMobile.classList.remove("opacity-100", "scale-100");
+        dropdownMobile.classList.add("opacity-0", "scale-95");
+        labelMobile.classList.remove("text-secondary");
+        iconMobile.classList.remove("rotate-180", "text-secondary");
+        iconMobile.classList.add("text-text-primary");
+      }
+
       // show sidebar by removing translate
       sidebar.classList.remove("translate-x-full");
       openIcon.classList.add("hidden");
@@ -101,7 +115,47 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const closeSidebar = () => {
-      // slide sidebar out
+      // FIRST: Reset mobile dropdown BEFORE sidebar animation starts
+      const dropdownMobile = document.getElementById("menu-dropdown-mobile");
+      const labelMobile = document.getElementById("menu-label-mobile");
+      const iconMobile = document.getElementById("menu-icon-mobile");
+      const navMobile = document.getElementById("menu-nav-mobile");
+
+      if (dropdownMobile && labelMobile && iconMobile) {
+        // Remove any transition event listeners
+        if (dropdownMobile._closeHandler) {
+          dropdownMobile.removeEventListener(
+            "transitionend",
+            dropdownMobile._closeHandler,
+          );
+          dropdownMobile._closeHandler = null;
+        }
+
+        // Disable transition temporarily for instant reset
+        const originalTransition = dropdownMobile.style.transition;
+        dropdownMobile.style.transition = "none";
+
+        // Reset to closed state immediately
+        dropdownMobile.classList.add("hidden");
+        dropdownMobile.classList.remove("opacity-100", "scale-100");
+        dropdownMobile.classList.add("opacity-0", "scale-95");
+
+        labelMobile.classList.remove("text-secondary");
+        iconMobile.classList.remove("rotate-180", "text-secondary");
+        iconMobile.classList.add("text-text-primary");
+
+        // Remove open class from nav container if exists
+        if (navMobile) {
+          navMobile.classList.remove("open");
+        }
+
+        // Restore transition after a frame
+        requestAnimationFrame(() => {
+          dropdownMobile.style.transition = originalTransition;
+        });
+      }
+
+      // NOW slide sidebar out
       sidebar.classList.add("translate-x-full");
       openIcon.classList.remove("hidden");
       closeIcon.classList.add("hidden");
@@ -129,32 +183,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // re-enable body scroll
       document.body.classList.remove("overflow-hidden");
-
-      // force-reset mobile dropdown state when sidebar closes to avoid stale listeners
-      try {
-        const dropdownMobile = document.getElementById("menu-dropdown-mobile");
-        const labelMobile = document.getElementById("menu-label-mobile");
-        const iconMobile = document.getElementById("menu-icon-mobile");
-        if (dropdownMobile) {
-          if (dropdownMobile._closeHandler) {
-            dropdownMobile.removeEventListener(
-              "transitionend",
-              dropdownMobile._closeHandler,
-            );
-            dropdownMobile._closeHandler = null;
-          }
-          dropdownMobile.classList.add("hidden");
-          dropdownMobile.classList.remove("opacity-100", "scale-100");
-          dropdownMobile.classList.add("opacity-0", "scale-95");
-        }
-        if (labelMobile) labelMobile.classList.remove("text-secondary");
-        if (iconMobile) {
-          iconMobile.classList.remove("rotate-180", "text-secondary");
-          iconMobile.classList.add("text-text-primary");
-        }
-      } catch (err) {
-        /* ignore */
-      }
     };
 
     sidebarToggle.addEventListener("click", (e) => {
@@ -226,12 +254,24 @@ document.addEventListener("DOMContentLoaded", () => {
       labelMobile.classList.remove("text-secondary");
       iconMobile.classList.remove("text-secondary");
       iconMobile.classList.add("text-text-primary");
+
+      // Remove previous handler if exists
+      if (dropdownMobile._closeHandler) {
+        dropdownMobile.removeEventListener(
+          "transitionend",
+          dropdownMobile._closeHandler,
+        );
+      }
+
       // hide after transition
       const onTransitionEnd = (ev) => {
         if (ev.target !== dropdownMobile) return;
         dropdownMobile.classList.add("hidden");
         dropdownMobile.removeEventListener("transitionend", onTransitionEnd);
+        dropdownMobile._closeHandler = null;
       };
+
+      dropdownMobile._closeHandler = onTransitionEnd;
       dropdownMobile.addEventListener("transitionend", onTransitionEnd);
     };
 

@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "question": "Apa itu KSPS (PT Karya Solusi Prima Sejahtera)?",
+    "answer": "KSPS adalah perusahaan alih daya (outsourcing) telah menjadi mitra terpercaya yang mendukung dalam perkembangan bisnis di sektor ICT khususnya pada perusahaan Lintasarta & Group. KSPS merupakan anak perusahaan dari KOPKARLA (Koperasi Karyawan PT Aplikanusa Lintasarta) yang sudah berdiri sejak tahun 1992. Layanan dari KSPS berupa IT Outsourcing, Business Process Outsourcing (Data & Cloud Center, Call Center, Helpdesk), Facility & Security Management, Assessment, & Organization Development. KSPS sebagai vendor IT Outsourcing telah dipercaya menyalurkan talenta 1800+ di 50+ kota Indonesia."
+  },
+  {
+    "id": 2,
+    "question": "Apakah KSPS hanya melayani perusahaan IT?",
+    "answer": "Meskipun spesialisasi kami di ICT, kami melayani berbagai industri (Banking, Retail, Manufaktur) yang membutuhkan standar layanan tinggi."
+  },
+  {
+    "id": 3,
+    "question": "Berapa lama SLA untuk pemenuhan kandidat IT?",
+    "answer": " Rata-rata 7-14 hari kerja untuk posisi specialist, dan lebih cepat untuk posisi umum/admin."
+  },
+  {
+    "id": 4,
+    "question": "Apakah KSPS bisa handle payroll untuk karyawan di luar kota?",
+    "answer": "Ya, kami menangani end-to-end payroll, BPJS, dan pajak (PPh 21) untuk penempatan di 50+ kota."
+  },
+  {
+    "id": 5,
+    "question": " Apakah ada garansi jika kandidat resign/tidak perform?",
+    "answer": "Ada. Kami memberikan garansi penggantian kandidat (replacement guarantee) sesuai kesepakatan dalam kontrak kerja sama."
+  }
+]
