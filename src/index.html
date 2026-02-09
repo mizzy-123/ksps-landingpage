@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="id">
+<html lang="id" class="scroll-smooth" style="scroll-padding-top: 72px">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,10 +14,10 @@
     ></div>
 
     <header
-      class="bg-background fixed top-0 left-0 z-100 w-full lg:px-20 px-4 py-4 flex items-center justify-between shadow-[0_4px_6px_-1px_rgba(0,0,0,0.15)]"
+      class="bg-background fixed top-0 left-0 z-100 w-full lg:px-14 px-4 py-4 flex items-center justify-between shadow-[0_4px_6px_-1px_rgba(0,0,0,0.15)]"
     >
       <!-- Logo -->
-      <img src="/images/ksps_logo.png" width="120" alt="" />
+      <img src="/images/ksps_logo.png" width="90" alt="" />
 
       <nav class="lg:flex hidden items-center gap-6">
         <div
@@ -84,15 +84,17 @@
           </div>
         </div>
         <div class="flex items-center gap-2 cursor-pointer group">
-          <label
+          <a
+            href="#"
             class="font-inter text-[16px] text-text-primary cursor-pointer group-hover:text-secondary"
-            >Resources</label
+            >Resources</a
           >
         </div>
         <div class="flex items-center gap-2 cursor-pointer group">
-          <label
+          <a
+            href="#"
             class="font-inter text-[16px] text-text-primary cursor-pointer group-hover:text-secondary"
-            >Referal</label
+            >Referral</a
           >
         </div>
       </nav>
@@ -184,7 +186,7 @@
                 class="text-text-primary font-inter text-[16px] hover:text-secondary"
                 href="#"
               >
-                Layanan IT Outsourching
+                Layanan IT Outsourcing
               </a>
               <a
                 class="text-text-primary font-inter text-[16px] hover:text-secondary"
@@ -239,25 +241,26 @@
     <main class="bg-background">
       <!-- Hero section -->
       <section
-        class="w-full h-screen relative z-5 flex lg:flex-row flex-col items-center lg:gap-44 gap-12 lg:px-20 px-4 lg:mt-0 mt-32 overflow-x-hidden"
+        id="hero-section"
+        class="w-full lg:h-screen h-[100dvh] relative z-5 flex lg:flex-row flex-col lg:justify-between items-center lg:gap-44 gap-10 lg:px-14 px-4 lg:pt-0 pt-24 pb-4 overflow-hidden"
       >
         <img
-          class="absolute lg:block hidden"
+          class="absolute bottom-0 lg:block hidden"
           src="/images/line_bg.png"
           alt=""
         />
         <img
-          class="absolute lg:hidden md:hidden sm:hidden block"
+          class="absolute bottom-0 lg:hidden md:hidden sm:hidden block"
           src="/images/line_bg3.png"
           alt=""
         />
 
-        <div class="lg:flex-1 relative flex flex-col gap-6">
+        <div class="lg:flex-1 relative flex flex-col gap-2 lg:gap-6">
           <div
-            class="w-full p-6 flex flex-col gap-6 border border-border rounded-xl bg-[linear-gradient(90deg,#FFF_0%,#DFE1F2_100%)]"
+            class="w-full p-4 lg:p-6 flex flex-col gap-3 lg:gap-6 border border-border rounded-xl bg-[linear-gradient(90deg,#FFF_0%,#DFE1F2_100%)]"
           >
             <h1
-              class="font-manrope font-bold lg:text-4xl text-[28px] leading-11"
+              class="font-manrope font-bold lg:text-[40px] text-[24px] lg:leading-11 leading-8"
             >
               Solusi
               <label class="text-secondary"
@@ -276,12 +279,14 @@
             </p>
 
             <div class="flex items-center lg:gap-6 gap-4">
-              <a class="text-text-primary text-sm underline leading-5" href="#"
+              <a
+                class="text-text-primary text-xs underline leading-5"
+                href="#partner-section"
                 >Pelajari Lebih Lanjut</a
               >
 
               <a
-                class="px-8 py-3 bg-secondary rounded-xl text-background text-sm"
+                class="lg:px-8 px-4 py-3 bg-secondary rounded-xl text-background md:text-sm text-sm"
                 href="#"
                 >Konsultasi Sekarang</a
               >
@@ -289,39 +294,41 @@
           </div>
 
           <div
-            class="w-full p-6 flex justify-start items-center gap-3 border border-border rounded-xl bg-[linear-gradient(90deg,#FFF_0%,#DFE1F2_100%)]"
+            class="w-full p-4 flex justify-start items-stretch gap-3 border border-border rounded-xl bg-[linear-gradient(90deg,#FFF_0%,#DFE1F2_100%)]"
           >
-            <div class="flex-2 flex flex-col">
+            <div class="flex-2 flex flex-col justify-between">
               <p
-                class="text-2xl font-manrope font-bold text-center text-secondary"
+                class="lg:text-xl text-[16px] font-manrope font-bold text-center text-secondary"
               >
                 <span class="count" data-target="50" data-duration="1500"
                   >0</span
                 ><span class="count-suffix">+</span>
                 Kota
               </p>
-              <p class="text-text-primary text-sm font-inter text-center">
+              <p
+                class="text-text-primary md:text-[12px] text-[10px] font-inter text-center"
+              >
                 di Indonesia
               </p>
             </div>
 
             <div class="w-px self-stretch bg-black"></div>
 
-            <div class="flex-2 flex flex-col">
+            <div class="flex-2 flex flex-col justify-between">
               <div
                 class="flex items-center justify-center gap-0.75 text-center"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
-                  height="19"
-                  viewBox="0 0 20 19"
+                  height="20"
+                  viewBox="0 0 20 20"
                   fill="none"
                 >
                   <path
                     fill-rule="evenodd"
                     clip-rule="evenodd"
-                    d="M8.69555 0.80846C9.1439 -0.269486 10.6709 -0.269487 11.1193 0.80846L13.2013 5.81417L18.6054 6.24742C19.7691 6.34071 20.241 7.793 19.3543 8.55251L15.237 12.0795L16.4949 17.3529C16.7658 18.4885 15.5304 19.3861 14.5341 18.7775L9.90741 15.9516L5.28076 18.7775C4.28444 19.3861 3.04905 18.4885 3.31993 17.3529L4.57785 12.0795L0.460502 8.55251C-0.426138 7.79301 0.045735 6.34071 1.20947 6.24742L6.61356 5.81417L8.69555 0.80846Z"
+                    d="M8.99013 2.67555C9.36375 1.77726 10.6363 1.77726 11.0099 2.67555L12.7449 6.84698L17.2483 7.20801C18.2181 7.28576 18.6113 8.496 17.8724 9.12892L14.4413 12.068L15.4896 16.4626C15.7153 17.4089 14.6858 18.1569 13.8556 17.6498L10 15.2948L6.14447 17.6498C5.3142 18.1569 4.28471 17.4089 4.51044 16.4626L5.55871 12.068L2.12759 9.12892C1.38872 8.496 1.78195 7.28576 2.75173 7.20801L7.25514 6.84698L8.99013 2.67555Z"
                     fill="#FA9A07"
                   />
                 </svg>
@@ -329,49 +336,49 @@
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
-                  height="19"
-                  viewBox="0 0 20 19"
+                  height="20"
+                  viewBox="0 0 20 20"
                   fill="none"
                 >
                   <path
                     fill-rule="evenodd"
                     clip-rule="evenodd"
-                    d="M8.69555 0.80846C9.1439 -0.269486 10.6709 -0.269487 11.1193 0.80846L13.2013 5.81417L18.6054 6.24742C19.7691 6.34071 20.241 7.793 19.3543 8.55251L15.237 12.0795L16.4949 17.3529C16.7658 18.4885 15.5304 19.3861 14.5341 18.7775L9.90741 15.9516L5.28076 18.7775C4.28444 19.3861 3.04905 18.4885 3.31993 17.3529L4.57785 12.0795L0.460502 8.55251C-0.426138 7.79301 0.045735 6.34071 1.20947 6.24742L6.61356 5.81417L8.69555 0.80846Z"
+                    d="M8.99013 2.67555C9.36375 1.77726 10.6363 1.77726 11.0099 2.67555L12.7449 6.84698L17.2483 7.20801C18.2181 7.28576 18.6113 8.496 17.8724 9.12892L14.4413 12.068L15.4896 16.4626C15.7153 17.4089 14.6858 18.1569 13.8556 17.6498L10 15.2948L6.14447 17.6498C5.3142 18.1569 4.28471 17.4089 4.51044 16.4626L5.55871 12.068L2.12759 9.12892C1.38872 8.496 1.78195 7.28576 2.75173 7.20801L7.25514 6.84698L8.99013 2.67555Z"
                     fill="#FA9A07"
                   />
                 </svg>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
-                  height="19"
-                  viewBox="0 0 20 19"
+                  height="20"
+                  viewBox="0 0 20 20"
                   fill="none"
                 >
                   <path
                     fill-rule="evenodd"
                     clip-rule="evenodd"
-                    d="M8.69555 0.80846C9.1439 -0.269486 10.6709 -0.269487 11.1193 0.80846L13.2013 5.81417L18.6054 6.24742C19.7691 6.34071 20.241 7.793 19.3543 8.55251L15.237 12.0795L16.4949 17.3529C16.7658 18.4885 15.5304 19.3861 14.5341 18.7775L9.90741 15.9516L5.28076 18.7775C4.28444 19.3861 3.04905 18.4885 3.31993 17.3529L4.57785 12.0795L0.460502 8.55251C-0.426138 7.79301 0.045735 6.34071 1.20947 6.24742L6.61356 5.81417L8.69555 0.80846Z"
+                    d="M8.99013 2.67555C9.36375 1.77726 10.6363 1.77726 11.0099 2.67555L12.7449 6.84698L17.2483 7.20801C18.2181 7.28576 18.6113 8.496 17.8724 9.12892L14.4413 12.068L15.4896 16.4626C15.7153 17.4089 14.6858 18.1569 13.8556 17.6498L10 15.2948L6.14447 17.6498C5.3142 18.1569 4.28471 17.4089 4.51044 16.4626L5.55871 12.068L2.12759 9.12892C1.38872 8.496 1.78195 7.28576 2.75173 7.20801L7.25514 6.84698L8.99013 2.67555Z"
                     fill="#FA9A07"
                   />
                 </svg>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
-                  height="19"
-                  viewBox="0 0 20 19"
+                  height="20"
+                  viewBox="0 0 20 20"
                   fill="none"
                 >
                   <path
                     fill-rule="evenodd"
                     clip-rule="evenodd"
-                    d="M8.69555 0.80846C9.1439 -0.269486 10.6709 -0.269487 11.1193 0.80846L13.2013 5.81417L18.6054 6.24742C19.7691 6.34071 20.241 7.793 19.3543 8.55251L15.237 12.0795L16.4949 17.3529C16.7658 18.4885 15.5304 19.3861 14.5341 18.7775L9.90741 15.9516L5.28076 18.7775C4.28444 19.3861 3.04905 18.4885 3.31993 17.3529L4.57785 12.0795L0.460502 8.55251C-0.426138 7.79301 0.045735 6.34071 1.20947 6.24742L6.61356 5.81417L8.69555 0.80846Z"
+                    d="M8.99013 2.67555C9.36375 1.77726 10.6363 1.77726 11.0099 2.67555L12.7449 6.84698L17.2483 7.20801C18.2181 7.28576 18.6113 8.496 17.8724 9.12892L14.4413 12.068L15.4896 16.4626C15.7153 17.4089 14.6858 18.1569 13.8556 17.6498L10 15.2948L6.14447 17.6498C5.3142 18.1569 4.28471 17.4089 4.51044 16.4626L5.55871 12.068L2.12759 9.12892C1.38872 8.496 1.78195 7.28576 2.75173 7.20801L7.25514 6.84698L8.99013 2.67555Z"
                     fill="#FA9A07"
                   />
                 </svg>
                 <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -379,7 +386,7 @@
                     <path
                       fill-rule="evenodd"
                       clip-rule="evenodd"
-                      d="M10.7881 3.21068C11.2365 2.13274 12.7635 2.13273 13.2119 3.21068L15.2939 8.2164L20.6979 8.64964C21.8617 8.74293 22.3336 10.1952 21.4469 10.9547L17.3296 14.4817L18.5875 19.7551C18.8584 20.8908 17.623 21.7883 16.6267 21.1798L12 18.3538L7.37335 21.1798C6.37703 21.7883 5.14164 20.8908 5.41252 19.7551L6.67044 14.4817L2.55309 10.9547C1.66645 10.1952 2.13833 8.74293 3.30206 8.64964L8.70615 8.2164L10.7881 3.21068Z"
+                      d="M8.99013 2.67555C9.36375 1.77726 10.6363 1.77726 11.0099 2.67555L12.7449 6.84698L17.2483 7.20801C18.2181 7.28576 18.6113 8.496 17.8724 9.12892L14.4413 12.068L15.4896 16.4626C15.7153 17.4089 14.6858 18.1569 13.8556 17.6498L10 15.2948L6.14447 17.6498C5.3142 18.1569 4.28471 17.4089 4.51044 16.4626L5.55871 12.068L2.12759 9.12892C1.38872 8.496 1.78195 7.28576 2.75173 7.20801L7.25514 6.84698L8.99013 2.67555Z"
                       fill="#FA9A07"
                       stroke="#FA9A07"
                       stroke-width="2"
@@ -389,23 +396,27 @@
                   <path
                     fill-rule="evenodd"
                     clip-rule="evenodd"
-                    d="M10.7881 3.21068C11.2365 2.13274 12.7635 2.13273 13.2119 3.21068L15.2939 8.2164L20.6979 8.64964C21.8617 8.74293 22.3336 10.1952 21.4469 10.9547L17.3296 14.4817L18.5875 19.7551C18.8584 20.8908 17.623 21.7883 16.6267 21.1798L12 18.3538L7.37335 21.1798C6.37703 21.7883 5.14164 20.8908 5.41252 19.7551L6.67044 14.4817L2.55309 10.9547C1.66645 10.1952 2.13833 8.74293 3.30206 8.64964L8.70615 8.2164L10.7881 3.21068Z"
+                    d="M8.99013 2.67555C9.36375 1.77726 10.6363 1.77726 11.0099 2.67555L12.7449 6.84698L17.2483 7.20801C18.2181 7.28576 18.6113 8.496 17.8724 9.12892L14.4413 12.068L15.4896 16.4626C15.7153 17.4089 14.6858 18.1569 13.8556 17.6498L10 15.2948L6.14447 17.6498C5.3142 18.1569 4.28471 17.4089 4.51044 16.4626L5.55871 12.068L2.12759 9.12892C1.38872 8.496 1.78195 7.28576 2.75173 7.20801L7.25514 6.84698L8.99013 2.67555Z"
                     stroke="#FA9A07"
                     stroke-width="2"
                     stroke-linejoin="round"
                   />
                   <defs>
                     <clipPath id="clip0_257_3253">
-                      <rect width="12" height="24" fill="white" />
+                      <rect width="10" height="20" fill="white" />
                     </clipPath>
                   </defs>
                 </svg>
               </div>
               <div class="flex items-center justify-center gap-2">
-                <p class="text-secondary text-[12px] font-inter font-semibold">
+                <p
+                  class="text-secondary md:text-[12px] text-[10px] font-inter font-semibold"
+                >
                   4.5/5.0
                 </p>
-                <p class="text-text-primary text-[12px] font-inter">
+                <p
+                  class="text-text-primary md:text-[12px] text-[10px] font-inter"
+                >
                   Satisfaction Score
                 </p>
               </div>
@@ -419,19 +430,19 @@
         >
           <div class="pb-6 flex justify-start items-center gap-2.5">
             <img
-              class="w-40 lg:h-96 h-44 rounded-xl object-cover"
+              class="w-40 lg:h-96 h-32 rounded-xl object-cover"
               src="/images//orang_server.png"
             />
           </div>
           <div class="pt-6 flex justify-start items-center gap-2.5">
             <img
-              class="w-40 lg:h-96 h-44 rounded-xl object-cover"
+              class="w-40 lg:h-96 h-32 rounded-xl object-cover"
               src="/images/orang_coding.png"
             />
           </div>
           <div class="pb-6 flex justify-start items-center gap-2.5">
             <img
-              class="w-40 lg:h-96 h-44 rounded-xl object-cover"
+              class="w-40 lg:h-96 h-32 rounded-xl object-cover"
               src="/images/orang_customer.png"
             />
           </div>
@@ -439,7 +450,10 @@
       </section>
 
       <!-- Partner section -->
-      <section class="lg:px-20 px-4 lg:py-16 py-8 bg-primary w-full h-fit">
+      <section
+        id="partner-section"
+        class="lg:px-14 px-4 py-20 bg-primary w-full h-fit flex flex-col justify-center"
+      >
         <h1
           class="font-manrope lg:text-4xl text-[24px] font-bold text-center text-background mb-8"
         >
@@ -454,194 +468,194 @@
 
         <!-- Parner -->
         <div
-          class="w-full h-fit bg-white rounded-xl border-[3px] border-secondary p-8 grid lg:grid-cols-5 grid-cols-4 gap-4 place-content-stretch"
+          class="max-w-5xl mx-auto h-fit bg-white rounded-xl border-[3px] border-secondary px-8 py-8 grid lg:grid-cols-5 grid-cols-4 gap-4 place-content-stretch"
         >
-          <div class="lg:h-25 h-[33.77px]">
+          <div class="h-[33.77px]">
             <img
-              src="/images/lintasarta.png"
-              class="size-full object-cover"
+              src="/images/lintasarta2.png"
+              class="size-full object-contain"
               alt=""
             />
           </div>
-          <div class="lg:h-25 h-[33.77px]">
+          <div class="h-[33.77px]">
             <img
               src="/images/bank_danamon.png"
               class="size-full object-contain"
               alt=""
             />
           </div>
-          <div class="lg:h-25 h-[33.77px]">
+          <div class="h-[33.77px]">
             <img
               src="/images/kemendikbud.png"
               class="size-full object-contain"
               alt=""
             />
           </div>
-          <div class="lg:h-25 h-[33.77px]">
+          <div class="h-[33.77px]">
             <img
               src="/images/artajasa.png"
               class="size-full object-contain"
               alt=""
             />
           </div>
-          <div class="lg:h-25 h-[33.77px]">
+          <div class="h-[33.77px]">
             <img
               src="/images/sojatek.png"
               class="size-full object-contain"
               alt=""
             />
           </div>
-          <div class="lg:h-25 h-[33.77px]">
+          <div class="h-[33.77px]">
             <img
               src="/images/bdx.png"
               class="size-full object-contain"
               alt=""
             />
           </div>
-          <div class="lg:h-25 h-[33.77px]">
+          <div class="h-[33.77px]">
             <img
               src="/images/sarimah.png"
               class="size-full object-contain"
               alt=""
             />
           </div>
-          <div class="lg:h-25 h-[33.77px]">
+          <div class="h-[33.77px]">
             <img
               src="/images/kementrian_pendidikan_dasar.png"
               class="size-full object-contain"
               alt=""
             />
           </div>
-          <div class="lg:h-25 h-[33.77px]">
+          <div class="h-[33.77px]">
             <img
               src="/images/banpt.png"
               class="size-full object-contain"
               alt=""
             />
           </div>
-          <div class="lg:h-25 h-[33.77px]">
+          <div class="h-[33.77px]">
             <img
               src="/images/jubelio.png"
               class="size-full object-contain"
               alt=""
             />
           </div>
-          <div class="lg:h-25 h-[33.77px]">
+          <div class="h-[33.77px]">
             <img
               src="/images/kopkarla.png"
               class="size-full object-contain"
               alt=""
             />
           </div>
-          <div class="lg:h-25 h-[33.77px]">
+          <div class="h-[33.77px]">
             <img
               src="/images/owlexa.png"
               class="size-full object-contain"
               alt=""
             />
           </div>
-          <div class="lg:h-25 h-[33.77px]">
+          <div class="h-[33.77px]">
             <img
-              src="/images/kemenristekdikti.png"
-              class="size-full object-cover"
+              src="/images/kemenristekdikti2.png"
+              class="size-full object-contain"
               alt=""
             />
           </div>
-          <div class="lg:h-25 h-[33.77px]">
+          <div class="h-[33.77px]">
             <img
               src="/images/steradian.png"
               class="size-full object-contain"
               alt=""
             />
           </div>
-          <div class="lg:h-25 h-[33.77px]">
+          <div class="h-[33.77px]">
             <img
               src="/images/biotrop.png"
               class="size-full object-contain"
               alt=""
             />
           </div>
-          <div class="lg:h-25 h-[33.77px]">
+          <div class="h-[33.77px]">
             <img
               src="/images/bni.png"
               class="size-full object-contain"
               alt=""
             />
           </div>
-          <div class="lg:h-25 h-[33.77px]">
+          <div class="h-[33.77px]">
             <img
               src="/images/mandiri.png"
-              class="size-full object-cover"
+              class="size-full object-contain"
               alt=""
             />
           </div>
-          <div class="lg:h-25 h-[33.77px]">
+          <div class="h-[33.77px]">
             <img src="/images/bi.png" class="size-full object-contain" alt="" />
           </div>
-          <div class="lg:h-25 h-[33.77px]">
+          <div class="h-[33.77px]">
             <img
               src="/images/axa_mandiri.png"
               class="size-full object-contain"
               alt=""
             />
           </div>
-          <div class="lg:h-25 h-[33.77px]">
+          <div class="h-[33.77px]">
             <img
               src="/images/kemnaker.png"
               class="size-full object-contain"
               alt=""
             />
           </div>
-          <div class="lg:h-25 h-[33.77px]">
+          <div class="h-[33.77px]">
             <img
               src="/images/telkom_indonesia.png"
               class="size-full object-contain"
               alt=""
             />
           </div>
-          <div class="lg:h-25 h-[33.77px]">
+          <div class="h-[33.77px]">
             <img
               src="/images/indosat.png"
               class="size-full object-contain"
               alt=""
             />
           </div>
-          <div class="lg:h-25 h-[33.77px]">
+          <div class="h-[33.77px]">
             <img
               src="/images/linknet.png"
               class="size-full object-contain"
               alt=""
             />
           </div>
-          <div class="lg:h-25 h-[33.77px]">
+          <div class="h-[33.77px]">
             <img
               src="/images/petrocina.png"
               class="size-full object-contain"
               alt=""
             />
           </div>
-          <div class="lg:h-25 h-[33.77px]">
+          <div class="h-[33.77px]">
             <img
               src="/images/pertamina.png"
               class="size-full object-contain"
               alt=""
             />
           </div>
-          <div class="lg:h-25 h-[33.77px] lg:hidden">
+          <div class="h-[33.77px] lg:hidden">
             <img
-              src="/images/transon_group.png"
+              src="/images/transon_group2.png"
               class="size-full object-contain"
               alt=""
             />
           </div>
-          <div class="lg:h-25 h-[33.77px] lg:hidden">
+          <div class="h-[33.77px] lg:hidden">
             <img
               src="/images/pelindo.png"
               class="size-full object-contain"
               alt=""
             />
           </div>
-          <div class="lg:h-25 h-[33.77px] lg:hidden">
+          <div class="h-[33.77px] lg:hidden">
             <img
               src="/images/apl.png"
               class="size-full object-contain"
@@ -652,7 +666,7 @@
           <div
             class="col-span-4 lg:hidden flex items-center justify-center gap-4"
           >
-            <div class="lg:h-25 h-[33.77px] lg:hidden">
+            <div class="h-[33.77px] lg:hidden">
               <img
                 src="/images/unilever.png"
                 class="size-full object-contain"
@@ -666,52 +680,52 @@
             </p>
           </div>
 
-          <div class="col-span-5 lg:flex justify-center gap-4 hidden">
-            <div class="w-48 lg:h-25 h-[33.77px]">
-              <img
-                src="/images/transon_group.png"
-                class="size-full object-contain"
-                alt=""
-              />
-            </div>
-            <div class="w-48 lg:h-25 h-[33.77px]">
-              <img
-                src="/images/pelindo.png"
-                class="size-full object-contain"
-                alt=""
-              />
-            </div>
-            <div class="w-48 lg:h-25 h-[33.77px]">
-              <img
-                src="/images/apl.png"
-                class="size-full object-contain"
-                alt=""
-              />
-            </div>
-            <div class="w-48 lg:h-25 h-[33.77px]">
-              <img
-                src="/images/unilever.png"
-                class="size-full object-contain"
-                alt=""
-              />
-            </div>
+          <div class="h-[33.77px] hidden lg:block">
+            <img
+              src="/images/transon_group.png"
+              class="size-full object-contain"
+              alt=""
+            />
           </div>
-
-          <div class="col-span-5 lg:flex justify-center gap-4 hidden">
-            <div>
-              <p
-                class="font-inter text-[20px] font-semibold text-text-primary text-center"
-              >
-                40+ <br />
-                Perusahaan Lainnya
-              </p>
-            </div>
+          <div class="h-[33.77px] hidden lg:block">
+            <img
+              src="/images/pelindo.png"
+              class="size-full object-contain"
+              alt=""
+            />
+          </div>
+          <div class="h-[33.77px] hidden lg:block">
+            <img
+              src="/images/apl.png"
+              class="size-full object-contain"
+              alt=""
+            />
+          </div>
+          <div class="h-[33.77px] hidden lg:block">
+            <img
+              src="/images/unilever.png"
+              class="size-full object-contain"
+              alt=""
+            />
+          </div>
+          <div
+            class="hidden lg:flex items-center justify-center lg:h-[33.77px]"
+          >
+            <p
+              class="font-inter text-[14px] font-bold text-text-primary text-center leading-tight"
+            >
+              40+ <br />
+              Perusahaan Lainnya
+            </p>
           </div>
         </div>
       </section>
 
       <!-- Problem section -->
-      <section class="w-full lg:h-screen h-fit lg:px-20 px-4 lg:py-16 py-8">
+      <section
+        id="problem-section"
+        class="w-full h-fit lg:px-14 px-4 lg:py-20 py-8"
+      >
         <h1
           class="font-manrope lg:text-4xl text-[24px] font-bold text-text-primary text-center lg:leading-11 leading-8 mb-8"
         >
@@ -899,20 +913,23 @@
       </section>
 
       <!-- Solution section -->
-      <section class="lg:py-16 py-8 bg-primary w-full h-fit overflow-hidden">
-        <div class="w-full flex flex-col items-center gap-3 mb-8">
+      <section
+        id="solution-section"
+        class="lg:py-16 py-8 bg-primary w-full h-fit overflow-hidden"
+      >
+        <div class="w-full flex flex-col items-center gap-4 mb-8">
           <h1
             class="font-manrope lg:text-4xl text-[24px] font-bold text-background text-center"
           >
             Integrated Solutions for
             <label class="text-secondary">Your Business Growth</label>
           </h1>
-          <p
+          <h2
             class="font-inter lg:text-[16px] text-[14px] text-center text-background"
           >
             Satu pintu untuk kebutuhan IT Outsourcing, Facility Management
             hingga Organization Development
-          </p>
+          </h2>
         </div>
 
         <!-- Card -->
@@ -926,7 +943,7 @@
             style="transform: translateX(0px)"
           >
             <div
-              class="shrink-0 p-6 bg-[#2B22A8] w-[calc(100vw-2rem)] lg:w-90.5 h-85 border border-border rounded-xl flex flex-col justify-between relative overflow-hidden"
+              class="shrink-0 p-4 bg-[#2B22A8] w-[calc(100vw-2rem)] lg:w-90.5 h-85 border border-border rounded-xl flex flex-col justify-between relative overflow-hidden"
             >
               <div class="flex flex-col gap-6">
                 <div class="flex flex-col gap-3">
@@ -1011,9 +1028,7 @@
                       Senior Software Engineer
                     </p>
                   </div>
-                </div>
 
-                <div class="flex flex-col gap-3">
                   <div class="flex items-center gap-2">
                     <svg
                       width="19"
@@ -1083,9 +1098,7 @@
                       Network & Data Engineer
                     </p>
                   </div>
-                </div>
 
-                <div class="flex flex-col gap-3">
                   <div class="flex items-center gap-2">
                     <svg
                       width="19"
@@ -1159,8 +1172,8 @@
               </div>
 
               <a
-                class="w-50 px-8 py-3 bg-secondary text-background rounded-xl text-center font-semibold text-sm font-inter"
-                href="#"
+                class="w-40 px-5 py-3 bg-secondary text-background rounded-xl text-center font-semibold text-[12px] font-inter"
+                href="#kelebihan-section"
                 >Pelajari Lebih Lanjut</a
               >
 
@@ -1169,15 +1182,15 @@
               ></div>
 
               <img
-                class="absolute -bottom-[37px] -right-[70px]"
-                width="250"
-                src="/images/person1.png"
+                class="absolute -bottom-[25px] -right-[7px]"
+                width="150"
+                src="/images/person1_1.png"
                 alt=""
               />
             </div>
 
             <div
-              class="shrink-0 p-6 bg-[#2B22A8] w-[calc(100vw-2rem)] lg:w-90.5 h-85 border border-border rounded-xl flex flex-col justify-between relative overflow-hidden"
+              class="shrink-0 p-4 bg-[#2B22A8] w-[calc(100vw-2rem)] lg:w-90.5 h-85 border border-border rounded-xl flex flex-col justify-between relative overflow-hidden"
             >
               <div class="flex flex-col gap-6">
                 <div class="flex flex-col gap-3">
@@ -1261,9 +1274,6 @@
                       Data & Security Operation Center
                     </p>
                   </div>
-                </div>
-
-                <div class="flex flex-col gap-3">
                   <div class="flex items-center gap-2">
                     <svg
                       width="19"
@@ -1333,9 +1343,6 @@
                       Call Center & Helpdesk
                     </p>
                   </div>
-                </div>
-
-                <div class="flex flex-col gap-3">
                   <div class="flex items-center gap-2">
                     <svg
                       width="19"
@@ -1409,8 +1416,8 @@
               </div>
 
               <a
-                class="w-50 px-8 py-3 bg-secondary text-background rounded-xl text-center font-semibold text-sm font-inter"
-                href="#"
+                class="w-40 px-5 py-3 bg-secondary text-background rounded-xl text-center font-semibold text-[12px] font-inter"
+                href="#kelebihan-section"
                 >Pelajari Lebih Lanjut</a
               >
 
@@ -1419,7 +1426,7 @@
               ></div>
 
               <img
-                class="absolute -bottom-[34px] -right-[50px]"
+                class="absolute -bottom-[60px] -right-[50px]"
                 width="250"
                 src="/images/person2.png"
                 alt=""
@@ -1427,7 +1434,7 @@
             </div>
 
             <div
-              class="shrink-0 p-6 bg-[#2B22A8] w-[calc(100vw-2rem)] lg:w-90.5 h-85 border border-border rounded-xl flex flex-col justify-between relative overflow-hidden"
+              class="shrink-0 p-4 bg-[#2B22A8] w-[calc(100vw-2rem)] lg:w-90.5 h-85 border border-border rounded-xl flex flex-col justify-between relative overflow-hidden"
             >
               <div class="flex flex-col gap-6">
                 <div class="flex flex-col gap-3">
@@ -1512,9 +1519,6 @@
                       Building Management & Maintenance
                     </p>
                   </div>
-                </div>
-
-                <div class="flex flex-col gap-3">
                   <div class="flex items-center gap-2">
                     <svg
                       width="19"
@@ -1584,9 +1588,6 @@
                       Security Service
                     </p>
                   </div>
-                </div>
-
-                <div class="flex flex-col gap-3">
                   <div class="flex items-center gap-2">
                     <svg
                       width="19"
@@ -1660,8 +1661,8 @@
               </div>
 
               <a
-                class="w-50 px-8 py-3 bg-secondary text-background rounded-xl text-center font-semibold text-sm font-inter"
-                href="#"
+                class="w-40 px-5 py-3 bg-secondary text-background rounded-xl text-center font-semibold text-[12px] font-inter"
+                href="#kelebihan-section"
                 >Pelajari Lebih Lanjut</a
               >
 
@@ -1678,7 +1679,7 @@
             </div>
 
             <div
-              class="shrink-0 p-6 bg-[#2B22A8] w-[calc(100vw-2rem)] lg:w-90.5 h-85 border border-border rounded-xl flex flex-col justify-between relative overflow-hidden"
+              class="shrink-0 p-4 bg-[#2B22A8] w-[calc(100vw-2rem)] lg:w-90.5 h-85 border border-border rounded-xl flex flex-col justify-between relative overflow-hidden"
             >
               <div class="flex flex-col gap-6">
                 <div class="flex flex-col gap-3">
@@ -1762,9 +1763,6 @@
                       Organization Development Consulting
                     </p>
                   </div>
-                </div>
-
-                <div class="flex flex-col gap-3">
                   <div class="flex items-center gap-2">
                     <svg
                       width="19"
@@ -1834,9 +1832,6 @@
                       Assessment Center
                     </p>
                   </div>
-                </div>
-
-                <div class="flex flex-col gap-3">
                   <div class="flex items-center gap-2">
                     <svg
                       width="19"
@@ -1910,8 +1905,8 @@
               </div>
 
               <a
-                class="w-50 px-8 py-3 bg-secondary text-background rounded-xl text-center font-semibold text-sm font-inter"
-                href="#"
+                class="w-40 px-5 py-3 bg-secondary text-background rounded-xl text-center font-semibold text-[12px] font-inter"
+                href="#kelebihan-section"
                 >Pelajari Lebih Lanjut</a
               >
 
@@ -1922,7 +1917,7 @@
                   <label class="font-inter text-[8px] text-text-primary"
                     >Powered By</label
                   >
-                  <img src="/images/sintesa_logo.png" alt="" />
+                  <img width="50" src="/images/sintesa_logo.png" alt="" />
                 </div>
               </div>
 
@@ -1948,8 +1943,11 @@
             <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
               <rect width="36" height="36" rx="18" fill="#F5F4FA" />
               <path
-                d="M15.1464 18.3536C14.9512 18.1583 14.9512 17.8417 15.1464 17.6464L20.1464 12.6464L16.2071 18L20.8536 22.6464L15.1464 18.3536Z"
-                fill="#0F172A"
+                d="M21.5 11L14.5 18L21.5 25"
+                stroke="#0F172A"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
               />
             </svg>
           </button>
@@ -1960,8 +1958,11 @@
             <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
               <rect width="36" height="36" rx="18" fill="#F5F4FA" />
               <path
-                d="M20.8536 17.6464C21.0488 17.8417 21.0488 18.1583 20.8536 18.3536L15.8536 23.3536L19.7929 18L15.1464 13.3536L20.8536 17.6464Z"
-                fill="#1A1A1A"
+                d="M14.5 11L21.5 18L14.5 25"
+                stroke="#1A1A1A"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
               />
             </svg>
           </button>
@@ -1969,7 +1970,10 @@
       </section>
 
       <!-- Kelebihan section -->
-      <section class="w-full h-fit lg:px-20 px-4 lg:py-16 py-8 relative">
+      <section
+        id="kelebihan-section"
+        class="w-full h-fit lg:px-14 px-4 lg:py-16 py-8 relative"
+      >
         <img
           class="absolute left-0 right-0 top-0 bottom-0 lg:block hidden"
           src="/images/bg_line1.png"
@@ -1985,7 +1989,7 @@
         <h1
           class="text-center font-manrope lg:text-4xl text-2xl font-bold lg:leading-11 leading-8 relative"
         >
-          Lebih dari sekadar Vendor <br />
+          Lebih dari sekadar Vendor, <br />
           KSPS adalah
           <label class="text-secondary">Partner growth Anda</label>
         </h1>
@@ -2006,12 +2010,13 @@
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <rect width="48" height="48" rx="12" fill="#B9F5A8" />
+                <rect width="48" height="48" rx="12" fill="#FFDDAA" />
+                <path d="M28.5 19.5H19.5V28.5H28.5V19.5Z" fill="#FA9A07" />
                 <path
                   fill-rule="evenodd"
                   clip-rule="evenodd"
-                  d="M24.5157 14.1698C24.2265 13.8959 23.7735 13.8959 23.4843 14.1698C21.4675 16.0798 18.7462 17.2501 15.75 17.2501C15.7023 17.2501 15.6547 17.2498 15.6072 17.2492C15.2798 17.2452 14.9877 17.4539 14.8854 17.7649C14.4729 19.0197 14.25 20.3596 14.25 21.7502C14.25 27.6922 18.3141 32.6831 23.8131 34.0984C23.9357 34.13 24.0643 34.13 24.1869 34.0984C29.6859 32.6831 33.75 27.6922 33.75 21.7502C33.75 20.3596 33.5271 19.0197 33.1146 17.7649C33.0123 17.4539 32.7202 17.2452 32.3928 17.2492C32.3453 17.2498 32.2977 17.2501 32.25 17.2501C29.2538 17.2501 26.5325 16.0798 24.5157 14.1698ZM27.6103 22.1859C27.8511 21.8489 27.773 21.3805 27.4359 21.1397C27.0989 20.8989 26.6305 20.977 26.3897 21.3141L23.1543 25.8436L21.5303 24.2197C21.2374 23.9268 20.7626 23.9268 20.4697 24.2197C20.1768 24.5126 20.1768 24.9874 20.4697 25.2803L22.7197 27.5303C22.8756 27.6862 23.0921 27.7656 23.3119 27.7474C23.5316 27.7293 23.7322 27.6153 23.8603 27.4359L27.6103 22.1859Z"
-                  fill="#3BCD13"
+                  d="M20.25 14.25C20.6642 14.25 21 14.5858 21 15V15.75H23.25V15C23.25 14.5858 23.5858 14.25 24 14.25C24.4142 14.25 24.75 14.5858 24.75 15V15.75H27V15C27 14.5858 27.3358 14.25 27.75 14.25C28.1642 14.25 28.5 14.5858 28.5 15V15.75H29.25C30.9069 15.75 32.25 17.0931 32.25 18.75V19.5H33C33.4142 19.5 33.75 19.8358 33.75 20.25C33.75 20.6642 33.4142 21 33 21H32.25V23.25H33C33.4142 23.25 33.75 23.5858 33.75 24C33.75 24.4142 33.4142 24.75 33 24.75H32.25V27H33C33.4142 27 33.75 27.3358 33.75 27.75C33.75 28.1642 33.4142 28.5 33 28.5H32.25V29.25C32.25 30.9069 30.9069 32.25 29.25 32.25H28.5V33C28.5 33.4142 28.1642 33.75 27.75 33.75C27.3358 33.75 27 33.4142 27 33V32.25H24.75V33C24.75 33.4142 24.4142 33.75 24 33.75C23.5858 33.75 23.25 33.4142 23.25 33V32.25H21V33C21 33.4142 20.6642 33.75 20.25 33.75C19.8358 33.75 19.5 33.4142 19.5 33V32.25H18.75C17.0931 32.25 15.75 30.9069 15.75 29.25V28.5H15C14.5858 28.5 14.25 28.1642 14.25 27.75C14.25 27.3358 14.5858 27 15 27H15.75V24.75H15C14.5858 24.75 14.25 24.4142 14.25 24C14.25 23.5858 14.5858 23.25 15 23.25H15.75V21H15C14.5858 21 14.25 20.6642 14.25 20.25C14.25 19.8358 14.5858 19.5 15 19.5H15.75V18.75C15.75 17.0931 17.0931 15.75 18.75 15.75H19.5V15C19.5 14.5858 19.8358 14.25 20.25 14.25ZM18 18.75C18 18.3358 18.3358 18 18.75 18H29.25C29.6642 18 30 18.3358 30 18.75V29.25C30 29.6642 29.6642 30 29.25 30H18.75C18.3358 30 18 29.6642 18 29.25V18.75Z"
+                  fill="#FA9A07"
                 />
               </svg>
             </div>
@@ -2021,7 +2026,7 @@
               <h2 class="font-inter text-[20px] font-semibold">
                 DNA Spesialis ICT
               </h2>
-              <p class="font-inter text-[16px] text-black">
+              <p class="font-inter text-sm text-black">
                 Berbeda dengan vendor umum, KSPS berpengalaman support IT
                 outsourcing untuk 500+ project perusahaan IT besar
               </p>
@@ -2059,7 +2064,7 @@
               <h2 class="font-inter text-[20px] font-semibold">
                 Jangkauan Nasional
               </h2>
-              <p class="font-inter text-[16px] text-black">
+              <p class="font-inter text-sm text-black">
                 Dari Sumatera hingga Papua. Kami siap menyuplai tenaga kerja
                 Smarthand dan Engineer di 50 kota di Indonesia.
               </p>
@@ -2093,7 +2098,7 @@
               <h2 class="font-inter text-[20px] font-semibold">
                 Integritas Tanpa Potongan Gaji
               </h2>
-              <p class="font-inter text-[16px] text-black">
+              <p class="font-inter text-sm text-black">
                 Hak talenta diberikan 100% sesuai kesepakatan klien. Hasilnya?
                 Retensi talenta kami bertahan >8 tahun.
               </p>
@@ -2127,7 +2132,7 @@
               <h2 class="font-inter text-[20px] font-semibold">
                 Kecepatan Delivery
               </h2>
-              <p class="font-inter text-[16px] text-black">
+              <p class="font-inter text-sm text-black">
                 SLA pemenuhan yang terukur dari database talent aktif menjadikan
                 deployment lebih cepat dari rata-rata industri.
               </p>
@@ -2137,11 +2142,15 @@
       </section>
 
       <!-- Testimoni section -->
-      <section class="lg:py-16 py-8 bg-primary w-full h-fit">
+      <section
+        id="testimoni-section"
+        class="lg:py-20 py-8 bg-primary w-full h-fit"
+      >
         <h1
-          class="font-manrope lg:text-4xl text-2xl font-bold text-background text-center"
+          class="font-manrope lg:text-4xl text-[22px] font-bold text-background text-center"
         >
-          Kata Mereka Tentang <label class="text-secondary">Kinerja KSPS</label>
+          Kata Mereka Tentang <br />
+          <label class="text-secondary">Kinerja KSPS</label>
         </h1>
 
         <div
@@ -2160,7 +2169,12 @@
               <!-- Isi -->
               <div class="flex flex-col gap-3">
                 <div class="flex flex-col gap-2.5">
-                  <img src="/images/bdx.png" width="39" height="24" alt="" />
+                  <img
+                    src="/images/bdx-removebg-preview.png"
+                    width="39"
+                    height="24"
+                    alt=""
+                  />
                   <div class="flex items-center gap-2">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -2252,9 +2266,8 @@
               <div class="flex flex-col gap-3">
                 <div class="flex flex-col gap-2.5">
                   <img
-                    src="/images/lintasarta.png"
-                    width="39"
-                    height="24"
+                    src="/images/lintasarta2-removebg-preview.png"
+                    width="70"
                     alt=""
                   />
                   <div class="flex items-center gap-2">
@@ -2340,17 +2353,17 @@
                 </p>
               </div>
             </div>
+
             <!-- Testimoni 3 -->
             <div
-              class="shrink-0 w-[calc(100vw-2rem)] lg:w-90.5 w-full h-85.75 flex flex-col justify-between p-6 rounded-[10px] border border-border bg-[linear-gradient(90deg,#FFF_0%,#DFE1F2_100%)]"
+              class="shrink-0 w-[calc(100vw-2rem)] lg:w-90.5 h-85.75 flex flex-col justify-between p-6 rounded-[10px] border border-border bg-[linear-gradient(90deg,#FFF_0%,#DFE1F2_100%)]"
             >
               <!-- Isi -->
               <div class="flex flex-col gap-3">
                 <div class="flex flex-col gap-2.5">
                   <img
-                    src="/images/artajasa.png"
-                    width="41"
-                    height="25"
+                    src="/images/artajasa-removebg-preview.png"
+                    width="70"
                     alt=""
                   />
                   <div class="flex items-center gap-2">
@@ -2435,6 +2448,101 @@
                 </p>
               </div>
             </div>
+
+            <!-- Testimoni 4 -->
+            <div
+              class="shrink-0 w-[calc(100vw-2rem)] lg:w-90.5 h-85.75 flex flex-col justify-between p-6 rounded-[10px] border border-border bg-[linear-gradient(90deg,#FFF_0%,#DFE1F2_100%)]"
+            >
+              <!-- Isi -->
+              <div class="flex flex-col gap-3">
+                <div class="flex flex-col gap-2.5">
+                  <img
+                    src="/images/biotrop-removebg-preview.png"
+                    width="60"
+                    alt=""
+                  />
+                  <div class="flex items-center gap-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                    >
+                      <path
+                        d="M9.13232 2.88379C9.45342 2.11179 10.5465 2.11182 10.8677 2.88379L12.6987 7.28516L17.4507 7.66602C18.284 7.73282 18.6225 8.77338 17.9878 9.31738L14.3667 12.4189L15.4731 17.0557C15.6671 17.8689 14.7824 18.5118 14.0688 18.0762L10.0005 15.5908L5.93213 18.0762C5.21857 18.512 4.33383 17.869 4.52783 17.0557L5.6333 12.4189L2.01318 9.31738C1.37818 8.77343 1.71586 7.73283 2.54932 7.66602L7.30127 7.28516L9.13232 2.88379Z"
+                        fill="#FA9A07"
+                      />
+                    </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                    >
+                      <path
+                        d="M9.13232 2.88379C9.45342 2.11179 10.5465 2.11182 10.8677 2.88379L12.6987 7.28516L17.4507 7.66602C18.284 7.73282 18.6225 8.77338 17.9878 9.31738L14.3667 12.4189L15.4731 17.0557C15.6671 17.8689 14.7824 18.5118 14.0688 18.0762L10.0005 15.5908L5.93213 18.0762C5.21857 18.512 4.33383 17.869 4.52783 17.0557L5.6333 12.4189L2.01318 9.31738C1.37818 8.77343 1.71586 7.73283 2.54932 7.66602L7.30127 7.28516L9.13232 2.88379Z"
+                        fill="#FA9A07"
+                      />
+                    </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                    >
+                      <path
+                        d="M9.13232 2.88379C9.45342 2.11179 10.5465 2.11182 10.8677 2.88379L12.6987 7.28516L17.4507 7.66602C18.284 7.73282 18.6225 8.77338 17.9878 9.31738L14.3667 12.4189L15.4731 17.0557C15.6671 17.8689 14.7824 18.5118 14.0688 18.0762L10.0005 15.5908L5.93213 18.0762C5.21857 18.512 4.33383 17.869 4.52783 17.0557L5.6333 12.4189L2.01318 9.31738C1.37818 8.77343 1.71586 7.73283 2.54932 7.66602L7.30127 7.28516L9.13232 2.88379Z"
+                        fill="#FA9A07"
+                      />
+                    </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                    >
+                      <path
+                        d="M9.13232 2.88379C9.45342 2.11179 10.5465 2.11182 10.8677 2.88379L12.6987 7.28516L17.4507 7.66602C18.284 7.73282 18.6225 8.77338 17.9878 9.31738L14.3667 12.4189L15.4731 17.0557C15.6671 17.8689 14.7824 18.5118 14.0688 18.0762L10.0005 15.5908L5.93213 18.0762C5.21857 18.512 4.33383 17.869 4.52783 17.0557L5.6333 12.4189L2.01318 9.31738C1.37818 8.77343 1.71586 7.73283 2.54932 7.66602L7.30127 7.28516L9.13232 2.88379Z"
+                        fill="#FA9A07"
+                      />
+                    </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                    >
+                      <path
+                        d="M9.13232 2.88379C9.45342 2.11179 10.5465 2.11182 10.8677 2.88379L12.6987 7.28516L17.4507 7.66602C18.284 7.73282 18.6225 8.77338 17.9878 9.31738L14.3667 12.4189L15.4731 17.0557C15.6671 17.8689 14.7824 18.5118 14.0688 18.0762L10.0005 15.5908L5.93213 18.0762C5.21857 18.512 4.33383 17.869 4.52783 17.0557L5.6333 12.4189L2.01318 9.31738C1.37818 8.77343 1.71586 7.73283 2.54932 7.66602L7.30127 7.28516L9.13232 2.88379Z"
+                        fill="#FA9A07"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <p class="font-inter text-[16px] text-text-primary">
+                  “Pekerjaan yang ditugaskan kepada talenta dari Outsourcing
+                  KSPS sangat memuaskan hasilnya, jadi lebih efektif dalam
+                  kegiatan operasional kami.”
+                </p>
+              </div>
+
+              <!-- Name testimoni -->
+              <div class="w-full border-t-2 border-text-secondary pt-3">
+                <p
+                  class="font-inter text-text-primary text-[20px] font-semibold"
+                >
+                  Doni Yusri
+                </p>
+                <p class="font-inter text-text-primary text-[20px]">
+                  Deputy Director
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -2446,8 +2554,11 @@
             <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
               <rect width="36" height="36" rx="18" fill="#F5F4FA" />
               <path
-                d="M15.1464 18.3536C14.9512 18.1583 14.9512 17.8417 15.1464 17.6464L20.1464 12.6464L16.2071 18L20.8536 22.6464L15.1464 18.3536Z"
-                fill="#0F172A"
+                d="M21.5 11L14.5 18L21.5 25"
+                stroke="#0F172A"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
               />
             </svg>
           </button>
@@ -2458,8 +2569,11 @@
             <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
               <rect width="36" height="36" rx="18" fill="#F5F4FA" />
               <path
-                d="M20.8536 17.6464C21.0488 17.8417 21.0488 18.1583 20.8536 18.3536L15.8536 23.3536L19.7929 18L15.1464 13.3536L20.8536 17.6464Z"
-                fill="#1A1A1A"
+                d="M14.5 11L21.5 18L14.5 25"
+                stroke="#1A1A1A"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
               />
             </svg>
           </button>
@@ -2467,7 +2581,10 @@
       </section>
 
       <!-- Trust section -->
-      <section class="w-full h-fit lg:px-20 px-4 lg:py-16 py-8">
+      <section
+        id="trust-section"
+        class="w-full h-fit lg:px-14 px-4 lg:py-16 py-8"
+      >
         <!-- Headline -->
         <h1
           class="font-manrope lg:text-4xl text-2xl font-bold text-text-primary text-center lg:leading-11 leading-8 mb-8"
@@ -2517,7 +2634,7 @@
               </div>
 
               <a
-                class="trust-detail-btn rounded-xl self-start px-8 py-3 bg-secondary text-background"
+                class="trust-detail-btn rounded-xl self-start px-8 py-3 bg-secondary text-background text-sm"
                 href="#"
                 >Lihat detail</a
               >
@@ -2562,7 +2679,7 @@
               </div>
 
               <a
-                class="trust-detail-btn rounded-xl self-start px-8 py-3 bg-secondary text-background"
+                class="trust-detail-btn rounded-xl self-start px-8 py-3 bg-secondary text-background text-sm"
                 href="#"
                 >Lihat detail</a
               >
@@ -2610,7 +2727,7 @@
               </div>
 
               <a
-                class="trust-detail-btn rounded-xl self-start px-8 py-3 bg-secondary text-background"
+                class="trust-detail-btn rounded-xl self-start px-8 py-3 bg-secondary text-background text-sm"
                 href="#"
                 >Lihat detail</a
               >
@@ -2657,7 +2774,7 @@
               </div>
 
               <a
-                class="trust-detail-btn rounded-xl self-start px-8 py-3 bg-secondary text-background"
+                class="trust-detail-btn rounded-xl self-start px-8 py-3 bg-secondary text-background text-sm"
                 href="#"
                 >Lihat detail</a
               >
@@ -2667,7 +2784,10 @@
       </section>
 
       <!-- Standart section -->
-      <section class="w-full h-fit lg:px-20 px-4 lg:py-16 py-8 overflow-hidden">
+      <section
+        id="standart-section"
+        class="w-full h-fit lg:px-14 px-4 lg:py-16 py-8 overflow-hidden"
+      >
         <h1
           class="font-manrope lg:text-4xl text-[24px] leading-8 font-bold text-center"
         >
@@ -2772,7 +2892,7 @@
       </section>
 
       <!-- CTA Section -->
-      <div class="w-full h-fit lg:px-20 px-4 lg:py-16 py-8">
+      <div id="cta-section" class="w-full h-fit lg:px-14 px-4 lg:py-16 py-8">
         <div
           class="rounded-lg bg-[linear-gradient(180deg,#211591_0%,#1E13BA_100%)] flex flex-col justify-between items-center py-9.5 px-[23px] gap-11"
         >
@@ -2802,7 +2922,10 @@
       </div>
 
       <!-- Faq section -->
-      <section class="w-full h-fit lg:px-20 px-4 lg:py-16 py-8">
+      <section
+        id="faq-section"
+        class="w-full h-fit lg:px-14 px-4 lg:py-16 py-8"
+      >
         <h1
           class="font-manrope font-bold lg:text-4xl text-2xl text-center mb-6"
         >
@@ -2820,14 +2943,14 @@
 
       <!-- Footer section -->
       <footer
-        class="bg-background shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.15)] w-full h-fit lg:px-20 px-4 py-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+        class="bg-background shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.15)] w-full h-fit lg:px-14 px-4 py-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
       >
         <div class="lg:col-span-2 col-span-1 flex flex-col gap-6">
           <div>
             <!-- Logo -->
             <img src="/images/ksps_logo.png" width="120" alt="" />
           </div>
-          <p class="font-inter text-[20px] text-text-primary">
+          <p class="font-inter text-[16px] text-text-primary">
             <label class="font-bold">PT Karya Solusi Prima Sejahtera</label>
             <br />
             KSPS perusahaan IT Outsourcing terpercaya di Indonesia
@@ -2842,7 +2965,7 @@
           <!-- Social media -->
           <div class="flex items-center gap-6">
             <!-- Instagram -->
-            <div>
+            <a href="https://www.instagram.com/ksps_official/">
               <svg
                 class="w-6 h-6"
                 xmlns="http://www.w3.org/2000/svg"
@@ -2856,10 +2979,10 @@
                   fill="#211591"
                 />
               </svg>
-            </div>
+            </a>
 
             <!-- Facebook -->
-            <div>
+            <a href="#">
               <svg
                 class="w-6 h-6"
                 xmlns="http://www.w3.org/2000/svg"
@@ -2873,10 +2996,10 @@
                   fill="#211591"
                 />
               </svg>
-            </div>
+            </a>
 
             <!-- Linkedln -->
-            <div>
+            <a href="https://www.linkedin.com/company/kspsoutsourcing/">
               <svg
                 class="w-6 h-6"
                 xmlns="http://www.w3.org/2000/svg"
@@ -2890,7 +3013,7 @@
                   fill="#211591"
                 />
               </svg>
-            </div>
+            </a>
           </div>
         </div>
         <div class="col-span-1 flex flex-col gap-3">
@@ -2971,7 +3094,7 @@
         </div>
       </footer>
       <div
-        class="w-full h-fit lg:px-20 px-4 py-4 bg-primary flex items-center justify-center"
+        class="w-full h-fit lg:px-14 px-4 py-4 bg-primary flex items-center justify-center"
       >
         <p
           class="font-inter text-[16px] font-semibold text-[#FDFDFD] text-center"
@@ -2984,36 +3107,41 @@
     <!-- Trust card modal -->
     <div
       id="trust-modal-overlay"
-      class="fixed inset-0 bg-black/50 z-50 opacity-0 transition-opacity duration-200 hidden"
+      class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[999] opacity-0 transition-opacity duration-200 hidden"
     ></div>
     <div
       id="trust-modal"
-      class="fixed inset-0 z-50 items-center justify-center hidden"
+      class="fixed inset-0 z-[999] flex items-center justify-center hidden"
     >
       <div
-        class="max-w-2xl w-full mx-4 bg-background rounded-xl shadow-lg px-5 py-[25px]"
+        class="max-w-2xl w-full mx-4 bg-background rounded-xl shadow-lg p-4 lg:px-5 lg:py-[25px] max-h-[90dvh] overflow-y-auto"
       >
         <div class="w-full flex items-center justify-between">
           <div>
-            <p
+            <!-- <p
               id="trust-modal-category"
-              class="font-inter text-sm text-secondary mb-2"
-            ></p>
+              class="font-inter text-xs lg:text-sm text-secondary mb-1 lg:mb-2"
+            ></p> -->
             <h1
               id="trust-modal-title"
-              class="font-inter text-[20px] font-semibold text-text-primary"
+              class="font-inter text-xs lg:text-xl font-semibold text-text-primary"
             ></h1>
           </div>
           <div>
             <button class="trust-modal-close">
               <svg
-                width="40"
-                height="40"
+                class="w-8 h-8 lg:w-10 lg:h-10"
                 viewBox="0 0 40 40"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <rect width="40" height="40" rx="12" fill="#FFE2E2" />
+                <rect
+                  class="w-full h-full"
+                  width="40"
+                  height="40"
+                  rx="12"
+                  fill="#FFE2E2"
+                />
                 <path
                   d="M15.5364 14.2636C15.1849 13.9121 14.6151 13.9121 14.2636 14.2636C13.9121 14.6151 13.9121 15.1849 14.2636 15.5364L18.7272 20L14.2636 24.4636C13.9121 24.8151 13.9121 25.3849 14.2636 25.7364C14.6151 26.0879 15.1849 26.0879 15.5364 25.7364L20 21.2728L24.4636 25.7364C24.8151 26.0879 25.3849 26.0879 25.7364 25.7364C26.0879 25.3849 26.0879 24.8151 25.7364 24.4636L21.2728 20L25.7364 15.5364C26.0879 15.1849 26.0879 14.6151 25.7364 14.2636C25.3849 13.9121 24.8151 13.9121 24.4636 14.2636L20 18.7272L15.5364 14.2636Z"
                   fill="#FF1A1A"
@@ -3026,13 +3154,13 @@
           <img id="trust-modal-img" class="w-full h-full object-cover" src="" alt=""/>
         </div> -->
         <p
-          class="mt-4 font-inter leading-6 text-text-primary text-[16px] whitespace-pre-line"
+          class="mt-3 lg:mt-4 font-inter leading-5 lg:leading-6 text-text-primary text-[11px] lg:text-[12px] whitespace-pre-line"
           id="trust-modal-desc"
         ></p>
-        <div class="w-full h-px bg-border my-6.75"></div>
+        <div class="w-full h-px bg-border my-4 lg:my-6.75"></div>
         <div class="flex items-center gap-2.5">
           <div
-            class="size-[76px] rounded-lg border border-border bg-white overflow-hidden"
+            class="size-14 lg:size-[76px] shrink-0 rounded-lg border border-border bg-white overflow-hidden"
           >
             <img
               id="trust-modal-logo"
@@ -3041,19 +3169,20 @@
               alt=""
             />
           </div>
-          <div class="flex flex-col gap-2">
+          <div class="flex flex-col gap-1 lg:gap-2">
             <p
               id="trust-modal-service"
-              class="font-inter font-semibold text-[16px] text-black"
+              class="font-inter font-semibold text-[10px] text-black"
             ></p>
             <div class="flex flex-col gap-1">
               <div class="flex items-center gap-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
+                  width="16"
+                  height="16"
                   viewBox="0 0 20 20"
                   fill="none"
+                  class="shrink-0 w-4 h-4 lg:w-5 lg:h-5"
                 >
                   <path
                     fill-rule="evenodd"
@@ -3068,16 +3197,17 @@
                 </svg>
                 <p
                   id="trust-modal-industry"
-                  class="font-inter text-sm text-text-secondary"
+                  class="font-inter text-[10px] lg:text-[11px] text-text-secondary"
                 ></p>
               </div>
               <div class="flex items-center gap-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
+                  width="16"
+                  height="16"
                   viewBox="0 0 20 20"
                   fill="none"
+                  class="shrink-0 w-4 h-4 lg:w-5 lg:h-5"
                 >
                   <path
                     d="M7 8C8.65685 8 10 6.65685 10 5C10 3.34315 8.65685 2 7 2C5.34315 2 4 3.34315 4 5C4 6.65685 5.34315 8 7 8Z"
@@ -3098,7 +3228,7 @@
                 </svg>
                 <p
                   id="trust-modal-size"
-                  class="font-inter text-sm text-text-secondary"
+                  class="font-inter text-[10px] lg:text-[11px] text-text-secondary"
                 ></p>
               </div>
             </div>

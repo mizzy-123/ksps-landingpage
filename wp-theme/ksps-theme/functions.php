@@ -70,4 +70,7 @@ add_action('wp_enqueue_scripts', function () {
 
     // Provide global config before faq.js executes
     wp_add_inline_script('ksps-faq', 'window.KSPS_FAQ_DATA_URL = ' . wp_json_encode($config['faqDataUrl']) . ';', 'before');
+
+    // Provide assets base URL for scripts that need to resolve image paths
+    wp_add_inline_script('ksps-trust-modal', 'window.KSPS_ASSETS_URL = ' . wp_json_encode($config['assetsUrl']) . ';', 'before');
 });

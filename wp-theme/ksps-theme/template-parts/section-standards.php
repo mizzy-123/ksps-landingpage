@@ -1,5 +1,5 @@
 <!-- Standart section -->
-<section class="w-full h-fit lg:px-20 px-4 lg:py-16 py-8 overflow-hidden">
+<section id="standart-section" class="w-full h-fit lg:px-20 px-4 lg:py-16 py-8 overflow-hidden">
   <h1
     class="font-manrope lg:text-4xl text-[24px] leading-8 font-bold text-center"
   >

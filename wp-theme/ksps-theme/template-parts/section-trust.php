@@ -1,5 +1,5 @@
 <!-- Trust section -->
-<section class="w-full h-fit lg:px-20 px-4 lg:py-16 py-8">
+<section id="trust-section" class="w-full h-fit lg:px-14 px-4 lg:py-16 py-8">
   <!-- Headline -->
   <h1 class="font-manrope lg:text-4xl text-2xl font-bold text-text-primary text-center lg:leading-11 leading-8 mb-8">
     <label class="text-secondary">Dipercaya oleh Industri skala besar</label>
@@ -11,7 +11,9 @@
   <div class="flex gap-6 flex-wrap justify-center">
     <!-- Card 1 - Lintasarta -->
     <div data-trust-card="true" data-trust-id="1" class="flex flex-col lg:w-[584px] w-full h-fit rounded-xl border border-border bg-white overflow-hidden relative">
-      <img class="size-12 border border-border rounded-lg absolute left-4 top-4 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.15)]" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/lintasarta.png'); ?>" alt="" />
+      <div class="bg-white size-12 border border-border rounded-lg absolute left-4 top-4 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.15)]">
+        <img class="size-full object-contain" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/lintasarta2-removebg-preview.png'); ?>" alt="" />
+      </div>
       <div class="self-stretch h-40 overflow-hidden">
         <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/trust1.png'); ?>" class="object-contain" alt="" />
       </div>
@@ -31,14 +33,18 @@
           </div>
         </div>
 
-        <a class="trust-detail-btn rounded-xl self-start px-8 py-3 bg-secondary text-background" href="#">Lihat detail</a>
+        <a
+                class="trust-detail-btn rounded-xl self-start px-8 py-3 bg-secondary text-background text-sm"
+                href="#"
+                >Lihat detail</a
+              >
       </div>
     </div>
 
     <!-- Card 2 - BDx -->
     <div data-trust-card="true" data-trust-id="2" class="flex flex-col lg:w-[584px] w-full h-fit rounded-xl border border-border bg-white overflow-hidden relative">
       <div class="bg-white size-12 border border-border rounded-lg absolute left-4 top-4 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.15)]">
-        <img class="size-full object-contain" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/bdx.png'); ?>" alt="" />
+        <img class="size-full object-contain" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/bdx-removebg-preview.png'); ?>" alt="" />
       </div>
       <div class="self-stretch h-40 overflow-hidden">
         <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/trust2.png'); ?>" class="object-contain" alt="" />
@@ -57,7 +63,11 @@
           </div>
         </div>
 
-        <a class="trust-detail-btn rounded-xl self-start px-8 py-3 bg-secondary text-background" href="#">Lihat detail</a>
+        <a
+                class="trust-detail-btn rounded-xl self-start px-8 py-3 bg-secondary text-background text-sm"
+                href="#"
+                >Lihat detail</a
+              >
       </div>
     </div>
 
@@ -85,7 +95,11 @@
           </div>
         </div>
 
-        <a class="trust-detail-btn rounded-xl self-start px-8 py-3 bg-secondary text-background" href="#">Lihat detail</a>
+        <a
+                class="trust-detail-btn rounded-xl self-start px-8 py-3 bg-secondary text-background text-sm"
+                href="#"
+                >Lihat detail</a
+              >
       </div>
     </div>
 
@@ -113,7 +127,11 @@
           </div>
         </div>
 
-        <a class="trust-detail-btn rounded-xl self-start px-8 py-3 bg-secondary text-background" href="#">Lihat detail</a>
+        <a
+                class="trust-detail-btn rounded-xl self-start px-8 py-3 bg-secondary text-background text-sm"
+                href="#"
+                >Lihat detail</a
+              >
       </div>
     </div>
   </div>

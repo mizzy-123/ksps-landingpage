@@ -28,12 +28,12 @@ document.addEventListener("DOMContentLoaded", () => {
           class: "",
         },
       ],
-      desc: `Tantangan terbesar dalam eksekusi project di bisnis Telekomunikasi adalah mengelola tenaga kerja di ratusan titik nusantara. KSPS menjawab tantangan ini dengan mendisposisikan 300+ Project Engineer On-site dan 20+ Tim Business Operation yang tersebar luas dari Aceh hingga Jayapura. 
+      desc: `Tantangan terbesar dalam eksekusi project di bisnis Telekomunikasi adalah mengelola tenaga kerja di ratusan titik nusantara. KSPS menjawab tantangan ini dengan mendisposisikan 300+ Project Engineer On-site dan 20+ Tim Business Operation yang tersebar luas dari Aceh hingga Jayapura.
 
 Solusi kami mencakup spektrum penuh mulai dari tenaga ahli tingkat tinggi seperti Network & Security Engineer, tim operasional seperti Helpdesk & Call Center, hingga pendukung lapangan seperti Janitor sebagai bukti nyata kapabilitas jangkauan nasional KSPS menjadi vendor IT Outsourcing terpercaya di Indonesia.
 `,
       img: "/images/trust1.png",
-      logo: "/images/lintasarta.png",
+      logo: "/images/lintasarta2-removebg-preview.png",
       service:
         " IT Outsourcing, Business Process Outsourcing, Facility Management",
       industry: "Telecommunication & Network Infrastructure",
@@ -62,15 +62,17 @@ Kami menyediakan solusi end-to-end mulai dari Cloud Engineer dan System Analyst 
     },
     3: {
       category: "Banking & Financial Services",
-      title:
-        "Critical Payment System Support: Pengelolaan sistem ATM Bersama dan Data Center",
+      title: "Digital Transformation & Security",
       titleParts: [
-        { text: "Critical Payment System Support: ", class: "text-secondary" },
-        { text: "Pengelolaan sistem ATM Bersama dan Data Center", class: "" },
+        {
+          text: "Digital Transformation & Security: ",
+          class: "text-secondary",
+        },
+        { text: "Dukungan penuh dari talenta KSPS", class: "" },
       ],
-      desc: `Sebagai tulang punggung sistem pembayaran nasional (ATM Bersama), downtime bukanlah opsi bagi Artajasa. KSPS sebagai vendor IT Outsourcing mendukung operasional Card & Digital Payment serta pengelolaan Data Center di 4 lokasi strategis (Jabodetabek & Sumatera). 
+      desc: `Dalam industri perbankan yang teregulasi ketat, keamanan dan otomatisasi adalah kunci. KSPS sebagai vendor IT Outsourcing mendukung inisiatif transformasi digital Bank Danamon melalui penyediaan tenaga ahli spesifik. 
 
-Kami menyuplai tim teknis yang terdiri dari System Analyst, Data Analyst, hingga Helpdesk & Technician untuk memastikan setiap transaksi digital dan operasional data center berjalan tanpa hambatan.
+Talenta kami seperti Senior Engineer dan Project Manager terlibat langsung dalam pengelolaan sistem krusial, termasuk implementasi Automation SharePoint, penguatan keamanan lewat Multi-Factor Authentication (MFA), dan pembaruan infrastruktur IT perbankan.
 `,
       img: "/images/trust3.png",
       logo: "/images/bank_danamon.png",
@@ -131,7 +133,9 @@ Kami menyuplai tim teknis yang terdiri dari System Analyst, Data Analyst, hingga
             dataFromJson.titleParts.forEach((part) => {
               const span = document.createElement("span");
               span.textContent = part.text || "";
-              if (part.class) span.className = part.class;
+              // make each part a block so they stack vertically
+              const partClasses = part.class ? part.class + " " : "";
+              span.className = partClasses;
               titleEl.appendChild(span);
             });
           } else {

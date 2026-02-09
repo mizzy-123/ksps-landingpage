@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const overlay = document.getElementById("trust-modal-overlay");
   const modal = document.getElementById("trust-modal");
   const img = document.getElementById("trust-modal-img");
-  const imgContainer = document.getElementById("trust-modal-img-container");
   const categoryEl = document.getElementById("trust-modal-category");
   const titleEl = document.getElementById("trust-modal-title");
   const descEl = document.getElementById("trust-modal-desc");
@@ -13,8 +12,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const sizeEl = document.getElementById("trust-modal-size");
   const closeBtns = document.querySelectorAll(".trust-modal-close");
 
-  // Get WordPress assets URL from a data attribute or use relative path
-  const assetsUrl = document.body.dataset.assetsUrl || "";
+  // Resolve image paths for WordPress theme assets
+  const ASSETS_BASE =
+    (typeof window !== "undefined" && window.KSPS_ASSETS_URL) || "";
+  const resolveSrc = (src) => {
+    if (!src) return "";
+    // If using "/images/..." from static markup, prepend theme assets URL
+    if (ASSETS_BASE && src.startsWith("/images/")) return ASSETS_BASE + src;
+    return src;
+  };
 
   // Default JSON-like data you can edit or replace with a fetched JSON
   const TRUST_DATA = {
@@ -32,12 +38,12 @@ document.addEventListener("DOMContentLoaded", () => {
           class: "",
         },
       ],
-      desc: `Tantangan terbesar dalam eksekusi project di bisnis Telekomunikasi adalah mengelola tenaga kerja di ratusan titik nusantara. KSPS menjawab tantangan ini dengan mendisposisikan 300+ Project Engineer On-site dan 20+ Tim Business Operation yang tersebar luas dari Aceh hingga Jayapura. 
+      desc: `Tantangan terbesar dalam eksekusi project di bisnis Telekomunikasi adalah mengelola tenaga kerja di ratusan titik nusantara. KSPS menjawab tantangan ini dengan mendisposisikan 300+ Project Engineer On-site dan 20+ Tim Business Operation yang tersebar luas dari Aceh hingga Jayapura.
 
 Solusi kami mencakup spektrum penuh mulai dari tenaga ahli tingkat tinggi seperti Network & Security Engineer, tim operasional seperti Helpdesk & Call Center, hingga pendukung lapangan seperti Janitor sebagai bukti nyata kapabilitas jangkauan nasional KSPS menjadi vendor IT Outsourcing terpercaya di Indonesia.
 `,
-      img: "trust1.png",
-      logo: "lintasarta.png",
+      img: "/images/trust1.png",
+      logo: "/images/lintasarta2-removebg-preview.png",
       service:
         " IT Outsourcing, Business Process Outsourcing, Facility Management",
       industry: "Telecommunication & Network Infrastructure",
@@ -57,8 +63,8 @@ Solusi kami mencakup spektrum penuh mulai dari tenaga ahli tingkat tinggi sepert
       desc: `Mengelola ekosistem Hyperscale Data Center di area strategis (Jakarta, Tangerang, Jawa Barat) menuntut integrasi sempurna antara teknologi dan fasilitas fisik. KSPS sebagai vendor IT Outsourcing dipercaya menjalankan 9 Project Vital (5 Data & Security Network + 4 Business Operation). 
 
 Kami menyediakan solusi end-to-end mulai dari Cloud Engineer dan System Analyst untuk menjaga uptime server, hingga Receptionist dan Technician untuk manajemen fasilitas, memastikan operasional Data Center berjalan mulus 24/7.`,
-      img: "trust2.png",
-      logo: "bdx.png",
+      img: "/images/trust2.png",
+      logo: "/images/bdx.png",
       service:
         " IT Outsourcing, Business Process Outsourcing, Facility Management",
       industry: "Telecommunication & Network Infrastructure",
@@ -66,22 +72,22 @@ Kami menyediakan solusi end-to-end mulai dari Cloud Engineer dan System Analyst 
     },
     3: {
       category: "Banking & Financial Services",
-      title:
-        "Digital Transformation & Security: Mendukung transformasi digital perbankan",
+      title: "Digital Transformation & Security",
       titleParts: [
         {
           text: "Digital Transformation & Security: ",
           class: "text-secondary",
         },
-        { text: "Mendukung transformasi digital perbankan", class: "" },
+        { text: "Dukungan penuh dari talenta KSPS", class: "" },
       ],
-      desc: `Mendukung inisiatif transformasi digital di industri perbankan melalui solusi teknologi yang inovatif dan terintegrasi. KSPS sebagai vendor IT Outsourcing menyediakan tenaga ahli untuk mendukung keamanan sistem dan pengembangan layanan digital banking.
+      desc: `Dalam industri perbankan yang teregulasi ketat, keamanan dan otomatisasi adalah kunci. KSPS sebagai vendor IT Outsourcing mendukung inisiatif transformasi digital Bank Danamon melalui penyediaan tenaga ahli spesifik. 
 
-Kami menyuplai tim yang terdiri dari Security Engineer, Software Developer, dan IT Support untuk memastikan sistem perbankan berjalan aman dan efisien.`,
-      img: "trust3.png",
-      logo: "bank_danamon.png",
+Talenta kami seperti Senior Engineer dan Project Manager terlibat langsung dalam pengelolaan sistem krusial, termasuk implementasi Automation SharePoint, penguatan keamanan lewat Multi-Factor Authentication (MFA), dan pembaruan infrastruktur IT perbankan.
+`,
+      img: "/images/trust3.png",
+      logo: "/images/bank_danamon.png",
       service: "IT Outsourcing",
-      industry: "Banking & Financial Services",
+      industry: "Fintech & Digital Payment",
       size: ">25.000 Karyawan",
     },
     4: {
@@ -96,11 +102,11 @@ Kami menyuplai tim yang terdiri dari Security Engineer, Software Developer, dan 
 
 Kami menyuplai tim teknis yang terdiri dari System Analyst, Data Analyst, hingga Helpdesk & Technician untuk memastikan setiap transaksi digital dan operasional data center berjalan tanpa hambatan.
 `,
-      img: "trust4.png",
-      logo: "artajasa.png",
+      img: "/images/trust4.png",
+      logo: "/images/artajasa.png",
       service: "IT Outsourcing",
       industry: "Fintech & Digital Payment",
-      size: ">500 Karyawan",
+      size: ">25.000 Karyawan",
     },
   };
 
@@ -116,19 +122,12 @@ Kami menyuplai tim teknis yang terdiri dari System Analyst, Data Analyst, hingga
       const dataFromJson = id && TRUST_DATA[id] ? TRUST_DATA[id] : null;
 
       if (dataFromJson) {
-        if (img && imgContainer) {
-          const imgSrc = assetsUrl
-            ? `${assetsUrl}/images/${dataFromJson.img}`
-            : dataFromJson.img;
-          img.setAttribute("src", imgSrc || "");
-          imgContainer.classList.remove("hidden");
-        }
-        if (logoEl) {
-          const logoSrc = assetsUrl
-            ? `${assetsUrl}/images/${dataFromJson.logo}`
-            : dataFromJson.logo;
-          logoEl.setAttribute("src", logoSrc || "");
-        }
+        if (img) img.setAttribute("src", resolveSrc(dataFromJson.img || ""));
+        if (logoEl)
+          logoEl.setAttribute(
+            "src",
+            resolveSrc(dataFromJson.logo || dataFromJson.img || ""),
+          );
         if (serviceEl) serviceEl.textContent = dataFromJson.service || "";
         if (industryEl) industryEl.textContent = dataFromJson.industry || "";
         if (sizeEl) sizeEl.textContent = dataFromJson.size || "";
@@ -144,7 +143,9 @@ Kami menyuplai tim teknis yang terdiri dari System Analyst, Data Analyst, hingga
             dataFromJson.titleParts.forEach((part) => {
               const span = document.createElement("span");
               span.textContent = part.text || "";
-              if (part.class) span.className = part.class;
+              // make each part a block so they stack vertically
+              const partClasses = part.class ? part.class + " " : "";
+              span.className = partClasses;
               titleEl.appendChild(span);
             });
           } else {
@@ -172,8 +173,8 @@ Kami menyuplai tim teknis yang terdiri dari System Analyst, Data Analyst, hingga
           card.querySelector(".bg-white.size-12 img")?.getAttribute("src") ||
           card.querySelector("img")?.getAttribute("src") ||
           "";
-        if (img) img.setAttribute("src", imgSrc);
-        if (logoEl) logoEl.setAttribute("src", logoSrc || imgSrc);
+        if (img) img.setAttribute("src", resolveSrc(imgSrc));
+        if (logoEl) logoEl.setAttribute("src", resolveSrc(logoSrc || imgSrc));
         if (serviceEl)
           serviceEl.textContent =
             card.querySelector("p.text-secondary")?.innerText || "";

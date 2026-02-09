@@ -1,5 +1,5 @@
 <!-- Faq section -->
-<section class="w-full h-fit lg:px-20 px-4 lg:py-16 py-8">
+<section id="faq-section" class="w-full h-fit lg:px-14 px-4 lg:py-16 py-8">
   <h1
     class="font-manrope font-bold lg:text-4xl text-2xl text-center mb-6"
   >

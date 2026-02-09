@@ -4,8 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!viewport || !wrapper) return;
 
   const cards = wrapper.children;
-  const gap = 16; // gap-4
 
+  // Variabel state
   let currentIndex = 0;
   let isDragging = false;
   let startX = 0;
@@ -13,21 +13,33 @@ document.addEventListener("DOMContentLoaded", () => {
   let prevTranslate = 0;
 
   function updateCarousel() {
-    const viewportWidth = viewport.offsetWidth;
-    const cardWidth = cards[0].offsetWidth;
+    // Pastikan card ada
+    if (cards.length === 0) return;
 
-    // RUMUS CENTERING:
-    // (Lebar Layar / 2) - (Lebar Kartu / 2) - (Total Lebar Kartu sebelumnya + total gap sebelumnya)
-    const centerOffset = (viewportWidth - cardWidth) / 2;
-    const targetTranslate = -(currentIndex * (cardWidth + gap)) + centerOffset;
+    // 1. Ambil elemen card yang sedang aktif
+    const currentCard = cards[currentIndex];
 
+    // 2. Hitung titik tengah Viewport (Container/Layar)
+    const viewportCenter = viewport.offsetWidth / 2;
+
+    // 3. Hitung titik tengah Card target
+    // offsetLeft = jarak sisi kiri card dari awal wrapper
+    // offsetWidth / 2 = setengah lebar card
+    const cardCenter = currentCard.offsetLeft + currentCard.offsetWidth / 2;
+
+    // 4. Hitung berapa pixel harus digeser (Translate)
+    // Logikanya: Kita ingin Card Center berada di posisi Viewport Center
+    const targetTranslate = viewportCenter - cardCenter;
+
+    // Update state posisi
     currentTranslate = targetTranslate;
     prevTranslate = targetTranslate;
 
+    // Terapkan ke style
     wrapper.style.transform = `translateX(${targetTranslate}px)`;
   }
 
-  // Daftarkan fungsi ke window agar bisa dipanggil dari atribut onclick HTML
+  // --- LOGIKA NAVIGASI TOMBOL ---
   window.moveTesti = (direction) => {
     if (direction === "right") {
       if (currentIndex < cards.length - 1) currentIndex++;
@@ -43,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const dragStart = (e) => {
     isDragging = true;
     startX = e.type.includes("touch") ? e.touches[0].clientX : e.clientX;
-    wrapper.style.transition = "none"; // Matikan transisi agar responsif saat ditarik
+    wrapper.style.transition = "none"; // Matikan transisi saat drag biar responsif
   };
 
   const dragAction = (e) => {
@@ -52,34 +64,47 @@ document.addEventListener("DOMContentLoaded", () => {
       ? e.touches[0].clientX
       : e.clientX;
     const diff = currentX - startX;
+
+    // Update posisi sementara (mengikuti jari/mouse)
     wrapper.style.transform = `translateX(${prevTranslate + diff}px)`;
   };
 
   const dragEnd = (e) => {
     if (!isDragging) return;
     isDragging = false;
-    wrapper.style.transition = "transform 0.5s ease-in-out"; // Kembalikan transisi
+    wrapper.style.transition = "transform 0.5s ease-in-out"; // Hidupkan lagi transisi
 
     const endX = e.type.includes("touch")
       ? e.changedTouches[0].clientX
       : e.clientX;
     const diff = endX - startX;
 
-    // Jika geser lebih dari 100px, pindah slide
-    if (diff < -100) window.moveTesti("right");
-    else if (diff > 100) window.moveTesti("left");
-    else updateCarousel();
+    // Threshold: Jika geser lebih dari 50px, pindah slide
+    if (diff < -50) window.moveTesti("right");
+    else if (diff > 50) window.moveTesti("left");
+    else updateCarousel(); // Balik ke posisi semula jika geser sedikit
   };
 
   // Event Listeners
   viewport.addEventListener("mousedown", dragStart);
   viewport.addEventListener("touchstart", dragStart, { passive: true });
+
   window.addEventListener("mousemove", dragAction);
   viewport.addEventListener("touchmove", dragAction, { passive: true });
+
   window.addEventListener("mouseup", dragEnd);
   viewport.addEventListener("touchend", dragEnd);
 
-  // Inisialisasi posisi awal
-  setTimeout(updateCarousel, 50); // Delay sedikit untuk memastikan lebar card sudah di-render
-  window.addEventListener("resize", updateCarousel);
+  // Inisialisasi & Responsivitas
+  // Timeout kecil untuk memastikan CSS sudah selesai render layout
+  setTimeout(updateCarousel, 100);
+  window.addEventListener("resize", () => {
+    // Matikan transisi saat resize agar tidak terlihat aneh
+    wrapper.style.transition = "none";
+    updateCarousel();
+    // Hidupkan kembali transisi setelah render frame selesai
+    setTimeout(() => {
+      wrapper.style.transition = "transform 0.5s ease-in-out";
+    }, 0);
+  });
 });

@@ -2,10 +2,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const faqList = document.getElementById("faq-list");
   if (!faqList) return;
 
-  const dataUrl = (window && window.KSPS_FAQ_DATA_URL) || "./data/faq.json";
-
   // Load JSON data and render
-  fetch(dataUrl)
+  const faqDataUrl = window.KSPS_FAQ_DATA_URL || "./data/faq.json";
+  fetch(faqDataUrl)
     .then((res) => res.json())
     .then((faqs) => renderFaqs(faqs))
     .catch((err) => {

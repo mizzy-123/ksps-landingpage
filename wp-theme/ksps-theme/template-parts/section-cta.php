@@ -1,5 +1,5 @@
 <!-- CTA Section -->
-<div class="w-full h-fit lg:px-20 px-4 lg:py-16 py-8">
+<div id="cta-section" class="w-full h-fit lg:px-14 px-4 lg:py-16 py-8">
   <div
     class="rounded-lg bg-[linear-gradient(180deg,#211591_0%,#1E13BA_100%)] flex flex-col justify-between items-center py-9.5 px-[23px] gap-11"
   >
