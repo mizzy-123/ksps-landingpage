@@ -20,7 +20,7 @@
     </div>
 
     <a
-      href="#"
+      href="https://pgp6i.app.link/e/ctadiskusi"
       class="rounded-lg px-8 py-3 bg-secondary text-background font-inter"
     >
       Saya Ingin Diskusi

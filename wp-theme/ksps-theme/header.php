@@ -28,14 +28,17 @@
           </div>
         </div>
         <div class="flex items-center gap-2 cursor-pointer group">
-          <label class="font-inter text-[16px] text-text-primary group-hover:text-secondary cursor-pointer">Resources</label>
+          <a href="#" class="font-inter text-[16px] text-text-primary group-hover:text-secondary cursor-pointer">Resources</a>
         </div>
         <div class="flex items-center gap-2 cursor-pointer group">
-          <label class="font-inter text-[16px] text-text-primary group-hover:text-secondary cursor-pointer">Referral</label>
+          <a href="#" class="font-inter text-[16px] text-text-primary group-hover:text-secondary cursor-pointer">Referral</a>
+        </div>
+        <div class="flex items-center gap-2 cursor-pointer group">
+          <a href="/article" class="font-inter text-[16px] text-text-primary group-hover:text-secondary cursor-pointer">Article</a>
         </div>
       </nav>
 
-      <a class="lg:block hidden px-8 py-3 bg-secondary rounded-xl font-inter text-sm font-semibold text-background" href="">Hubungi Kami</a>
+      <a class="lg:block hidden px-8 py-3 bg-secondary rounded-xl font-inter text-sm font-semibold text-background" href="https://pgp6i.app.link/e/hubungikami">Hubungi Kami</a>
 
       <a id="sidebar-toggle" class="lg:hidden block" href="#">
         <svg id="sidebar-close-icon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -76,12 +79,15 @@
             </div>
           </div>
           <div class="flex items-center gap-2 cursor-pointer group py-4">
-            <label class="font-inter text-[16px] text-text-primary group-hover:text-secondary cursor-pointer">Resources</label>
+            <a href="#" class="font-inter text-[16px] text-text-primary group-hover:text-secondary cursor-pointer">Resources</a>
           </div>
           <div class="flex items-center gap-2 cursor-pointer group py-4">
-            <label class="font-inter text-[16px] text-text-primary group-hover:text-secondary cursor-pointer">Referral</label>
+            <a href="#" class="font-inter text-[16px] text-text-primary group-hover:text-secondary cursor-pointer">Referral</a>
+          </div>
+          <div class="flex items-center gap-2 cursor-pointer group py-4">
+            <a href="/article" class="font-inter text-[16px] text-text-primary group-hover:text-secondary cursor-pointer">Article</a>
           </div>
         </div>
-        <a class="lg:hidden block px-8 py-3 bg-secondary rounded-xl font-inter text-sm font-semibold text-background text-center" href="#">Hubungi Kami</a>
+        <a class="lg:hidden block px-8 py-3 bg-secondary rounded-xl font-inter text-sm font-semibold text-background text-center" href="https://pgp6i.app.link/e/hubungikami">Hubungi Kami</a>
       </div>
     </header>

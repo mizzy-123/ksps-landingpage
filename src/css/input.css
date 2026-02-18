@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+@source "../index.html";
+@source "../article.html";
+
 /* Design tokens (colors, borders, gradients) */
 
 @font-face {
@@ -33,6 +36,67 @@
   }
   hr {
     border-color: var(--border);
+  }
+
+  /* Article Carousel Animations */
+  @keyframes slideOutLeft {
+    from {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+  }
+
+  @keyframes slideOutRight {
+    from {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+  }
+
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .slide-out-left {
+    animation: slideOutLeft 0.5s ease-in-out forwards;
+  }
+
+  .slide-out-right {
+    animation: slideOutRight 0.5s ease-in-out forwards;
+  }
+
+  .slide-in-left {
+    animation: slideInLeft 0.5s ease-in-out forwards;
+  }
+
+  .slide-in-right {
+    animation: slideInRight 0.5s ease-in-out forwards;
   }
 }
 

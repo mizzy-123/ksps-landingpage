@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "authorImage": "/images/bdx.png",
+    "authorName": "KSPS",
+    "date": "30 Januari 2026",
+    "title": "Strategi Outsourcing untuk Meningkatkan Efisiensi Perusahaan",
+    "description": "Strategi outsourcing membantu perusahaan mengurangi biaya operasional sekaligus meningkatkan fokus pada core bisnis.",
+    "thumbnail": "/images/contoh_thumbnail_article_1.png",
+    "link": "#"
+  },
+  {
+    "id": 2,
+    "authorImage": "/images/bdx.png",
+    "authorName": "KSPS",
+    "date": "25 Januari 2026",
+    "title": "Mengoptimalkan SDM dengan IT Outsourcing Terpercaya",
+    "description": "Temukan bagaimana IT outsourcing dapat membantu perusahaan Anda mengelola sumber daya manusia dengan lebih efektif dan efisien.",
+    "thumbnail": "/images/contoh_thumbnail_article_1.png",
+    "link": "#"
+  },
+  {
+    "id": 3,
+    "authorImage": "/images/bdx.png",
+    "authorName": "KSPS",
+    "date": "20 Januari 2026",
+    "title": "Solusi BPO untuk Meningkatkan Produktivitas Bisnis",
+    "description": "Pelajari bagaimana layanan BPO & Contact Center dapat meningkatkan produktivitas dan kepuasan pelanggan perusahaan Anda.",
+    "thumbnail": "/images/contoh_thumbnail_article_1.png",
+    "link": "#"
+  },
+  {
+    "id": 4,
+    "authorImage": "/images/bdx.png",
+    "authorName": "KSPS",
+    "date": "15 Januari 2026",
+    "title": "Pentingnya Assessment Center dalam Rekrutmen Modern",
+    "description": "Assessment center membantu perusahaan menemukan kandidat terbaik dengan metode evaluasi yang komprehensif dan objektif.",
+    "thumbnail": "/images/contoh_thumbnail_article_1.png",
+    "link": "#"
+  },
+  {
+    "id": 5,
+    "authorImage": "/images/bdx.png",
+    "authorName": "KSPS",
+    "date": "10 Januari 2026",
+    "title": "Transformasi Digital Melalui Organization Development",
+    "description": "Organization development membantu perusahaan beradaptasi dengan perubahan digital dan meningkatkan kinerja organisasi secara keseluruhan.",
+    "thumbnail": "/images/contoh_thumbnail_article_1.png",
+    "link": "#"
+  }
+]

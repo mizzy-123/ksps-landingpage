@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth" style="scroll-padding-top: 72px">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./css/output.css" rel="stylesheet" />
+    <title>KSPS</title>
+  </head>
+  <body class="antialiased bg-white">
+    <!-- Overlay for sidebar -->
+    <div
+      id="sidebar-overlay"
+      class="lg:hidden fixed z-10 inset-0 bg-black/40 opacity-0 transition-opacity duration-300 hidden"
+    ></div>
+
+    <header
+      class="bg-background fixed top-0 left-0 z-100 w-full lg:px-14 px-4 py-4 flex items-center justify-between shadow-[0_4px_6px_-1px_rgba(0,0,0,0.15)]"
+    >
+      <!-- Logo -->
+      <img src="/images/ksps_logo.png" width="90" alt="" />
+
+      <nav class="lg:flex hidden items-center gap-6">
+        <div
+          id="menu-nav-desktop"
+          class="flex items-center gap-2 relative cursor-pointer group"
+        >
+          <label
+            id="menu-label-desktop"
+            class="font-inter text-[16px] text-text-primary group-hover:text-secondary cursor-pointer"
+            >Layanan</label
+          >
+          <svg
+            id="menu-icon-desktop"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            class="text-text-primary group-hover:text-secondary cursor-pointer"
+            fill="none"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M12.5303 16.2803C12.2374 16.5732 11.7626 16.5732 11.4697 16.2803L3.96967 8.78033C3.67678 8.48744 3.67678 8.01256 3.96967 7.71967C4.26256 7.42678 4.73744 7.42678 5.03033 7.71967L12 14.6893L18.9697 7.71967C19.2626 7.42678 19.7374 7.42678 20.0303 7.71967C20.3232 8.01256 20.3232 8.48744 20.0303 8.78033L12.5303 16.2803Z"
+              fill="currentColor"
+            />
+          </svg>
+
+          <!-- Menu -->
+          <div
+            id="menu-dropdown-desktop"
+            class="bg-background lg:absolute top-full left-0 h-fit w-88.75 p-6 flex flex-col gap-6 border border-border rounded-b-xl hidden"
+          >
+            <a
+              class="text-text-primary font-inter text-[16px] hover:text-secondary"
+              href=""
+            >
+              Layanan IT Outsourching
+            </a>
+            <a
+              class="text-text-primary font-inter text-[16px] hover:text-secondary"
+              href=""
+            >
+              Solusi BPO & Contact Center
+            </a>
+            <a
+              class="text-text-primary font-inter text-[16px] hover:text-secondary"
+              href=""
+            >
+              Layanan Facility & Security Management
+            </a>
+            <a
+              class="text-text-primary font-inter text-[16px] hover:text-secondary"
+              href=""
+            >
+              Layanan Assessment Center
+            </a>
+            <a
+              class="text-text-primary font-inter text-[16px] hover:text-secondary"
+              href=""
+            >
+              Layanan Organization Development
+            </a>
+          </div>
+        </div>
+        <div class="flex items-center gap-2 cursor-pointer group">
+          <a
+            href="#"
+            class="font-inter text-[16px] text-text-primary cursor-pointer group-hover:text-secondary"
+            >Resources</a
+          >
+        </div>
+        <div class="flex items-center gap-2 cursor-pointer group">
+          <a
+            href="#"
+            class="font-inter text-[16px] text-text-primary cursor-pointer group-hover:text-secondary"
+            >Referral</a
+          >
+        </div>
+      </nav>
+
+      <!-- Button cta -->
+      <a
+        class="lg:block hidden px-8 py-3 bg-secondary rounded-xl font-inter text-sm font-semibold text-background"
+        href="https://pgp6i.app.link/e/hubungikami"
+      >
+        Hubungi Kami
+      </a>
+
+      <!-- Close and Open sidebar menu -->
+      <a id="sidebar-toggle" class="lg:hidden block" href="#">
+        <!-- Close sidebar -->
+        <svg
+          id="sidebar-close-icon"
+          class="hidden"
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="none"
+        >
+          <path
+            d="M2.04853 0.351472C1.5799 -0.117157 0.820101 -0.117157 0.351472 0.351472C-0.117157 0.820101 -0.117157 1.5799 0.351472 2.04853L6.30294 8L0.351472 13.9515C-0.117157 14.4201 -0.117157 15.1799 0.351472 15.6485C0.820101 16.1172 1.5799 16.1172 2.04853 15.6485L8 9.69706L13.9515 15.6485C14.4201 16.1172 15.1799 16.1172 15.6485 15.6485C16.1172 15.1799 16.1172 14.4201 15.6485 13.9515L9.69706 8L15.6485 2.04853C16.1172 1.5799 16.1172 0.820101 15.6485 0.351472C15.1799 -0.117157 14.4201 -0.117157 13.9515 0.351472L8 6.30294L2.04853 0.351472Z"
+            fill="#FA9A07"
+          />
+        </svg>
+
+        <!-- Open sidebar -->
+        <svg
+          id="sidebar-open-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="16"
+          viewBox="0 0 24 16"
+          fill="none"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M0 1C0 0.447715 0.447715 0 1 0H23C23.5523 0 24 0.447715 24 1C24 1.55228 23.5523 2 23 2H1C0.447715 2 0 1.55228 0 1ZM0 8C0 7.44772 0.447715 7 1 7H23C23.5523 7 24 7.44772 24 8C24 8.55228 23.5523 9 23 9H1C0.447715 9 0 8.55228 0 8ZM11 15C11 14.4477 11.4477 14 12 14H23C23.5523 14 24 14.4477 24 15C24 15.5523 23.5523 16 23 16H12C11.4477 16 11 15.5523 11 15Z"
+            fill="#FA9A07"
+          />
+        </svg>
+      </a>
+
+      <!-- Side bar (slides from right) -->
+      <div
+        id="sidebar"
+        style="height: calc(100vh - 100%)"
+        class="lg:hidden absolute top-full right-0 w-84.75 p-4 bg-background transform translate-x-full transition-transform duration-300 ease-out overflow-y-auto flex flex-col gap-10"
+      >
+        <div class="flex flex-col gap-4">
+          <div
+            id="menu-nav-mobile"
+            class="flex flex-col gap-4 relative cursor-pointer group py-4"
+          >
+            <div class="flex items-center gap-2">
+              <label
+                id="menu-label-mobile"
+                class="font-inter text-[16px] text-text-primary group-hover:text-secondary cursor-pointer"
+                >Layanan</label
+              >
+              <svg
+                id="menu-icon-mobile"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                class="text-text-primary group-hover:text-secondary cursor-pointer transform transition-transform duration-200"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12.5303 16.2803C12.2374 16.5732 11.7626 16.5732 11.4697 16.2803L3.96967 8.78033C3.67678 8.48744 3.67678 8.01256 3.96967 7.71967C4.26256 7.42678 4.73744 7.42678 5.03033 7.71967L12 14.6893L18.9697 7.71967C19.2626 7.42678 19.7374 7.42678 20.0303 7.71967C20.3232 8.01256 20.3232 8.48744 20.0303 8.78033L12.5303 16.2803Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+
+            <div
+              id="menu-dropdown-mobile"
+              class="bg-background top-full left-0 h-fit w-88.75 flex flex-col gap-4 hidden opacity-0 scale-95 transform transition duration-200 ease-out origin-top"
+            >
+              <a
+                class="text-text-primary font-inter text-[16px] hover:text-secondary"
+                href="#"
+              >
+                Layanan IT Outsourcing
+              </a>
+              <a
+                class="text-text-primary font-inter text-[16px] hover:text-secondary"
+                href="#"
+              >
+                Solusi BPO & Contact Center
+              </a>
+              <a
+                class="text-text-primary font-inter text-[16px] hover:text-secondary"
+                href="#"
+              >
+                Layanan Facility & Security Management
+              </a>
+              <a
+                class="text-text-primary font-inter text-[16px] hover:text-secondary"
+                href="#"
+              >
+                Layanan Assessment Center
+              </a>
+              <a
+                class="text-text-primary font-inter text-[16px] hover:text-secondary"
+                href="#"
+              >
+                Layanan Organization Development
+              </a>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-2 cursor-pointer group py-4">
+            <label
+              class="font-inter text-[16px] text-text-primary cursor-pointer group-hover:text-secondary"
+              >Resources</label
+            >
+          </div>
+          <div class="flex items-center gap-2 cursor-pointer group py-4">
+            <label
+              class="font-inter text-[16px] text-text-primary cursor-pointer group-hover:text-secondary"
+              >Referal</label
+            >
+          </div>
+        </div>
+
+        <a
+          class="lg:hidden block px-8 py-3 bg-secondary rounded-xl font-inter text-sm font-semibold text-background text-center"
+          href="https://pgp6i.app.link/e/hubungikami"
+        >
+          Hubungi Kami
+        </a>
+      </div>
+    </header>
+
+    <main class="bg-background">
+      <section
+        class="w-full min-h-screen bg-cover bg-center bg-no-repeat bg-[linear-gradient(0deg,rgba(52,48,48,0.80)_0%,rgba(52,48,48,0.80)_100%),url('/images/contoh_thumbnail_article_1.png')] flex flex-col justify-center items-center"
+      >
+        <div class="flex items-center gap-3"></div>
+      </section>
+      <!-- Footer section -->
+      <footer
+        class="bg-background shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.15)] w-full h-fit lg:px-14 px-4 py-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+      >
+        <div class="lg:col-span-2 col-span-1 flex flex-col gap-6">
+          <div>
+            <!-- Logo -->
+            <img src="/images/ksps_logo.png" width="120" alt="" />
+          </div>
+          <p class="font-inter text-[16px] text-text-primary">
+            <label class="font-bold">PT Karya Solusi Prima Sejahtera</label>
+            <br />
+            KSPS perusahaan IT Outsourcing terpercaya di Indonesia
+          </p>
+          <p class="font-inter text-[16px] text-text-primary">
+            KSPS vendor IT Outsourcing telah dipercaya menyalurkan talenta 1800+
+            di 50+ kota Indonesia. KSPS telah menjadi mitra terpercaya yang
+            mendukung dalam perkembangan bisnis di sektor ICT khususnya pada
+            perusahaan Lintasarta & Group.
+          </p>
+
+          <!-- Social media -->
+          <div class="flex items-center gap-6">
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/ksps_official/">
+              <svg
+                class="w-6 h-6"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M13.028 2C14.153 2.003 14.724 2.009 15.217 2.023L15.411 2.03C15.635 2.038 15.856 2.048 16.123 2.06C17.187 2.11 17.913 2.278 18.55 2.525C19.21 2.779 19.766 3.123 20.322 3.678C20.8307 4.17773 21.2242 4.78247 21.475 5.45C21.722 6.087 21.89 6.813 21.94 7.878C21.952 8.144 21.962 8.365 21.97 8.59L21.976 8.784C21.991 9.276 21.997 9.847 21.999 10.972L22 11.718V13.028C22.0024 13.7574 21.9948 14.4868 21.977 15.216L21.971 15.41C21.963 15.635 21.953 15.856 21.941 16.122C21.891 17.187 21.721 17.912 21.475 18.55C21.2242 19.2175 20.8307 19.8223 20.322 20.322C19.8223 20.8307 19.2175 21.2242 18.55 21.475C17.913 21.722 17.187 21.89 16.123 21.94L15.411 21.97L15.217 21.976C14.724 21.99 14.153 21.997 13.028 21.999L12.282 22H10.973C10.2433 22.0026 9.51352 21.9949 8.784 21.977L8.59 21.971C8.35261 21.962 8.11527 21.9517 7.878 21.94C6.814 21.89 6.088 21.722 5.45 21.475C4.78283 21.2241 4.17844 20.8306 3.679 20.322C3.16994 19.8224 2.77611 19.2176 2.525 18.55C2.278 17.913 2.11 17.187 2.06 16.122L2.03 15.41L2.025 15.216C2.00656 14.4868 1.99823 13.7574 2 13.028V10.972C1.99723 10.2426 2.00456 9.5132 2.022 8.784L2.029 8.59C2.037 8.365 2.047 8.144 2.059 7.878C2.109 6.813 2.277 6.088 2.524 5.45C2.77569 4.7822 3.17022 4.17744 3.68 3.678C4.17915 3.16955 4.78318 2.77607 5.45 2.525C6.088 2.278 6.813 2.11 7.878 2.06C8.144 2.048 8.366 2.038 8.59 2.03L8.784 2.024C9.51319 2.00623 10.2426 1.99857 10.972 2.001L13.028 2ZM12 7C10.6739 7 9.40214 7.52678 8.46446 8.46447C7.52678 9.40215 7 10.6739 7 12C7 13.3261 7.52678 14.5979 8.46446 15.5355C9.40214 16.4732 10.6739 17 12 17C13.3261 17 14.5978 16.4732 15.5355 15.5355C16.4732 14.5979 17 13.3261 17 12C17 10.6739 16.4732 9.40215 15.5355 8.46447C14.5978 7.52678 13.3261 7 12 7ZM12 9C12.394 8.99993 12.7841 9.07747 13.1481 9.22817C13.5121 9.37887 13.8428 9.5998 14.1215 9.87833C14.4001 10.1569 14.6211 10.4875 14.7719 10.8515C14.9228 11.2154 15.0004 11.6055 15.0005 11.9995C15.0006 12.3935 14.923 12.7836 14.7723 13.1476C14.6216 13.5116 14.4007 13.8423 14.1222 14.121C13.8436 14.3996 13.513 14.6206 13.149 14.7714C12.7851 14.9223 12.395 14.9999 12.001 15C11.2053 15 10.4423 14.6839 9.87968 14.1213C9.31707 13.5587 9.001 12.7956 9.001 12C9.001 11.2044 9.31707 10.4413 9.87968 9.87868C10.4423 9.31607 11.2053 9 12.001 9M17.251 5.5C16.9195 5.5 16.6015 5.6317 16.3671 5.86612C16.1327 6.10054 16.001 6.41848 16.001 6.75C16.001 7.08152 16.1327 7.39946 16.3671 7.63388C16.6015 7.8683 16.9195 8 17.251 8C17.5825 8 17.9005 7.8683 18.1349 7.63388C18.3693 7.39946 18.501 7.08152 18.501 6.75C18.501 6.41848 18.3693 6.10054 18.1349 5.86612C17.9005 5.6317 17.5825 5.5 17.251 5.5Z"
+                  fill="#211591"
+                />
+              </svg>
+            </a>
+
+            <!-- Facebook -->
+            <a href="#">
+              <svg
+                class="w-6 h-6"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M22 12C22 6.48 17.52 2 12 2C6.48 2 2 6.48 2 12C2 16.84 5.44 20.87 10 21.8V15H8V12H10V9.5C10 7.57 11.57 6 13.5 6H16V9H14C13.45 9 13 9.45 13 10V12H16V15H13V21.95C18.05 21.45 22 17.19 22 12Z"
+                  fill="#211591"
+                />
+              </svg>
+            </a>
+
+            <!-- Linkedln -->
+            <a href="https://www.linkedin.com/company/kspsoutsourcing/">
+              <svg
+                class="w-6 h-6"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M19 3C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19ZM18.5 18.5V13.2C18.5 12.3354 18.1565 11.5062 17.5452 10.8948C16.9338 10.2835 16.1046 9.94 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17C14.6813 12.17 15.0374 12.3175 15.2999 12.5801C15.5625 12.8426 15.71 13.1987 15.71 13.57V18.5H18.5ZM6.88 8.56C7.32556 8.56 7.75288 8.383 8.06794 8.06794C8.383 7.75288 8.56 7.32556 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19C6.43178 5.19 6.00193 5.36805 5.68499 5.68499C5.36805 6.00193 5.19 6.43178 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56ZM8.27 18.5V10.13H5.5V18.5H8.27Z"
+                  fill="#211591"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="col-span-1 flex flex-col gap-3">
+          <p class="font-inter font-semibold text-primary text-[16px]">
+            Services:
+          </p>
+          <a href="#" class="font-inter text-text-primary text-[16px]">
+            Layanan IT Outsourcing
+          </a>
+          <a href="#" class="font-inter text-text-primary text-[16px]">
+            Solusi BPO & Contact Center
+          </a>
+          <a href="#" class="font-inter text-text-primary text-[16px]">
+            Layanan Facility & Security Management
+          </a>
+          <a href="#" class="font-inter text-text-primary text-[16px]">
+            Layanan Assessment Center
+          </a>
+          <a href="#" class="font-inter text-text-primary text-[16px]">
+            Layanan Organization Development
+          </a>
+        </div>
+        <div class="col-span-1 flex flex-col gap-3">
+          <p class="font-inter font-semibold text-primary text-[16px]">
+            Hubungi kami:
+          </p>
+          <div class="flex items-center gap-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M1.5 8.6691V17.25C1.5 18.9069 2.84315 20.25 4.5 20.25H19.5C21.1569 20.25 22.5 18.9069 22.5 17.25V8.6691L13.5723 14.1631C12.6081 14.7564 11.3919 14.7564 10.4277 14.1631L1.5 8.6691Z"
+                fill="#0F172A"
+              />
+              <path
+                d="M22.5 6.90783V6.75C22.5 5.09315 21.1569 3.75 19.5 3.75H4.5C2.84315 3.75 1.5 5.09315 1.5 6.75V6.90783L11.2139 12.8856C11.696 13.1823 12.304 13.1823 12.7861 12.8856L22.5 6.90783Z"
+                fill="#0F172A"
+              />
+            </svg>
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=tim.marketing@ksps.coid"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="font-inter text-text-primary text-[16px] underline"
+              >tim.marketing@ksps.coid</a
+            >
+          </div>
+          <div class="flex justify-start items-start gap-2">
+            <svg
+              class="w-6 h-6 flex-shrink-0"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M11.5397 22.351C11.57 22.3685 11.5937 22.3821 11.6105 22.3915L11.6384 22.4071C11.8613 22.5294 12.1378 22.5285 12.3608 22.4075L12.3895 22.3915C12.4063 22.3821 12.43 22.3685 12.4603 22.351C12.5207 22.316 12.607 22.265 12.7155 22.1982C12.9325 22.0646 13.2388 21.8676 13.6046 21.6091C14.3351 21.0931 15.3097 20.3274 16.2865 19.3273C18.2307 17.3368 20.25 14.3462 20.25 10.5C20.25 5.94365 16.5563 2.25 12 2.25C7.44365 2.25 3.75 5.94365 3.75 10.5C3.75 14.3462 5.76932 17.3368 7.71346 19.3273C8.69025 20.3274 9.66491 21.0931 10.3954 21.6091C10.7612 21.8676 11.0675 22.0646 11.2845 22.1982C11.393 22.265 11.4793 22.316 11.5397 22.351ZM12 13.5C13.6569 13.5 15 12.1569 15 10.5C15 8.84315 13.6569 7.5 12 7.5C10.3431 7.5 9 8.84315 9 10.5C9 12.1569 10.3431 13.5 12 13.5Z"
+                fill="#0F172A"
+              />
+            </svg>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Jl.+Lebak+Bulus+I+No.12+Blok+A9,+RT.4%2FRW.6,+Lb.+Bulus,+Kec.+Cilandak,+Kota+Jakarta+Selatan,+Daerah+Khusus+Ibukota+Jakarta+12440"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="font-inter text-text-primary text-[16px] break-words"
+              >Jl. Lebak Bulus I No.12 Blok A9, RT.4/RW.6, Lb. Bulus, Kec.
+              Cilandak, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta
+              12440</a
+            >
+          </div>
+        </div>
+      </footer>
+      <div
+        class="w-full h-fit lg:px-14 px-4 py-4 bg-primary flex items-center justify-center"
+      >
+        <p
+          class="font-inter text-[16px] font-semibold text-[#FDFDFD] text-center"
+        >
+          @2026 PT Karya Solusi Prima Sejahtera. All Rights Reserved
+        </p>
+      </div>
+    </main>
+
+    <script src="./js/menu.js"></script>
+    <script src="./js/carousel.js"></script>
+    <script src="./js/testi-carousel.js"></script>
+    <script src="./js/trust-modal.js"></script>
+    <script src="./js/faq.js"></script>
+    <script src="./js/countup.js"></script>
+    <script src="./js/article-carousel.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1529 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth" style="scroll-padding-top: 72px">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./css/output.css" rel="stylesheet" />
+    <title>KSPS</title>
+  </head>
+  <body class="antialiased bg-white">
+    <!-- Overlay for sidebar -->
+    <div
+      id="sidebar-overlay"
+      class="lg:hidden fixed z-10 inset-0 bg-black/40 opacity-0 transition-opacity duration-300 hidden"
+    ></div>
+
+    <header
+      class="bg-background fixed top-0 left-0 z-100 w-full lg:px-14 px-4 py-4 flex items-center justify-between shadow-[0_4px_6px_-1px_rgba(0,0,0,0.15)]"
+    >
+      <!-- Logo -->
+      <img src="/images/ksps_logo.png" width="70" alt="" />
+
+      <nav class="lg:flex hidden items-center gap-6">
+        <div
+          id="menu-nav-desktop"
+          class="flex items-center gap-2 relative cursor-pointer group"
+        >
+          <label
+            id="menu-label-desktop"
+            class="font-inter text-[16px] text-text-primary group-hover:text-secondary cursor-pointer"
+            >Layanan</label
+          >
+          <svg
+            id="menu-icon-desktop"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            class="text-text-primary group-hover:text-secondary cursor-pointer"
+            fill="none"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M12.5303 16.2803C12.2374 16.5732 11.7626 16.5732 11.4697 16.2803L3.96967 8.78033C3.67678 8.48744 3.67678 8.01256 3.96967 7.71967C4.26256 7.42678 4.73744 7.42678 5.03033 7.71967L12 14.6893L18.9697 7.71967C19.2626 7.42678 19.7374 7.42678 20.0303 7.71967C20.3232 8.01256 20.3232 8.48744 20.0303 8.78033L12.5303 16.2803Z"
+              fill="currentColor"
+            />
+          </svg>
+
+          <!-- Menu -->
+          <div
+            id="menu-dropdown-desktop"
+            class="bg-background lg:absolute top-full left-0 h-fit w-88.75 p-6 flex flex-col gap-6 border border-border rounded-b-xl hidden"
+          >
+            <a
+              class="text-text-primary font-inter text-[16px] hover:text-secondary"
+              href=""
+            >
+              Layanan IT Outsourching
+            </a>
+            <a
+              class="text-text-primary font-inter text-[16px] hover:text-secondary"
+              href=""
+            >
+              Solusi BPO & Contact Center
+            </a>
+            <a
+              class="text-text-primary font-inter text-[16px] hover:text-secondary"
+              href=""
+            >
+              Layanan Facility & Security Management
+            </a>
+            <a
+              class="text-text-primary font-inter text-[16px] hover:text-secondary"
+              href=""
+            >
+              Layanan Assessment Center
+            </a>
+            <a
+              class="text-text-primary font-inter text-[16px] hover:text-secondary"
+              href=""
+            >
+              Layanan Organization Development
+            </a>
+          </div>
+        </div>
+        <div class="flex items-center gap-2 cursor-pointer group">
+          <a
+            href="#"
+            class="font-inter text-[16px] text-text-primary cursor-pointer group-hover:text-secondary"
+            >Resources</a
+          >
+        </div>
+        <div class="flex items-center gap-2 cursor-pointer group">
+          <a
+            href="#"
+            class="font-inter text-[16px] text-text-primary cursor-pointer group-hover:text-secondary"
+            >Referral</a
+          >
+        </div>
+      </nav>
+
+      <!-- Button cta -->
+      <a
+        class="lg:block hidden px-8 py-3 bg-secondary rounded-xl font-inter text-sm font-semibold text-background"
+        href="https://pgp6i.app.link/e/hubungikami"
+      >
+        Hubungi Kami
+      </a>
+
+      <!-- Close and Open sidebar menu -->
+      <a id="sidebar-toggle" class="lg:hidden block" href="#">
+        <!-- Close sidebar -->
+        <svg
+          id="sidebar-close-icon"
+          class="hidden"
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="none"
+        >
+          <path
+            d="M2.04853 0.351472C1.5799 -0.117157 0.820101 -0.117157 0.351472 0.351472C-0.117157 0.820101 -0.117157 1.5799 0.351472 2.04853L6.30294 8L0.351472 13.9515C-0.117157 14.4201 -0.117157 15.1799 0.351472 15.6485C0.820101 16.1172 1.5799 16.1172 2.04853 15.6485L8 9.69706L13.9515 15.6485C14.4201 16.1172 15.1799 16.1172 15.6485 15.6485C16.1172 15.1799 16.1172 14.4201 15.6485 13.9515L9.69706 8L15.6485 2.04853C16.1172 1.5799 16.1172 0.820101 15.6485 0.351472C15.1799 -0.117157 14.4201 -0.117157 13.9515 0.351472L8 6.30294L2.04853 0.351472Z"
+            fill="#FA9A07"
+          />
+        </svg>
+
+        <!-- Open sidebar -->
+        <svg
+          id="sidebar-open-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="16"
+          viewBox="0 0 24 16"
+          fill="none"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M0 1C0 0.447715 0.447715 0 1 0H23C23.5523 0 24 0.447715 24 1C24 1.55228 23.5523 2 23 2H1C0.447715 2 0 1.55228 0 1ZM0 8C0 7.44772 0.447715 7 1 7H23C23.5523 7 24 7.44772 24 8C24 8.55228 23.5523 9 23 9H1C0.447715 9 0 8.55228 0 8ZM11 15C11 14.4477 11.4477 14 12 14H23C23.5523 14 24 14.4477 24 15C24 15.5523 23.5523 16 23 16H12C11.4477 16 11 15.5523 11 15Z"
+            fill="#FA9A07"
+          />
+        </svg>
+      </a>
+
+      <!-- Side bar (slides from right) -->
+      <div
+        id="sidebar"
+        style="height: calc(100vh - 100%)"
+        class="lg:hidden absolute top-full right-0 w-84.75 p-4 bg-background transform translate-x-full transition-transform duration-300 ease-out overflow-y-auto flex flex-col gap-10"
+      >
+        <div class="flex flex-col gap-4">
+          <div
+            id="menu-nav-mobile"
+            class="flex flex-col gap-4 relative cursor-pointer group py-4"
+          >
+            <div class="flex items-center gap-2">
+              <label
+                id="menu-label-mobile"
+                class="font-inter text-[16px] text-text-primary group-hover:text-secondary cursor-pointer"
+                >Layanan</label
+              >
+              <svg
+                id="menu-icon-mobile"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                class="text-text-primary group-hover:text-secondary cursor-pointer transform transition-transform duration-200"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12.5303 16.2803C12.2374 16.5732 11.7626 16.5732 11.4697 16.2803L3.96967 8.78033C3.67678 8.48744 3.67678 8.01256 3.96967 7.71967C4.26256 7.42678 4.73744 7.42678 5.03033 7.71967L12 14.6893L18.9697 7.71967C19.2626 7.42678 19.7374 7.42678 20.0303 7.71967C20.3232 8.01256 20.3232 8.48744 20.0303 8.78033L12.5303 16.2803Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+
+            <div
+              id="menu-dropdown-mobile"
+              class="bg-background top-full left-0 h-fit w-88.75 flex flex-col gap-4 hidden opacity-0 scale-95 transform transition duration-200 ease-out origin-top"
+            >
+              <a
+                class="text-text-primary font-inter text-[16px] hover:text-secondary"
+                href="#"
+              >
+                Layanan IT Outsourcing
+              </a>
+              <a
+                class="text-text-primary font-inter text-[16px] hover:text-secondary"
+                href="#"
+              >
+                Solusi BPO & Contact Center
+              </a>
+              <a
+                class="text-text-primary font-inter text-[16px] hover:text-secondary"
+                href="#"
+              >
+                Layanan Facility & Security Management
+              </a>
+              <a
+                class="text-text-primary font-inter text-[16px] hover:text-secondary"
+                href="#"
+              >
+                Layanan Assessment Center
+              </a>
+              <a
+                class="text-text-primary font-inter text-[16px] hover:text-secondary"
+                href="#"
+              >
+                Layanan Organization Development
+              </a>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-2 cursor-pointer group py-4">
+            <label
+              class="font-inter text-[16px] text-text-primary cursor-pointer group-hover:text-secondary"
+              >Resources</label
+            >
+          </div>
+          <div class="flex items-center gap-2 cursor-pointer group py-4">
+            <label
+              class="font-inter text-[16px] text-text-primary cursor-pointer group-hover:text-secondary"
+              >Referal</label
+            >
+          </div>
+        </div>
+
+        <a
+          class="lg:hidden block px-8 py-3 bg-secondary rounded-xl font-inter text-sm font-semibold text-background text-center"
+          href="https://pgp6i.app.link/e/hubungikami"
+        >
+          Hubungi Kami
+        </a>
+      </div>
+    </header>
+
+    <main class="bg-background">
+      <section
+        class="flex flex-col-reverse lg:flex-row lg:h-screen h-fit w-full lg:px-14 px-4 items-center justify-center lg:gap-11 gap-4 py-10 lg:py-0 pt-20"
+      >
+        <div id="article-content" class="flex-1 flex flex-col gap-5">
+          <div class="flex items-center gap-3">
+            <!-- Digunakan untuk -->
+            <img
+              class="article-author-img rounded-full lg:size-12 size-[38px] object-cover"
+              src="/images/bdx.png"
+              alt=""
+            />
+            <div class="flex flex-col">
+              <p class="font-inter text-sm text-text-primary">Ditulis Oleh</p>
+              <div class="flex items-center gap-2">
+                <!-- Nama author yang buat articlenya -->
+                <p
+                  class="article-author-name text-primary font-inter text-[16px] font-semibold"
+                >
+                  KSPS
+                </p>
+
+                <svg
+                  class="lg:size-2 size-1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="8"
+                  height="8"
+                  viewBox="0 0 8 8"
+                  fill="none"
+                >
+                  <circle cx="4" cy="4" r="4" fill="#2E2E2E" />
+                </svg>
+
+                <!-- Tanggal buat articlenya -->
+                <p
+                  class="article-date text-text-primary font-inter text-[16px]"
+                >
+                  30 Januari 2026
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Judul article -->
+          <h1
+            class="article-title font-manrope lg:text-4xl text-[24px] font-bold text-text-primary lg:leading-11 leading-8"
+          >
+            Strategi Outsourcing untuk Meningkatkan Efisiensi Perusahaan
+          </h1>
+
+          <!-- Penggalan isi/description dari article -->
+          <p
+            class="article-description font-inter lg:text-[20px] text-[16px] text-text-secondary lg:leading-7 line-clamp-6"
+          >
+            Strategi outsourcing membantu perusahaan mengurangi biaya
+            operasional sekaligus meningkatkan fokus pada core bisnis.
+          </p>
+
+          <!-- Ini nanti masuk ke detail article -->
+          <a
+            href="#"
+            class="article-read-more px-8 py-3 rounded-xl bg-secondary self-start flex justify-center items-center text-background font-inter text-sm font-semibold"
+            >Read More</a
+          >
+
+          <div class="flex items-center gap-6">
+            <!-- Left -->
+            <a
+              id="article-prev-btn"
+              href="#"
+              class="transition-all hover:scale-110"
+            >
+              <svg
+                width="44"
+                height="44"
+                viewBox="0 0 44 44"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="44" height="44" rx="22" fill="#E2E1E6" />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M17.7197 22.5303C17.4268 22.2374 17.4268 21.7626 17.7197 21.4697L25.2197 13.9697C25.5126 13.6768 25.9874 13.6768 26.2803 13.9697C26.5732 14.2626 26.5732 14.7374 26.2803 15.0303L19.3107 22L26.2803 28.9697C26.5732 29.2626 26.5732 29.7374 26.2803 30.0303C25.9874 30.3232 25.5126 30.3232 25.2197 30.0303L17.7197 22.5303Z"
+                  fill="#1A1A1A"
+                />
+              </svg>
+            </a>
+
+            <!-- Right -->
+            <a
+              id="article-next-btn"
+              href="#"
+              class="transition-all hover:scale-110"
+              ><svg
+                width="44"
+                height="44"
+                viewBox="0 0 44 44"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="44" height="44" rx="22" fill="#E2E1E6" />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M26.2803 21.4697C26.5732 21.7626 26.5732 22.2374 26.2803 22.5303L18.7803 30.0303C18.4874 30.3232 18.0126 30.3232 17.7197 30.0303C17.4268 29.7374 17.4268 29.2626 17.7197 28.9697L24.6893 22L17.7197 15.0303C17.4268 14.7374 17.4268 14.2626 17.7197 13.9697C18.0126 13.6768 18.4874 13.6768 18.7803 13.9697L26.2803 21.4697Z"
+                  fill="#1A1A1A"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div id="article-image" class="flex-1">
+          <img
+            class="lg:size-full lg:w-full w-screen lg:h-[400px] h-[150px] object-cover rounded-xl"
+            src="/images/contoh_thumbnail_article_1.png"
+            alt=""
+          />
+        </div>
+      </section>
+
+      <section
+        class="w-full lg:px-14 px-4 min-h-screen flex flex-col lg:gap-8 gap-6 mb-5"
+      >
+        <h1
+          class="text-center font-manrope lg:text-4xl text-[20px] font-bold lg:leading-11 leading-8"
+        >
+          Cari Dan Temukan Informasi <br />
+          Sesuai Dengan
+          <label class="text-secondary">Kebutuhan Disini</label>
+        </h1>
+
+        <!-- Digunakan untuk mencari article -->
+        <div
+          class="rounded-xl border border-border bg-white p-4 flex items-center justify-between h-fit lg:w-232.5 w-full text-center self-center gap-3"
+        >
+          <input
+            type="text"
+            placeholder="Cari Artikel Disini"
+            class="w-full font-inter lg:text-[20px] text-[16px] placeholder:font-inter placeholder:lg:text-[20px] placeholder:text-[16px] placeholder:text-[#A5A5A5] outline-none border-none focus:ring-0"
+          />
+
+          <button
+            class="cursor-pointer px-8 py-3 bg-secondary rounded-xl font-inter text-sm font-semibold text-background"
+          >
+            Cari
+          </button>
+        </div>
+
+        <!-- Ini isi dari hasil pencarian article, defaultnya itu ada 4 article jika belum di search articlenya -->
+        <div class="w-full grid lg:grid-cols-2 grid-cols-1 gap-6">
+          <a
+            href="#"
+            class="w-full lg:h-[196px] h-[148px] border border-border flex overflow-hidden rounded-xl bg-white"
+          >
+            <img
+              src="/images/contoh_thumbnail_article_1.png"
+              class="object-cover h-full lg:w-[189px] w-[129px]"
+              alt=""
+            />
+
+            <div class="lg:p-6 p-3 size-full flex flex-col justify-between">
+              <!-- Judul article -->
+              <h2
+                class="font-inter lg:text-[20px] text-sm font-semibold text-text-primary"
+              >
+                Strategi Outsourcing untuk Meningkatkan Efisiensi Perusahaan
+              </h2>
+              <div class="flex items-center gap-2">
+                <!-- Nama author dari article -->
+                <p
+                  class="font-inter lg:text-[16px] text-[10px] text-primary font-semibold"
+                >
+                  KSPS
+                </p>
+
+                <svg
+                  class="lg:size-2 size-1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="8"
+                  height="8"
+                  viewBox="0 0 8 8"
+                  fill="none"
+                >
+                  <circle cx="4" cy="4" r="4" fill="#2E2E2E" />
+                </svg>
+
+                <!-- Tanggal publish article -->
+                <p
+                  class="font-inter text-text-primary lg:text-[16px] text-[10px]"
+                >
+                  30 January 2026
+                </p>
+              </div>
+            </div>
+          </a>
+
+          <a
+            href="#"
+            class="w-full lg:h-[196px] h-[148px] border border-border flex overflow-hidden rounded-xl bg-white"
+          >
+            <img
+              src="/images/contoh_thumbnail_article_1.png"
+              class="object-cover h-full lg:w-[189px] w-[129px]"
+              alt=""
+            />
+
+            <div class="lg:p-6 p-3 size-full flex flex-col justify-between">
+              <!-- Judul article -->
+              <h2
+                class="font-inter lg:text-[20px] text-sm font-semibold text-text-primary"
+              >
+                Strategi Outsourcing untuk Meningkatkan Efisiensi Perusahaan
+              </h2>
+              <div class="flex items-center gap-2">
+                <!-- Nama author dari article -->
+                <p
+                  class="font-inter lg:text-[16px] text-[10px] text-primary font-semibold"
+                >
+                  KSPS
+                </p>
+
+                <svg
+                  class="lg:size-2 size-1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="8"
+                  height="8"
+                  viewBox="0 0 8 8"
+                  fill="none"
+                >
+                  <circle cx="4" cy="4" r="4" fill="#2E2E2E" />
+                </svg>
+
+                <!-- Tanggal publish article -->
+                <p
+                  class="font-inter text-text-primary lg:text-[16px] text-[10px]"
+                >
+                  30 January 2026
+                </p>
+              </div>
+            </div>
+          </a>
+
+          <a
+            href="#"
+            class="w-full lg:h-[196px] h-[148px] border border-border flex overflow-hidden rounded-xl bg-white"
+          >
+            <img
+              src="/images/contoh_thumbnail_article_1.png"
+              class="object-cover h-full lg:w-[189px] w-[129px]"
+              alt=""
+            />
+
+            <div class="lg:p-6 p-3 size-full flex flex-col justify-between">
+              <!-- Judul article -->
+              <h2
+                class="font-inter lg:text-[20px] text-sm font-semibold text-text-primary"
+              >
+                Strategi Outsourcing untuk Meningkatkan Efisiensi Perusahaan
+              </h2>
+              <div class="flex items-center gap-2">
+                <!-- Nama author dari article -->
+                <p
+                  class="font-inter lg:text-[16px] text-[10px] text-primary font-semibold"
+                >
+                  KSPS
+                </p>
+
+                <svg
+                  class="lg:size-2 size-1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="8"
+                  height="8"
+                  viewBox="0 0 8 8"
+                  fill="none"
+                >
+                  <circle cx="4" cy="4" r="4" fill="#2E2E2E" />
+                </svg>
+
+                <!-- Tanggal publish article -->
+                <p
+                  class="font-inter text-text-primary lg:text-[16px] text-[10px]"
+                >
+                  30 January 2026
+                </p>
+              </div>
+            </div>
+          </a>
+
+          <a
+            href="#"
+            class="w-full lg:h-[196px] h-[148px] border border-border flex overflow-hidden rounded-xl bg-white"
+          >
+            <img
+              src="/images/contoh_thumbnail_article_1.png"
+              class="object-cover h-full lg:w-[189px] w-[129px]"
+              alt=""
+            />
+
+            <div class="lg:p-6 p-3 size-full flex flex-col justify-between">
+              <!-- Judul article -->
+              <h2
+                class="font-inter lg:text-[20px] text-sm font-semibold text-text-primary"
+              >
+                Strategi Outsourcing untuk Meningkatkan Efisiensi Perusahaan
+              </h2>
+              <div class="flex items-center gap-2">
+                <!-- Nama author dari article -->
+                <p
+                  class="font-inter lg:text-[16px] text-[10px] text-primary font-semibold"
+                >
+                  KSPS
+                </p>
+
+                <svg
+                  class="lg:size-2 size-1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="8"
+                  height="8"
+                  viewBox="0 0 8 8"
+                  fill="none"
+                >
+                  <circle cx="4" cy="4" r="4" fill="#2E2E2E" />
+                </svg>
+
+                <!-- Tanggal publish article -->
+                <p
+                  class="font-inter text-text-primary lg:text-[16px] text-[10px]"
+                >
+                  30 January 2026
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- Category -->
+      <section class="w-full h-fit lg:px-14 px-4 lg:py-16 py-8 bg-primary">
+        <div class="w-full flex flex-wrap justify-between items-center">
+          <!-- Diambil dari category -->
+          <h1
+            class="font-marope lg:text-[28px] text-[20px] font-bold text-background"
+          >
+            Outsourcing & BPO
+          </h1>
+
+          <a
+            href="#"
+            class="font-inter lg:text-[16px] text-sm font-bold text-background"
+            >Lihat Semua Artikel →</a
+          >
+        </div>
+
+        <!-- Isi article ini maksimal 5 -->
+        <div class="mt-8 flex lg:flex-row flex-col gap-6">
+          <!-- Card isi article -->
+          <div
+            class="rounded-xl lg:w-[262px] w-full lg:h-[364px] h-[312px] border border-border overflow-hidden bg-white flex flex-col"
+          >
+            <!-- Thumbnail article -->
+            <img
+              src="/images/contoh_thumbnail_article_1.png"
+              class="w-full h-[168px] object-cover"
+              alt=""
+            />
+
+            <div class="lg:p-6 p-3 flex-1 flex flex-col justify-between">
+              <h2
+                class="font-inter text-[20px] font-bold text-text-primary leading-tight"
+              >
+                Strategi Outsourcing untuk Meningkatkan Efisiensi Perusahaan
+              </h2>
+
+              <div class="flex items-center gap-2">
+                <!-- Author pembuat article -->
+                <p class="font-inter text-[14px] font-bold text-primary">
+                  KSPS
+                </p>
+
+                <svg width="4" height="4" viewBox="0 0 8 8" fill="none">
+                  <circle cx="4" cy="4" r="4" fill="#2E2E2E" />
+                </svg>
+
+                <!-- tanggal dibuat article -->
+                <p class="font-inter text-[14px] text-text-primary">
+                  30 Jan 2026
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="rounded-xl lg:w-[262px] w-full lg:h-[364px] h-[312px] border border-border overflow-hidden bg-white flex flex-col"
+          >
+            <!-- Thumbnail article -->
+            <img
+              src="/images/contoh_thumbnail_article_1.png"
+              class="w-full h-[168px] object-cover"
+              alt=""
+            />
+
+            <div class="lg:p-6 p-3 flex-1 flex flex-col justify-between">
+              <h2
+                class="font-inter text-[20px] font-bold text-text-primary leading-tight"
+              >
+                Strategi Outsourcing untuk Meningkatkan Efisiensi Perusahaan
+              </h2>
+
+              <div class="flex items-center gap-2">
+                <!-- Author pembuat article -->
+                <p class="font-inter text-[14px] font-bold text-primary">
+                  KSPS
+                </p>
+
+                <svg width="4" height="4" viewBox="0 0 8 8" fill="none">
+                  <circle cx="4" cy="4" r="4" fill="#2E2E2E" />
+                </svg>
+
+                <!-- tanggal dibuat article -->
+                <p class="font-inter text-[14px] text-text-primary">
+                  30 Jan 2026
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="rounded-xl lg:w-[262px] w-full lg:h-[364px] h-[312px] border border-border overflow-hidden bg-white flex flex-col"
+          >
+            <!-- Thumbnail article -->
+            <img
+              src="/images/contoh_thumbnail_article_1.png"
+              class="w-full h-[168px] object-cover"
+              alt=""
+            />
+
+            <div class="lg:p-6 p-3 flex-1 flex flex-col justify-between">
+              <h2
+                class="font-inter text-[20px] font-bold text-text-primary leading-tight"
+              >
+                Strategi Outsourcing untuk Meningkatkan Efisiensi Perusahaan
+              </h2>
+
+              <div class="flex items-center gap-2">
+                <!-- Author pembuat article -->
+                <p class="font-inter text-[14px] font-bold text-primary">
+                  KSPS
+                </p>
+
+                <svg width="4" height="4" viewBox="0 0 8 8" fill="none">
+                  <circle cx="4" cy="4" r="4" fill="#2E2E2E" />
+                </svg>
+
+                <!-- tanggal dibuat article -->
+                <p class="font-inter text-[14px] text-text-primary">
+                  30 Jan 2026
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="rounded-xl lg:w-[262px] w-full lg:h-[364px] h-[312px] border border-border overflow-hidden bg-white flex flex-col"
+          >
+            <!-- Thumbnail article -->
+            <img
+              src="/images/contoh_thumbnail_article_1.png"
+              class="w-full h-[168px] object-cover"
+              alt=""
+            />
+
+            <div class="lg:p-6 p-3 flex-1 flex flex-col justify-between">
+              <h2
+                class="font-inter text-[20px] font-bold text-text-primary leading-tight"
+              >
+                Strategi Outsourcing untuk Meningkatkan Efisiensi Perusahaan
+              </h2>
+
+              <div class="flex items-center gap-2">
+                <!-- Author pembuat article -->
+                <p class="font-inter text-[14px] font-bold text-primary">
+                  KSPS
+                </p>
+
+                <svg width="4" height="4" viewBox="0 0 8 8" fill="none">
+                  <circle cx="4" cy="4" r="4" fill="#2E2E2E" />
+                </svg>
+
+                <!-- tanggal dibuat article -->
+                <p class="font-inter text-[14px] text-text-primary">
+                  30 Jan 2026
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="rounded-xl lg:w-[262px] w-full lg:h-[364px] h-[312px] border border-border overflow-hidden bg-white flex flex-col"
+          >
+            <!-- Thumbnail article -->
+            <img
+              src="/images/contoh_thumbnail_article_1.png"
+              class="w-full h-[168px] object-cover"
+              alt=""
+            />
+
+            <div class="lg:p-6 p-3 flex-1 flex flex-col justify-between">
+              <h2
+                class="font-inter text-[20px] font-bold text-text-primary leading-tight"
+              >
+                Strategi Outsourcing untuk Meningkatkan Efisiensi Perusahaan
+              </h2>
+
+              <div class="flex items-center gap-2">
+                <!-- Author pembuat article -->
+                <p class="font-inter text-[14px] font-bold text-primary">
+                  KSPS
+                </p>
+
+                <svg width="4" height="4" viewBox="0 0 8 8" fill="none">
+                  <circle cx="4" cy="4" r="4" fill="#2E2E2E" />
+                </svg>
+
+                <!-- tanggal dibuat article -->
+                <p class="font-inter text-[14px] text-text-primary">
+                  30 Jan 2026
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="w-full h-fit lg:px-14 px-4 lg:py-16 py-8">
+        <div class="w-full flex justify-between items-center">
+          <!-- Diambil dari category -->
+          <h1
+            class="font-marope lg:text-[28px] text-[20px] font-bold text-primary"
+          >
+            News & Trend
+          </h1>
+
+          <a href="#" class="font-inter text-[16px] font-bold text-primary"
+            >Lihat Semua Artikel →</a
+          >
+        </div>
+
+        <!-- Isi article ini maksimal 5 -->
+        <div class="mt-8 flex lg:flex-row flex-col gap-6">
+          <!-- Card isi article -->
+          <div
+            class="rounded-xl lg:w-[262px] w-full lg:h-[364px] h-[312px] border border-border overflow-hidden bg-white flex flex-col"
+          >
+            <!-- Thumbnail article -->
+            <img
+              src="/images/contoh_thumbnail_article_1.png"
+              class="w-full h-[168px] object-cover"
+              alt=""
+            />
+
+            <div class="lg:p-6 p-3 flex-1 flex flex-col justify-between">
+              <h2
+                class="font-inter text-[20px] font-bold text-text-primary leading-tight"
+              >
+                Strategi Outsourcing untuk Meningkatkan Efisiensi Perusahaan
+              </h2>
+
+              <div class="flex items-center gap-2">
+                <!-- Author pembuat article -->
+                <p class="font-inter text-[14px] font-bold text-primary">
+                  KSPS
+                </p>
+
+                <svg width="4" height="4" viewBox="0 0 8 8" fill="none">
+                  <circle cx="4" cy="4" r="4" fill="#2E2E2E" />
+                </svg>
+
+                <!-- tanggal dibuat article -->
+                <p class="font-inter text-[14px] text-text-primary">
+                  30 Jan 2026
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="rounded-xl lg:w-[262px] w-full lg:h-[364px] h-[312px] border border-border overflow-hidden bg-white flex flex-col"
+          >
+            <!-- Thumbnail article -->
+            <img
+              src="/images/contoh_thumbnail_article_1.png"
+              class="w-full h-[168px] object-cover"
+              alt=""
+            />
+
+            <div class="lg:p-6 p-3 flex-1 flex flex-col justify-between">
+              <h2
+                class="font-inter text-[20px] font-bold text-text-primary leading-tight"
+              >
+                Strategi Outsourcing untuk Meningkatkan Efisiensi Perusahaan
+              </h2>
+
+              <div class="flex items-center gap-2">
+                <!-- Author pembuat article -->
+                <p class="font-inter text-[14px] font-bold text-primary">
+                  KSPS
+                </p>
+
+                <svg width="4" height="4" viewBox="0 0 8 8" fill="none">
+                  <circle cx="4" cy="4" r="4" fill="#2E2E2E" />
+                </svg>
+
+                <!-- tanggal dibuat article -->
+                <p class="font-inter text-[14px] text-text-primary">
+                  30 Jan 2026
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="rounded-xl lg:w-[262px] w-full lg:h-[364px] h-[312px] border border-border overflow-hidden bg-white flex flex-col"
+          >
+            <!-- Thumbnail article -->
+            <img
+              src="/images/contoh_thumbnail_article_1.png"
+              class="w-full h-[168px] object-cover"
+              alt=""
+            />
+
+            <div class="lg:p-6 p-3 flex-1 flex flex-col justify-between">
+              <h2
+                class="font-inter text-[20px] font-bold text-text-primary leading-tight"
+              >
+                Strategi Outsourcing untuk Meningkatkan Efisiensi Perusahaan
+              </h2>
+
+              <div class="flex items-center gap-2">
+                <!-- Author pembuat article -->
+                <p class="font-inter text-[14px] font-bold text-primary">
+                  KSPS
+                </p>
+
+                <svg width="4" height="4" viewBox="0 0 8 8" fill="none">
+                  <circle cx="4" cy="4" r="4" fill="#2E2E2E" />
+                </svg>
+
+                <!-- tanggal dibuat article -->
+                <p class="font-inter text-[14px] text-text-primary">
+                  30 Jan 2026
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="rounded-xl lg:w-[262px] w-full lg:h-[364px] h-[312px] border border-border overflow-hidden bg-white flex flex-col"
+          >
+            <!-- Thumbnail article -->
+            <img
+              src="/images/contoh_thumbnail_article_1.png"
+              class="w-full h-[168px] object-cover"
+              alt=""
+            />
+
+            <div class="lg:p-6 p-3 flex-1 flex flex-col justify-between">
+              <h2
+                class="font-inter text-[20px] font-bold text-text-primary leading-tight"
+              >
+                Strategi Outsourcing untuk Meningkatkan Efisiensi Perusahaan
+              </h2>
+
+              <div class="flex items-center gap-2">
+                <!-- Author pembuat article -->
+                <p class="font-inter text-[14px] font-bold text-primary">
+                  KSPS
+                </p>
+
+                <svg width="4" height="4" viewBox="0 0 8 8" fill="none">
+                  <circle cx="4" cy="4" r="4" fill="#2E2E2E" />
+                </svg>
+
+                <!-- tanggal dibuat article -->
+                <p class="font-inter text-[14px] text-text-primary">
+                  30 Jan 2026
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="rounded-xl lg:w-[262px] w-full lg:h-[364px] h-[312px] border border-border overflow-hidden bg-white flex flex-col"
+          >
+            <!-- Thumbnail article -->
+            <img
+              src="/images/contoh_thumbnail_article_1.png"
+              class="w-full h-[168px] object-cover"
+              alt=""
+            />
+
+            <div class="lg:p-6 p-3 flex-1 flex flex-col justify-between">
+              <h2
+                class="font-inter text-[20px] font-bold text-text-primary leading-tight"
+              >
+                Strategi Outsourcing untuk Meningkatkan Efisiensi Perusahaan
+              </h2>
+
+              <div class="flex items-center gap-2">
+                <!-- Author pembuat article -->
+                <p class="font-inter text-[14px] font-bold text-primary">
+                  KSPS
+                </p>
+
+                <svg width="4" height="4" viewBox="0 0 8 8" fill="none">
+                  <circle cx="4" cy="4" r="4" fill="#2E2E2E" />
+                </svg>
+
+                <!-- tanggal dibuat article -->
+                <p class="font-inter text-[14px] text-text-primary">
+                  30 Jan 2026
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="w-full h-fit lg:px-14 px-4 lg:py-16 py-8">
+        <div class="w-full flex justify-between items-center">
+          <!-- Diambil dari category -->
+          <h1
+            class="font-marope lg:text-[28px] text-[20px] font-bold text-primary"
+          >
+            Ketenagakerjaan
+          </h1>
+
+          <a href="#" class="font-inter text-[16px] font-bold text-primary"
+            >Lihat Semua Artikel →</a
+          >
+        </div>
+
+        <!-- Isi article ini maksimal 5 -->
+        <div class="mt-8 flex lg:flex-row flex-col gap-6">
+          <!-- Card isi article -->
+          <div
+            class="rounded-xl lg:w-[262px] w-full lg:h-[364px] h-[312px] border border-border overflow-hidden bg-white flex flex-col"
+          >
+            <!-- Thumbnail article -->
+            <img
+              src="/images/contoh_thumbnail_article_1.png"
+              class="w-full h-[168px] object-cover"
+              alt=""
+            />
+
+            <div class="lg:p-6 p-3 flex-1 flex flex-col justify-between">
+              <h2
+                class="font-inter text-[20px] font-bold text-text-primary leading-tight"
+              >
+                Strategi Outsourcing untuk Meningkatkan Efisiensi Perusahaan
+              </h2>
+
+              <div class="flex items-center gap-2">
+                <!-- Author pembuat article -->
+                <p class="font-inter text-[14px] font-bold text-primary">
+                  KSPS
+                </p>
+
+                <svg width="4" height="4" viewBox="0 0 8 8" fill="none">
+                  <circle cx="4" cy="4" r="4" fill="#2E2E2E" />
+                </svg>
+
+                <!-- tanggal dibuat article -->
+                <p class="font-inter text-[14px] text-text-primary">
+                  30 Jan 2026
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="rounded-xl lg:w-[262px] w-full lg:h-[364px] h-[312px] border border-border overflow-hidden bg-white flex flex-col"
+          >
+            <!-- Thumbnail article -->
+            <img
+              src="/images/contoh_thumbnail_article_1.png"
+              class="w-full h-[168px] object-cover"
+              alt=""
+            />
+
+            <div class="lg:p-6 p-3 flex-1 flex flex-col justify-between">
+              <h2
+                class="font-inter text-[20px] font-bold text-text-primary leading-tight"
+              >
+                Strategi Outsourcing untuk Meningkatkan Efisiensi Perusahaan
+              </h2>
+
+              <div class="flex items-center gap-2">
+                <!-- Author pembuat article -->
+                <p class="font-inter text-[14px] font-bold text-primary">
+                  KSPS
+                </p>
+
+                <svg width="4" height="4" viewBox="0 0 8 8" fill="none">
+                  <circle cx="4" cy="4" r="4" fill="#2E2E2E" />
+                </svg>
+
+                <!-- tanggal dibuat article -->
+                <p class="font-inter text-[14px] text-text-primary">
+                  30 Jan 2026
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="rounded-xl lg:w-[262px] w-full lg:h-[364px] h-[312px] border border-border overflow-hidden bg-white flex flex-col"
+          >
+            <!-- Thumbnail article -->
+            <img
+              src="/images/contoh_thumbnail_article_1.png"
+              class="w-full h-[168px] object-cover"
+              alt=""
+            />
+
+            <div class="lg:p-6 p-3 flex-1 flex flex-col justify-between">
+              <h2
+                class="font-inter text-[20px] font-bold text-text-primary leading-tight"
+              >
+                Strategi Outsourcing untuk Meningkatkan Efisiensi Perusahaan
+              </h2>
+
+              <div class="flex items-center gap-2">
+                <!-- Author pembuat article -->
+                <p class="font-inter text-[14px] font-bold text-primary">
+                  KSPS
+                </p>
+
+                <svg width="4" height="4" viewBox="0 0 8 8" fill="none">
+                  <circle cx="4" cy="4" r="4" fill="#2E2E2E" />
+                </svg>
+
+                <!-- tanggal dibuat article -->
+                <p class="font-inter text-[14px] text-text-primary">
+                  30 Jan 2026
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="rounded-xl lg:w-[262px] w-full lg:h-[364px] h-[312px] border border-border overflow-hidden bg-white flex flex-col"
+          >
+            <!-- Thumbnail article -->
+            <img
+              src="/images/contoh_thumbnail_article_1.png"
+              class="w-full h-[168px] object-cover"
+              alt=""
+            />
+
+            <div class="lg:p-6 p-3 flex-1 flex flex-col justify-between">
+              <h2
+                class="font-inter text-[20px] font-bold text-text-primary leading-tight"
+              >
+                Strategi Outsourcing untuk Meningkatkan Efisiensi Perusahaan
+              </h2>
+
+              <div class="flex items-center gap-2">
+                <!-- Author pembuat article -->
+                <p class="font-inter text-[14px] font-bold text-primary">
+                  KSPS
+                </p>
+
+                <svg width="4" height="4" viewBox="0 0 8 8" fill="none">
+                  <circle cx="4" cy="4" r="4" fill="#2E2E2E" />
+                </svg>
+
+                <!-- tanggal dibuat article -->
+                <p class="font-inter text-[14px] text-text-primary">
+                  30 Jan 2026
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="rounded-xl lg:w-[262px] w-full lg:h-[364px] h-[312px] border border-border overflow-hidden bg-white flex flex-col"
+          >
+            <!-- Thumbnail article -->
+            <img
+              src="/images/contoh_thumbnail_article_1.png"
+              class="w-full h-[168px] object-cover"
+              alt=""
+            />
+
+            <div class="lg:p-6 p-3 flex-1 flex flex-col justify-between">
+              <h2
+                class="font-inter text-[20px] font-bold text-text-primary leading-tight"
+              >
+                Strategi Outsourcing untuk Meningkatkan Efisiensi Perusahaan
+              </h2>
+
+              <div class="flex items-center gap-2">
+                <!-- Author pembuat article -->
+                <p class="font-inter text-[14px] font-bold text-primary">
+                  KSPS
+                </p>
+
+                <svg width="4" height="4" viewBox="0 0 8 8" fill="none">
+                  <circle cx="4" cy="4" r="4" fill="#2E2E2E" />
+                </svg>
+
+                <!-- tanggal dibuat article -->
+                <p class="font-inter text-[14px] text-text-primary">
+                  30 Jan 2026
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End bagian category -->
+
+      <!-- Section cta on article -->
+      <section
+        class="relative bg-primary lg:py-16 py-8 lg:px-20 px-4 flex flex-col justify-center items-center gap-8"
+      >
+        <div class="flex flex-col w-full gap-4 relative">
+          <h1
+            class="font-manrope lg:text-[28px] text-[24px] leading-8 font-bold text-background text-shadow-[1px_2px_0_#000] text-center"
+          >
+            Ada pertanyaan terkait kebutuhan
+            <label class="text-secondary">Outsourcing perusahaan Anda?</label>
+          </h1>
+
+          <h2
+            class="font-inter lg:text-[20px] text-[16px] text-center text-background"
+          >
+            Konsultasi Gratis dengan konsultan kami!
+          </h2>
+        </div>
+
+        <div
+          class="w-full flex items-center justify-center gap-[18px] relative"
+        >
+          <!-- Left -->
+          <svg
+            class="lg:block hidden"
+            width="97"
+            height="56"
+            viewBox="0 0 97 56"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <rect width="97" height="56" fill="url(#pattern0_507_3399)" />
+            <defs>
+              <pattern
+                id="pattern0_507_3399"
+                patternContentUnits="objectBoundingBox"
+                width="1"
+                height="1"
+              >
+                <use
+                  xlink:href="#image0_507_3399"
+                  transform="matrix(0.00134953 0 0 0.00233757 0 -0.00257856)"
+                />
+              </pattern>
+              <image
+                id="image0_507_3399"
+                width="741"
+                height="430"
+                preserveAspectRatio="none"
+                xlink:href="data:image/png;base64,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"
+              />
+            </defs>
+          </svg>
+
+          <svg
+            class="lg:hidden block"
+            width="68"
+            height="39"
+            viewBox="0 0 68 39"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <rect width="68" height="39" fill="url(#pattern0_528_3611)" />
+            <defs>
+              <pattern
+                id="pattern0_528_3611"
+                patternContentUnits="objectBoundingBox"
+                width="1"
+                height="1"
+              >
+                <use
+                  xlink:href="#image0_528_3611"
+                  transform="matrix(0.00134953 0 0 0.00235302 0 -0.00589986)"
+                />
+              </pattern>
+              <image
+                id="image0_528_3611"
+                width="741"
+                height="430"
+                preserveAspectRatio="none"
+                xlink:href="data:image/png;base64,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"
+              />
+            </defs>
+          </svg>
+
+          <a
+            href="#"
+            class="relative z-10 px-4 lg:px-8 py-3 bg-[#4AD439] border border-black rounded-xl shadow-[2px_3px_0_0_#000] cursor-pointer w-fit"
+          >
+            <div class="flex items-center gap-2.5">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19.0498 4.91005C18.1329 3.98416 17.0408 3.25002 15.8373 2.75042C14.6338 2.25081 13.3429 1.99574 12.0398 2.00005C6.5798 2.00005 2.1298 6.45005 2.1298 11.9101C2.1298 13.6601 2.5898 15.3601 3.4498 16.8601L2.0498 22.0001L7.2998 20.6201C8.7498 21.4101 10.3798 21.8301 12.0398 21.8301C17.4998 21.8301 21.9498 17.3801 21.9498 11.9201C21.9498 9.27005 20.9198 6.78005 19.0498 4.91005ZM12.0398 20.1501C10.5598 20.1501 9.1098 19.7501 7.8398 19.0001L7.5398 18.8201L4.4198 19.6401L5.2498 16.6001L5.0498 16.2901C4.22735 14.9771 3.79073 13.4593 3.7898 11.9101C3.7898 7.37005 7.4898 3.67005 12.0298 3.67005C14.2298 3.67005 16.2998 4.53005 17.8498 6.09005C18.6174 6.85392 19.2257 7.7626 19.6394 8.76338C20.0531 9.76417 20.264 10.8371 20.2598 11.9201C20.2798 16.4601 16.5798 20.1501 12.0398 20.1501ZM16.5598 13.9901C16.3098 13.8701 15.0898 13.2701 14.8698 13.1801C14.6398 13.1001 14.4798 13.0601 14.3098 13.3001C14.1398 13.5501 13.6698 14.1101 13.5298 14.2701C13.3898 14.4401 13.2398 14.4601 12.9898 14.3301C12.7398 14.2101 11.9398 13.9401 10.9998 13.1001C10.2598 12.4401 9.7698 11.6301 9.6198 11.3801C9.4798 11.1301 9.5998 11.0001 9.7298 10.8701C9.8398 10.7601 9.9798 10.5801 10.0998 10.4401C10.2198 10.3001 10.2698 10.1901 10.3498 10.0301C10.4298 9.86005 10.3898 9.72005 10.3298 9.60005C10.2698 9.48005 9.7698 8.26005 9.5698 7.76005C9.3698 7.28005 9.1598 7.34005 9.0098 7.33005H8.5298C8.3598 7.33005 8.0998 7.39005 7.8698 7.64005C7.6498 7.89005 7.0098 8.49005 7.0098 9.71005C7.0098 10.9301 7.89981 12.1101 8.0198 12.2701C8.1398 12.4401 9.7698 14.9401 12.2498 16.0101C12.8398 16.2701 13.2998 16.4201 13.6598 16.5301C14.2498 16.7201 14.7898 16.6901 15.2198 16.6301C15.6998 16.5601 16.6898 16.0301 16.8898 15.4501C17.0998 14.8701 17.0998 14.3801 17.0298 14.2701C16.9598 14.1601 16.8098 14.1101 16.5598 13.9901Z"
+                  fill="#F5F4FA"
+                />
+              </svg>
+
+              <span
+                class="font-inter lg:text-[20px] text-sm text-background font-semibold whitespace-nowrap"
+              >
+                Whatsapp Sekarang
+              </span>
+            </div>
+          </a>
+
+          <!-- Right -->
+          <svg
+            class="lg:block hidden"
+            width="97"
+            height="56"
+            viewBox="0 0 97 56"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <rect width="97" height="56" fill="url(#pattern0_507_3397)" />
+            <defs>
+              <pattern
+                id="pattern0_507_3397"
+                patternContentUnits="objectBoundingBox"
+                width="1"
+                height="1"
+              >
+                <use
+                  xlink:href="#image0_507_3397"
+                  transform="matrix(0.0013426 0 0 0.00232558 -0.00213378 0)"
+                />
+              </pattern>
+              <image
+                id="image0_507_3397"
+                width="748"
+                height="430"
+                preserveAspectRatio="none"
+                xlink:href="data:image/png;base64,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"
+              />
+            </defs>
+          </svg>
+
+          <svg
+            class="lg:hidden block"
+            width="68"
+            height="39"
+            viewBox="0 0 68 39"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <rect width="68" height="39" fill="url(#pattern0_528_3610)" />
+            <defs>
+              <pattern
+                id="pattern0_528_3610"
+                patternContentUnits="objectBoundingBox"
+                width="1"
+                height="1"
+              >
+                <use
+                  xlink:href="#image0_528_3610"
+                  transform="matrix(0.0013369 0 0 0.002331 0 -0.0011655)"
+                />
+              </pattern>
+              <image
+                id="image0_528_3610"
+                width="748"
+                height="430"
+                preserveAspectRatio="none"
+                xlink:href="data:image/png;base64,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"
+              />
+            </defs>
+          </svg>
+        </div>
+
+        <svg
+          class="absolute bottom-0 left-0 w-full h-auto"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1280 110"
+          preserveAspectRatio="none"
+          fill="none"
+        >
+          <path
+            d="M648.5 1.00399C914.5 1.00399 991 109.504 1280 0.416586V109.504H0V0C242 93.004 382.5 1.00399 648.5 1.00399Z"
+            fill="#6E80F6"
+            fill-opacity="0.15"
+          />
+        </svg>
+      </section>
+
+      <!-- Footer section -->
+      <footer
+        class="bg-background shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.15)] w-full h-fit lg:px-14 px-4 py-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+      >
+        <div class="lg:col-span-2 col-span-1 flex flex-col gap-6">
+          <div>
+            <!-- Logo -->
+            <img src="/images/ksps_logo.png" width="120" alt="" />
+          </div>
+          <p class="font-inter text-[16px] text-text-primary">
+            <label class="font-bold">PT Karya Solusi Prima Sejahtera</label>
+            <br />
+            KSPS perusahaan IT Outsourcing terpercaya di Indonesia
+          </p>
+          <p class="font-inter text-[16px] text-text-primary">
+            KSPS vendor IT Outsourcing telah dipercaya menyalurkan talenta 1800+
+            di 50+ kota Indonesia. KSPS telah menjadi mitra terpercaya yang
+            mendukung dalam perkembangan bisnis di sektor ICT khususnya pada
+            perusahaan Lintasarta & Group.
+          </p>
+
+          <!-- Social media -->
+          <div class="flex items-center gap-6">
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/ksps_official/">
+              <svg
+                class="w-6 h-6"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M13.028 2C14.153 2.003 14.724 2.009 15.217 2.023L15.411 2.03C15.635 2.038 15.856 2.048 16.123 2.06C17.187 2.11 17.913 2.278 18.55 2.525C19.21 2.779 19.766 3.123 20.322 3.678C20.8307 4.17773 21.2242 4.78247 21.475 5.45C21.722 6.087 21.89 6.813 21.94 7.878C21.952 8.144 21.962 8.365 21.97 8.59L21.976 8.784C21.991 9.276 21.997 9.847 21.999 10.972L22 11.718V13.028C22.0024 13.7574 21.9948 14.4868 21.977 15.216L21.971 15.41C21.963 15.635 21.953 15.856 21.941 16.122C21.891 17.187 21.721 17.912 21.475 18.55C21.2242 19.2175 20.8307 19.8223 20.322 20.322C19.8223 20.8307 19.2175 21.2242 18.55 21.475C17.913 21.722 17.187 21.89 16.123 21.94L15.411 21.97L15.217 21.976C14.724 21.99 14.153 21.997 13.028 21.999L12.282 22H10.973C10.2433 22.0026 9.51352 21.9949 8.784 21.977L8.59 21.971C8.35261 21.962 8.11527 21.9517 7.878 21.94C6.814 21.89 6.088 21.722 5.45 21.475C4.78283 21.2241 4.17844 20.8306 3.679 20.322C3.16994 19.8224 2.77611 19.2176 2.525 18.55C2.278 17.913 2.11 17.187 2.06 16.122L2.03 15.41L2.025 15.216C2.00656 14.4868 1.99823 13.7574 2 13.028V10.972C1.99723 10.2426 2.00456 9.5132 2.022 8.784L2.029 8.59C2.037 8.365 2.047 8.144 2.059 7.878C2.109 6.813 2.277 6.088 2.524 5.45C2.77569 4.7822 3.17022 4.17744 3.68 3.678C4.17915 3.16955 4.78318 2.77607 5.45 2.525C6.088 2.278 6.813 2.11 7.878 2.06C8.144 2.048 8.366 2.038 8.59 2.03L8.784 2.024C9.51319 2.00623 10.2426 1.99857 10.972 2.001L13.028 2ZM12 7C10.6739 7 9.40214 7.52678 8.46446 8.46447C7.52678 9.40215 7 10.6739 7 12C7 13.3261 7.52678 14.5979 8.46446 15.5355C9.40214 16.4732 10.6739 17 12 17C13.3261 17 14.5978 16.4732 15.5355 15.5355C16.4732 14.5979 17 13.3261 17 12C17 10.6739 16.4732 9.40215 15.5355 8.46447C14.5978 7.52678 13.3261 7 12 7ZM12 9C12.394 8.99993 12.7841 9.07747 13.1481 9.22817C13.5121 9.37887 13.8428 9.5998 14.1215 9.87833C14.4001 10.1569 14.6211 10.4875 14.7719 10.8515C14.9228 11.2154 15.0004 11.6055 15.0005 11.9995C15.0006 12.3935 14.923 12.7836 14.7723 13.1476C14.6216 13.5116 14.4007 13.8423 14.1222 14.121C13.8436 14.3996 13.513 14.6206 13.149 14.7714C12.7851 14.9223 12.395 14.9999 12.001 15C11.2053 15 10.4423 14.6839 9.87968 14.1213C9.31707 13.5587 9.001 12.7956 9.001 12C9.001 11.2044 9.31707 10.4413 9.87968 9.87868C10.4423 9.31607 11.2053 9 12.001 9M17.251 5.5C16.9195 5.5 16.6015 5.6317 16.3671 5.86612C16.1327 6.10054 16.001 6.41848 16.001 6.75C16.001 7.08152 16.1327 7.39946 16.3671 7.63388C16.6015 7.8683 16.9195 8 17.251 8C17.5825 8 17.9005 7.8683 18.1349 7.63388C18.3693 7.39946 18.501 7.08152 18.501 6.75C18.501 6.41848 18.3693 6.10054 18.1349 5.86612C17.9005 5.6317 17.5825 5.5 17.251 5.5Z"
+                  fill="#211591"
+                />
+              </svg>
+            </a>
+
+            <!-- Facebook -->
+            <a href="#">
+              <svg
+                class="w-6 h-6"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M22 12C22 6.48 17.52 2 12 2C6.48 2 2 6.48 2 12C2 16.84 5.44 20.87 10 21.8V15H8V12H10V9.5C10 7.57 11.57 6 13.5 6H16V9H14C13.45 9 13 9.45 13 10V12H16V15H13V21.95C18.05 21.45 22 17.19 22 12Z"
+                  fill="#211591"
+                />
+              </svg>
+            </a>
+
+            <!-- Linkedln -->
+            <a href="https://www.linkedin.com/company/kspsoutsourcing/">
+              <svg
+                class="w-6 h-6"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M19 3C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19ZM18.5 18.5V13.2C18.5 12.3354 18.1565 11.5062 17.5452 10.8948C16.9338 10.2835 16.1046 9.94 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17C14.6813 12.17 15.0374 12.3175 15.2999 12.5801C15.5625 12.8426 15.71 13.1987 15.71 13.57V18.5H18.5ZM6.88 8.56C7.32556 8.56 7.75288 8.383 8.06794 8.06794C8.383 7.75288 8.56 7.32556 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19C6.43178 5.19 6.00193 5.36805 5.68499 5.68499C5.36805 6.00193 5.19 6.43178 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56ZM8.27 18.5V10.13H5.5V18.5H8.27Z"
+                  fill="#211591"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="col-span-1 flex flex-col gap-3">
+          <p class="font-inter font-semibold text-primary text-[16px]">
+            Services:
+          </p>
+          <a href="#" class="font-inter text-text-primary text-[16px]">
+            Layanan IT Outsourcing
+          </a>
+          <a href="#" class="font-inter text-text-primary text-[16px]">
+            Solusi BPO & Contact Center
+          </a>
+          <a href="#" class="font-inter text-text-primary text-[16px]">
+            Layanan Facility & Security Management
+          </a>
+          <a href="#" class="font-inter text-text-primary text-[16px]">
+            Layanan Assessment Center
+          </a>
+          <a href="#" class="font-inter text-text-primary text-[16px]">
+            Layanan Organization Development
+          </a>
+        </div>
+        <div class="col-span-1 flex flex-col gap-3">
+          <p class="font-inter font-semibold text-primary text-[16px]">
+            Hubungi kami:
+          </p>
+          <div class="flex items-center gap-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M1.5 8.6691V17.25C1.5 18.9069 2.84315 20.25 4.5 20.25H19.5C21.1569 20.25 22.5 18.9069 22.5 17.25V8.6691L13.5723 14.1631C12.6081 14.7564 11.3919 14.7564 10.4277 14.1631L1.5 8.6691Z"
+                fill="#0F172A"
+              />
+              <path
+                d="M22.5 6.90783V6.75C22.5 5.09315 21.1569 3.75 19.5 3.75H4.5C2.84315 3.75 1.5 5.09315 1.5 6.75V6.90783L11.2139 12.8856C11.696 13.1823 12.304 13.1823 12.7861 12.8856L22.5 6.90783Z"
+                fill="#0F172A"
+              />
+            </svg>
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=tim.marketing@ksps.coid"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="font-inter text-text-primary text-[16px] underline"
+              >tim.marketing@ksps.coid</a
+            >
+          </div>
+          <div class="flex justify-start items-start gap-2">
+            <svg
+              class="w-6 h-6 flex-shrink-0"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M11.5397 22.351C11.57 22.3685 11.5937 22.3821 11.6105 22.3915L11.6384 22.4071C11.8613 22.5294 12.1378 22.5285 12.3608 22.4075L12.3895 22.3915C12.4063 22.3821 12.43 22.3685 12.4603 22.351C12.5207 22.316 12.607 22.265 12.7155 22.1982C12.9325 22.0646 13.2388 21.8676 13.6046 21.6091C14.3351 21.0931 15.3097 20.3274 16.2865 19.3273C18.2307 17.3368 20.25 14.3462 20.25 10.5C20.25 5.94365 16.5563 2.25 12 2.25C7.44365 2.25 3.75 5.94365 3.75 10.5C3.75 14.3462 5.76932 17.3368 7.71346 19.3273C8.69025 20.3274 9.66491 21.0931 10.3954 21.6091C10.7612 21.8676 11.0675 22.0646 11.2845 22.1982C11.393 22.265 11.4793 22.316 11.5397 22.351ZM12 13.5C13.6569 13.5 15 12.1569 15 10.5C15 8.84315 13.6569 7.5 12 7.5C10.3431 7.5 9 8.84315 9 10.5C9 12.1569 10.3431 13.5 12 13.5Z"
+                fill="#0F172A"
+              />
+            </svg>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Jl.+Lebak+Bulus+I+No.12+Blok+A9,+RT.4%2FRW.6,+Lb.+Bulus,+Kec.+Cilandak,+Kota+Jakarta+Selatan,+Daerah+Khusus+Ibukota+Jakarta+12440"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="font-inter text-text-primary text-[16px] break-words"
+              >Jl. Lebak Bulus I No.12 Blok A9, RT.4/RW.6, Lb. Bulus, Kec.
+              Cilandak, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta
+              12440</a
+            >
+          </div>
+        </div>
+      </footer>
+      <div
+        class="w-full h-fit lg:px-14 px-4 py-4 bg-primary flex items-center justify-center"
+      >
+        <p
+          class="font-inter text-[16px] font-semibold text-[#FDFDFD] text-center"
+        >
+          @2026 PT Karya Solusi Prima Sejahtera. All Rights Reserved
+        </p>
+      </div>
+    </main>
+
+    <script src="./js/menu.js"></script>
+    <script src="./js/carousel.js"></script>
+    <script src="./js/testi-carousel.js"></script>
+    <script src="./js/trust-modal.js"></script>
+    <script src="./js/faq.js"></script>
+    <script src="./js/countup.js"></script>
+    <script src="./js/article-carousel.js"></script>
+  </body>
+</html>

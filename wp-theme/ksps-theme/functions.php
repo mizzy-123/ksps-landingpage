@@ -50,6 +50,8 @@ add_action('wp_enqueue_scripts', function () {
     $scripts = [
         'menu'           => '/assets/js/menu.js',
         'carousel'       => '/assets/js/carousel.js',
+        'article-carousel' => '/assets/js/article-carousel.js',
+        'article-search' => '/assets/js/article-search.js',
         'countup'        => '/assets/js/countup.js',
         'testi-carousel' => '/assets/js/testi-carousel.js',
         'trust-modal'    => '/assets/js/trust-modal.js',

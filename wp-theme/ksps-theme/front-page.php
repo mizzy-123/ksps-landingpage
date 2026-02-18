@@ -53,7 +53,7 @@ get_header();
 
               <a
                 class="lg:px-8 px-4 py-3 bg-secondary rounded-xl text-background md:text-sm text-sm"
-                href="#"
+                href="https://pgp6i.app.link/e/konsultasi"
                 >Konsultasi Sekarang</a
               >
             </div>
