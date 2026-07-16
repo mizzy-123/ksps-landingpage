@@ -11,7 +11,7 @@
     <div id="sidebar-overlay" class="lg:hidden fixed z-10 inset-0 bg-black/40 opacity-0 transition-opacity duration-300 hidden"></div>
 
     <header class="bg-background fixed top-0 left-0 z-100 w-full lg:px-14 px-4 py-4 flex items-center justify-between shadow-[0_4px_6px_-1px_rgba(0,0,0,0.15)]">
-      <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/ksps_logo.png'); ?>" width="90" alt="<?php bloginfo('name'); ?>" />
+      <a href="/"><img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/ksps_logo.png'); ?>" width="80" alt="<?php bloginfo('name'); ?>" /></a>
 
       <nav class="lg:flex hidden items-center gap-6">
         <div id="menu-nav-desktop" class="flex items-center gap-2 relative cursor-pointer group">
