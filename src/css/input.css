@@ -3,7 +3,7 @@
 @source "../index.html";
 @source "../article.html";
 @source "../detail-article.html";
-@source "../assestment-and-organitzation-development.html"
+@source "../assestment-and-organitzation-development.html";
 
 /* Design tokens (colors, borders, gradients) */
 
@@ -117,6 +117,21 @@
     @apply bg-white border rounded-lg shadow-sm;
     border-color: var(--border);
   }
+
+  /* === TAMBAHAN BARU UNTUK KOTAK LOGO === */
+  .industry-card-wrapper {
+    @apply w-full h-[157px] rounded-2xl shadow-[0_10px_15px_rgba(33,21,145,0.08)] p-[1.5px];
+    /* Gradient mengambil variabel yang kita daftarkan di @theme */
+    background-image: linear-gradient(
+      to bottom right,
+      var(--color-card-grad-start),
+      var(--color-card-grad-end)
+    );
+  }
+
+  .industry-card-inner {
+    @apply bg-white rounded-[15px] w-full h-full p-[25px] grid gap-3;
+  }
 }
 
 @layer utilities {
@@ -145,7 +160,6 @@
       transform: translateX(0%);
     }
     100% {
-      /* PENTING: Ubah ke -50% karena container memuat 2 set gambar */
       transform: translateX(-50%);
     }
   }
@@ -154,7 +168,6 @@
     animation: marquee 20s linear infinite;
   }
 
-  /* Disable marquee on large screens (desktop) */
   @media (min-width: 1024px) {
     .animate-marquee {
       animation: none !important;
@@ -180,4 +193,9 @@
   --color-secondary: #fa9a07;
   --color-text-primary: #1a1a1a;
   --color-text-secondary: #2e2e2e;
+
+  /* === TAMBAHAN BARU: Warna Gradient Card === */
+  /* Ubah hex ini jika ingin mengganti warna gradient semua kotak secara serentak */
+  --color-card-grad-start: #fa9a07;
+  --color-card-grad-end: #3422dd;
 }

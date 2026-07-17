@@ -1,0 +1,148 @@
+<!-- Right visual -->
+        <div
+          class="relative w-full max-w-[380px] mx-auto lg:max-w-none lg:flex-1 lg:aspect-[622/348] h-[323px] lg:h-auto shrink-0 mt-8 lg:mt-6"
+        >
+          <!-- Rounded stage (clips people + blurs) -->
+          <div
+            class="absolute inset-0 overflow-hidden rounded-[32px] bg-[rgba(35,35,35,0.1)]"
+          >
+            <div
+              class="pointer-events-none absolute right-0 top-[-2px] size-72 rounded-full bg-[rgba(244,160,37,0.25)] blur-[65px]"
+              aria-hidden="true"
+            ></div>
+            <div
+              class="pointer-events-none absolute bottom-1 left-0 size-72 rounded-full bg-[rgba(33,21,145,0.25)] blur-[65px]"
+              aria-hidden="true"
+            ></div>
+
+            <div
+              class="relative z-10 flex items-end justify-center w-full h-full"
+            >
+              <div
+                class="relative w-[200px] h-[226px] lg:w-[270px] lg:h-[305px] shrink-0 -mr-10 lg:-mr-14"
+              >
+                <img
+                  src="/images/assessment-od/hero-woman.png"
+                  alt="Konsultan HR wanita"
+                  class="absolute inset-0 size-full object-contain object-bottom"
+                />
+              </div>
+              <div
+                class="relative w-[220px] h-[238px] lg:w-[298px] lg:h-[322px] shrink-0 -scale-x-100"
+              >
+                <img
+                  src="/images/assessment-od/hero-man.png"
+                  alt="Konsultan HR pria"
+                  class="absolute inset-0 size-full object-contain object-bottom"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating card: Client Satisfaction -->
+          <div
+            class="absolute z-20 left-[-10px] lg:left-[-46px] top-[42px] lg:top-10 flex gap-2.5 items-center lg:items-start bg-white p-4 rounded-2xl shadow-[0_8px_10px_rgba(0,0,0,0.1),0_20px_25px_rgba(0,0,0,0.1)]"
+          >
+            <div
+              class="bg-primary flex items-center justify-center rounded-full size-8 lg:size-12 shrink-0 overflow-hidden"
+            >
+              <img
+                src="/images/assessment-od/icon-star.svg"
+                alt=""
+                class="size-7 lg:size-9"
+                width="36"
+                height="36"
+              />
+            </div>
+            <div class="flex flex-col items-start">
+              <p
+                class="font-inter font-semibold text-primary text-sm leading-5 lg:text-xl lg:leading-7"
+              >
+                4.7/5.0
+              </p>
+              <p
+                class="font-inter font-normal text-[#464553] text-[10px] leading-4 lg:text-sm lg:leading-5"
+              >
+                Client Satisfaction
+              </p>
+            </div>
+          </div>
+
+          <!-- Floating card: Drive Profit & Growth -->
+          <div
+            class="absolute z-20 left-[46%] lg:left-auto lg:right-[-8px] top-[-34px] lg:top-[-24px] flex gap-2.5 items-center lg:items-start bg-white p-4 rounded-2xl shadow-[0_8px_10px_rgba(0,0,0,0.1),0_20px_25px_rgba(0,0,0,0.1)]"
+          >
+            <div
+              class="bg-primary flex items-center justify-center rounded-full size-8 lg:size-12 shrink-0 overflow-hidden"
+            >
+              <img
+                src="/images/assessment-od/icon-rocket.svg"
+                alt=""
+                class="size-[26px] rotate-45"
+                width="26"
+                height="26"
+              />
+            </div>
+            <div class="flex flex-col items-start">
+              <p
+                class="font-inter font-semibold text-primary text-sm leading-5 lg:text-base lg:leading-6 whitespace-nowrap"
+              >
+                Drive Profit &amp; Growth
+              </p>
+              <p
+                class="font-inter font-normal text-[#464553] text-[10px] leading-4 lg:text-sm lg:leading-5"
+              >
+                Strategic Impact
+              </p>
+            </div>
+          </div>
+
+          <!-- Floating card: 30+ Tahun Pengalaman -->
+          <div
+            class="absolute z-20 left-[-10px] lg:left-[-19px] top-[197px] lg:top-auto lg:bottom-4 flex gap-2.5 items-center lg:items-start bg-white p-4 rounded-2xl shadow-[0_8px_10px_rgba(0,0,0,0.1),0_20px_25px_rgba(0,0,0,0.1)]"
+          >
+            <div
+              class="bg-primary flex items-center justify-center rounded-full size-8 lg:size-12 shrink-0"
+            >
+              <span class="relative w-5 h-3 overflow-hidden shrink-0">
+                <img
+                  src="/images/assessment-od/icon-trend.svg"
+                  alt=""
+                  class="block size-full"
+                  width="20"
+                  height="12"
+                />
+              </span>
+            </div>
+            <div class="flex flex-col items-start">
+              <p
+                class="font-inter font-semibold text-primary text-sm leading-5 lg:text-xl lg:leading-7"
+              >
+                30+
+              </p>
+              <p
+                class="font-inter font-normal text-[#464553] text-[10px] leading-4 lg:text-sm lg:leading-5 whitespace-nowrap"
+              >
+                Tahun Pengalaman
+              </p>
+            </div>
+          </div>
+
+          <!-- Floating card: Powered By -->
+          <div
+            class="absolute z-20 right-0 lg:right-2 bottom-[-18px] lg:bottom-2 flex gap-4 items-center bg-white p-4 rounded-2xl shadow-[0_8px_10px_rgba(0,0,0,0.1),0_20px_25px_rgba(0,0,0,0.1)]"
+          >
+            <p
+              class="font-inter font-normal text-text-primary text-sm leading-5 whitespace-nowrap"
+            >
+              Powered By
+            </p>
+            <img
+              src="/images/assessment-od/sintesa-logo.png"
+              alt="Sintesa Resourcing"
+              class="h-[26px] w-[74px] object-contain"
+              width="74"
+              height="26"
+            />
+          </div>
+        </div>

@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const animateCount = (el, target, duration) => {
     const startTime = performance.now();
-    const format = (n) => n.toLocaleString();
+    const format = (n) => n.toLocaleString("id-ID");
 
     function step(now) {
       const elapsed = now - startTime;
