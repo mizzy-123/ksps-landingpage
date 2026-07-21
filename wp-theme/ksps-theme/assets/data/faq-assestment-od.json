@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "question": "Di mana tes asesmen dapat dilakukan?",
+    "answer": "Sangat fleksibel. Bisa secara Online, Offline, atau Asesor kami yang melakukan Office Visit ke lokasi Anda."
+  },
+  {
+    "id": 2,
+    "question": "Apakah ada sesi konsultasi awal sebelum saya memutuskan paket layanan yang tepat?",
+    "answer": "Meskipun spesialisasi kami di ICT, kami melayani berbagai industri (Banking, Retail, Manufaktur) yang membutuhkan standar layanan tinggi."
+  },
+  {
+    "id": 3,
+    "question": "Berapa lama waktu pengerjaan untuk proyek Organization Development (OD)?",
+    "answer": " Rata-rata 7-14 hari kerja untuk posisi specialist, dan lebih cepat untuk posisi umum/admin."
+  },
+  {
+    "id": 4,
+    "question": "Apa keunggulan asesmen KSPS dibandingkan software tes psikologi otomatis?",
+    "answer": "Ya, kami menangani end-to-end payroll, BPJS, dan pajak (PPh 21) untuk penempatan di 50+ kota."
+  },
+  {
+    "id": 5,
+    "question": " Apakah layanan Asesmen dan Organization Development (OD) bisa digabungkan?",
+    "answer": "Ada. Kami memberikan garansi penggantian kandidat (replacement guarantee) sesuai kesepakatan dalam kontrak kerja sama."
+  },
+  {
+    "id": 6,
+    "question": "Apakah layanan asesmen ini hanya ditujukan untuk posisi manajerial (C-Level)?",
+    "answer": "Ada. Kami memberikan garansi penggantian kandidat (replacement guarantee) sesuai kesepakatan dalam kontrak kerja sama."
+  }
+]

@@ -4,6 +4,9 @@
 @source "../article.html";
 @source "../detail-article.html";
 @source "../assestment-and-organitzation-development.html";
+@source "../../wp-theme/ksps-theme/page-assestment-and-organization-development.php";
+@source "../../wp-theme/ksps-theme/front-page.php";
+@source "../../wp-theme/ksps-theme/template-parts/**/*.php";
 
 /* Design tokens (colors, borders, gradients) */
 

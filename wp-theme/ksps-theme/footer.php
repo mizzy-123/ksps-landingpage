@@ -69,8 +69,8 @@
         <a href="#" class="font-inter text-text-primary text-[16px]">Layanan IT Outsourcing</a>
         <a href="#" class="font-inter text-text-primary text-[16px]">Solusi BPO & Contact Center</a>
         <a href="#" class="font-inter text-text-primary text-[16px]">Layanan Facility & Security Management</a>
-        <a href="#" class="font-inter text-text-primary text-[16px]">Layanan Assessment Center</a>
-        <a href="#" class="font-inter text-text-primary text-[16px]">Layanan Organization Development</a>
+        <a href="<?php echo esc_url(home_url('/assestment-and-organization-development/')); ?>" class="font-inter text-text-primary text-[16px]">Layanan Assessment Center</a>
+        <a href="<?php echo esc_url(home_url('/assestment-and-organization-development/')); ?>" class="font-inter text-text-primary text-[16px]">Layanan Organization Development</a>
       </div>
       <div class="col-span-1 flex flex-col gap-3">
         <p class="font-inter font-semibold text-primary text-[16px]">Hubungi kami:</p>

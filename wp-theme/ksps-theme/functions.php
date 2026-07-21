@@ -46,6 +46,8 @@ add_action('wp_enqueue_scripts', function () {
     list($ovr_uri, $ovr_ver) = ksps_asset('/assets/css/overrides.css');
     wp_enqueue_style('ksps-overrides', $ovr_uri, ['ksps-styles'], $ovr_ver);
 
+    $is_aod_page = is_page('assestment-and-organization-development');
+
     // Theme scripts (ScrollReveal removed as it causes responsiveness issues)
     $scripts = [
         'menu'           => '/assets/js/menu.js',
@@ -55,12 +57,33 @@ add_action('wp_enqueue_scripts', function () {
         'countup'        => '/assets/js/countup.js',
         'testi-carousel' => '/assets/js/testi-carousel.js',
         'trust-modal'    => '/assets/js/trust-modal.js',
-        'faq'            => '/assets/js/faq.js',
     ];
+
+    // The generic FAQ (uses faq.json) is used everywhere EXCEPT the AOD page,
+    // which has its own FAQ dataset/script. Loading both would make them fight
+    // over the same #faq-list element.
+    if (!$is_aod_page) {
+        $scripts['faq'] = '/assets/js/faq.js';
+    }
 
     foreach ($scripts as $handle => $rel) {
         list($uri, $ver) = ksps_asset($rel);
         wp_enqueue_script('ksps-' . $handle, $uri, [], $ver, true);
+    }
+
+    // Assessment & OD page carousels + its dedicated FAQ
+    if ($is_aod_page) {
+        $aod_scripts = [
+            'industry-carousel'          => '/assets/js/industry-carousel.js',
+            'case-study-carousel'        => '/assets/js/case-study-carousel.js',
+            'assessment-impact-carousel' => '/assets/js/assessment-impact-carousel.js',
+            'testimonials-carousel'      => '/assets/js/testimonials-carousel.js',
+            'faq-assestment-od'          => '/assets/js/faq-assestment-od.js',
+        ];
+        foreach ($aod_scripts as $handle => $rel) {
+            list($uri, $ver) = ksps_asset($rel);
+            wp_enqueue_script('ksps-' . $handle, $uri, [], $ver, true);
+        }
     }
 
     // Localize/config values for frontend scripts
@@ -68,11 +91,51 @@ add_action('wp_enqueue_scripts', function () {
         'themeUrl'      => get_stylesheet_directory_uri(),
         'assetsUrl'     => get_stylesheet_directory_uri() . '/assets',
         'faqDataUrl'    => get_stylesheet_directory_uri() . '/assets/data/faq.json',
+        'aodFaqDataUrl' => get_stylesheet_directory_uri() . '/assets/data/faq-assestment-od.json',
     ];
 
     // Provide global config before faq.js executes
-    wp_add_inline_script('ksps-faq', 'window.KSPS_FAQ_DATA_URL = ' . wp_json_encode($config['faqDataUrl']) . ';', 'before');
+    if (!$is_aod_page) {
+        wp_add_inline_script('ksps-faq', 'window.KSPS_FAQ_DATA_URL = ' . wp_json_encode($config['faqDataUrl']) . ';', 'before');
+    }
+
+    // Provide the correct data URL for the AOD FAQ script
+    if ($is_aod_page) {
+        wp_add_inline_script('ksps-faq-assestment-od', 'window.KSPS_AOD_FAQ_DATA_URL = ' . wp_json_encode($config['aodFaqDataUrl']) . ';', 'before');
+    }
 
     // Provide assets base URL for scripts that need to resolve image paths
     wp_add_inline_script('ksps-trust-modal', 'window.KSPS_ASSETS_URL = ' . wp_json_encode($config['assetsUrl']) . ';', 'before');
+});
+
+/**
+ * Ensure the Assessment & OD page exists at /assestment-and-organization-development
+ */
+function ksps_ensure_assessment_od_page(): void {
+    $slug = 'assestment-and-organization-development';
+    $existing = get_page_by_path($slug);
+    if ($existing) {
+        return;
+    }
+
+    $page_id = wp_insert_post([
+        'post_title'   => 'Assessment & Organization Development',
+        'post_name'    => $slug,
+        'post_status'  => 'publish',
+        'post_type'    => 'page',
+        'post_content' => '',
+    ], true);
+
+    if (!is_wp_error($page_id) && $page_id) {
+        update_post_meta($page_id, '_wp_page_template', 'page-assestment-and-organization-development.php');
+        flush_rewrite_rules(false);
+    }
+}
+add_action('after_switch_theme', 'ksps_ensure_assessment_od_page');
+add_action('admin_init', function () {
+    if (get_option('ksps_aod_page_created')) {
+        return;
+    }
+    ksps_ensure_assessment_od_page();
+    update_option('ksps_aod_page_created', 1);
 });

@@ -1,0 +1,14 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 42 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="icon-park-solid:up-two" clip-path="url(#clip0_0_128)">
+<path id="Vector" d="M0.416748 19L21.0001 -0.5L41.5834 19H28.5834V38.5H13.4167V19H0.416748Z" fill="url(#paint0_linear_0_128)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_128" x1="21.0001" y1="-0.5" x2="21.0001" y2="38.5" gradientUnits="userSpaceOnUse">
+<stop offset="0.302885" stop-color="#F4A025"/>
+<stop offset="1" stop-color="#FFE627"/>
+</linearGradient>
+<clipPath id="clip0_0_128">
+<rect width="42" height="39" fill="white"/>
+</clipPath>
+</defs>
+</svg>

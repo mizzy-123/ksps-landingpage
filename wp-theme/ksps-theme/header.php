@@ -23,8 +23,8 @@
             <a class="text-text-primary font-inter text-[16px] hover:text-secondary" href="#">Layanan IT Outsourcing</a>
             <a class="text-text-primary font-inter text-[16px] hover:text-secondary" href="#">Solusi BPO & Contact Center</a>
             <a class="text-text-primary font-inter text-[16px] hover:text-secondary" href="#">Layanan Facility & Security Management</a>
-            <a class="text-text-primary font-inter text-[16px] hover:text-secondary" href="#">Layanan Assessment Center</a>
-            <a class="text-text-primary font-inter text-[16px] hover:text-secondary" href="#">Layanan Organization Development</a>
+            <a class="text-text-primary font-inter text-[16px] hover:text-secondary" href="<?php echo esc_url(home_url('/assestment-and-organization-development/')); ?>">Layanan Assessment Center</a>
+            <a class="text-text-primary font-inter text-[16px] hover:text-secondary" href="<?php echo esc_url(home_url('/assestment-and-organization-development/')); ?>">Layanan Organization Development</a>
           </div>
         </div>
         <div class="flex items-center gap-2 cursor-pointer group">
@@ -74,8 +74,8 @@
               <a class="text-text-primary font-inter text-[16px] hover:text-secondary" href="#">Layanan IT Outsourcing</a>
               <a class="text-text-primary font-inter text-[16px] hover:text-secondary" href="#">Solusi BPO & Contact Center</a>
               <a class="text-text-primary font-inter text-[16px] hover:text-secondary" href="#">Layanan Facility & Security Management</a>
-              <a class="text-text-primary font-inter text-[16px] hover:text-secondary" href="#">Layanan Assessment Center</a>
-              <a class="text-text-primary font-inter text-[16px] hover:text-secondary" href="#">Layanan Organization Development</a>
+              <a class="text-text-primary font-inter text-[16px] hover:text-secondary" href="<?php echo esc_url(home_url('/assestment-and-organization-development/')); ?>">Layanan Assessment Center</a>
+              <a class="text-text-primary font-inter text-[16px] hover:text-secondary" href="<?php echo esc_url(home_url('/assestment-and-organization-development/')); ?>">Layanan Organization Development</a>
             </div>
           </div>
           <div class="flex items-center gap-2 cursor-pointer group py-4">
