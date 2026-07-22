@@ -17,11 +17,11 @@ $ksps_aod = get_stylesheet_directory_uri() . '/assets/images/assessment-od';
       <!-- Hero section -->
       <section
         id="hero-section"
-        class="w-full lg:min-h-screen h-screen relative z-5 flex lg:flex-row flex-col lg:items-center items-start lg:justify-between lg:gap-12 gap-12 lg:px-14 px-4 lg:pt-28 pt-28 lg:pb-24 pb-16 overflow-x-clip"
+        class="w-full lg:min-h-screen h-auto relative z-5 flex lg:flex-row flex-col lg:items-center items-start lg:justify-between lg:gap-12 gap-1 lg:px-14 px-4 lg:pt-28 pt-24 lg:pb-24 pb-10 overflow-x-clip"
       >
         <!-- Left content -->
         <div
-          class="lg:flex-1 flex flex-col gap-6 items-start relative shrink-0 w-full lg:w-[450px]"
+          class="lg:flex-1 flex flex-col gap-5 lg:gap-6 items-start relative shrink-0 w-full lg:w-[450px]"
         >
           <!-- Badge -->
           <div
@@ -79,11 +79,11 @@ $ksps_aod = get_stylesheet_directory_uri() . '/assets/images/assessment-od';
 
         <!-- Right visual -->
         <div
-          class="relative w-full max-w-[380px] mx-auto lg:max-w-none lg:flex-1 lg:aspect-[622/348] h-[323px] lg:h-auto shrink-0 mt-8 lg:mt-6"
+          class="relative w-full max-w-[320px] sm:max-w-[360px] mx-auto lg:max-w-none lg:flex-1 lg:aspect-[622/348] h-[300px] lg:h-auto shrink-0 mt-10 lg:mt-6 mb-8 lg:mb-0"
         >
           <!-- Rounded stage (clips people + blurs) -->
           <div
-            class="absolute inset-0 overflow-hidden rounded-[32px] bg-[rgba(35,35,35,0.1)]"
+            class="absolute inset-0 overflow-hidden rounded-[24px] lg:rounded-[32px] bg-[rgba(35,35,35,0.1)]"
           >
             <div
               class="pointer-events-none absolute right-0 top-[-2px] size-72 rounded-full bg-[rgba(244,160,37,0.25)] blur-[65px]"
@@ -98,7 +98,7 @@ $ksps_aod = get_stylesheet_directory_uri() . '/assets/images/assessment-od';
               class="relative z-10 flex items-end justify-center w-full h-full"
             >
               <div
-                class="relative w-[200px] h-[226px] lg:w-[270px] lg:h-[305px] shrink-0 -mr-10 lg:-mr-14"
+                class="relative w-[160px] h-[190px] sm:w-[180px] sm:h-[210px] lg:w-[270px] lg:h-[305px] shrink-0 -mr-8 sm:-mr-10 lg:-mr-14"
               >
                 <img
                   src="<?php echo esc_url( $ksps_aod ); ?>/hero-woman.png"
@@ -107,7 +107,7 @@ $ksps_aod = get_stylesheet_directory_uri() . '/assets/images/assessment-od';
                 />
               </div>
               <div
-                class="relative w-[220px] h-[238px] lg:w-[298px] lg:h-[322px] shrink-0 -scale-x-100"
+                class="relative w-[175px] h-[200px] sm:w-[200px] sm:h-[220px] lg:w-[298px] lg:h-[322px] shrink-0 -scale-x-100"
               >
                 <img
                   src="<?php echo esc_url( $ksps_aod ); ?>/hero-man.png"
@@ -120,27 +120,27 @@ $ksps_aod = get_stylesheet_directory_uri() . '/assets/images/assessment-od';
 
           <!-- Floating card: Client Satisfaction -->
           <div
-            class="absolute z-20 left-[-10px] lg:left-[-46px] top-[42px] lg:top-10 flex gap-2.5 items-center lg:items-start bg-white p-4 rounded-2xl shadow-[0_8px_10px_rgba(0,0,0,0.1),0_20px_25px_rgba(0,0,0,0.1)]"
+            class="absolute z-20 left-0 lg:left-[-46px] top-[28px] lg:top-10 flex gap-2 items-center lg:items-start bg-white p-2.5 lg:p-4 rounded-xl lg:rounded-2xl shadow-[0_8px_10px_rgba(0,0,0,0.1),0_20px_25px_rgba(0,0,0,0.1)]"
           >
             <div
-              class="bg-primary flex items-center justify-center rounded-full size-8 lg:size-12 shrink-0 overflow-hidden"
+              class="bg-primary flex items-center justify-center rounded-full size-7 lg:size-12 shrink-0 overflow-hidden"
             >
               <img
                 src="<?php echo esc_url( $ksps_aod ); ?>/icon-star.svg"
                 alt=""
-                class="size-7 lg:size-9"
+                class="size-6 lg:size-9"
                 width="36"
                 height="36"
               />
             </div>
             <div class="flex flex-col items-start">
               <p
-                class="font-inter font-semibold text-primary text-sm leading-5 lg:text-xl lg:leading-7"
+                class="font-inter font-semibold text-primary text-xs leading-4 lg:text-xl lg:leading-7"
               >
                 4.7/5.0
               </p>
               <p
-                class="font-inter font-normal text-[#464553] text-[10px] leading-4 lg:text-sm lg:leading-5"
+                class="font-inter font-normal text-[#464553] text-[9px] leading-3 lg:text-sm lg:leading-5"
               >
                 Client Satisfaction
               </p>
@@ -148,42 +148,42 @@ $ksps_aod = get_stylesheet_directory_uri() . '/assets/images/assessment-od';
           </div>
 
           <!-- Floating card: Drive Profit & Growth -->
-          <div
-            class="absolute z-20 left-[46%] lg:left-auto lg:right-[-8px] top-[-34px] lg:top-[-24px] flex gap-2.5 items-center lg:items-start bg-white p-4 rounded-2xl shadow-[0_8px_10px_rgba(0,0,0,0.1),0_20px_25px_rgba(0,0,0,0.1)]"
+          <!-- <div
+            class="absolute z-20 right-0 lg:right-[-8px] top-[-28px] lg:top-[-24px] left-auto flex gap-2 items-center lg:items-start bg-white p-2.5 lg:p-4 rounded-xl lg:rounded-2xl shadow-[0_8px_10px_rgba(0,0,0,0.1),0_20px_25px_rgba(0,0,0,0.1)] max-w-[calc(100%-8px)]"
           >
             <div
-              class="bg-primary flex items-center justify-center rounded-full size-8 lg:size-12 shrink-0 overflow-hidden"
+              class="bg-primary flex items-center justify-center rounded-full size-7 lg:size-12 shrink-0 overflow-hidden"
             >
               <img
                 src="<?php echo esc_url( $ksps_aod ); ?>/icon-rocket.svg"
                 alt=""
-                class="size-[26px] rotate-45"
+                class="size-5 lg:size-[26px] rotate-45"
                 width="26"
                 height="26"
               />
             </div>
-            <div class="flex flex-col items-start">
+            <div class="flex flex-col items-start min-w-0">
               <p
-                class="font-inter font-semibold text-primary text-sm leading-5 lg:text-base lg:leading-6 whitespace-nowrap"
+                class="font-inter font-semibold text-primary text-xs leading-4 lg:text-base lg:leading-6 whitespace-nowrap"
               >
                 Drive Profit &amp; Growth
               </p>
               <p
-                class="font-inter font-normal text-[#464553] text-[10px] leading-4 lg:text-sm lg:leading-5"
+                class="font-inter font-normal text-[#464553] text-[9px] leading-3 lg:text-sm lg:leading-5"
               >
                 Strategic Impact
               </p>
             </div>
-          </div>
+          </div> -->
 
           <!-- Floating card: 30+ Tahun Pengalaman -->
           <div
-            class="absolute z-20 left-[-10px] lg:left-[-19px] top-[197px] lg:top-auto lg:bottom-4 flex gap-2.5 items-center lg:items-start bg-white p-4 rounded-2xl shadow-[0_8px_10px_rgba(0,0,0,0.1),0_20px_25px_rgba(0,0,0,0.1)]"
+            class="absolute z-20 left-0 lg:left-[-19px] top-auto bottom-10 lg:bottom-4 flex gap-2 items-center lg:items-start bg-white p-2.5 lg:p-4 rounded-xl lg:rounded-2xl shadow-[0_8px_10px_rgba(0,0,0,0.1),0_20px_25px_rgba(0,0,0,0.1)]"
           >
             <div
-              class="bg-primary flex items-center justify-center rounded-full size-8 lg:size-12 shrink-0"
+              class="bg-primary flex items-center justify-center rounded-full size-7 lg:size-12 shrink-0"
             >
-              <span class="relative w-5 h-3 overflow-hidden shrink-0">
+              <span class="relative w-4 h-2.5 lg:w-5 lg:h-3 overflow-hidden shrink-0">
                 <img
                   src="<?php echo esc_url( $ksps_aod ); ?>/icon-trend.svg"
                   alt=""
@@ -195,12 +195,12 @@ $ksps_aod = get_stylesheet_directory_uri() . '/assets/images/assessment-od';
             </div>
             <div class="flex flex-col items-start">
               <p
-                class="font-inter font-semibold text-primary text-sm leading-5 lg:text-xl lg:leading-7"
+                class="font-inter font-semibold text-primary text-xs leading-4 lg:text-xl lg:leading-7"
               >
                 30+
               </p>
               <p
-                class="font-inter font-normal text-[#464553] text-[10px] leading-4 lg:text-sm lg:leading-5 whitespace-nowrap"
+                class="font-inter font-normal text-[#464553] text-[9px] leading-3 lg:text-sm lg:leading-5 whitespace-nowrap"
               >
                 Tahun Pengalaman
               </p>
@@ -209,17 +209,17 @@ $ksps_aod = get_stylesheet_directory_uri() . '/assets/images/assessment-od';
 
           <!-- Floating card: Powered By -->
           <div
-            class="absolute z-20 right-0 lg:right-2 bottom-[-18px] lg:bottom-[-30px] flex gap-4 items-center bg-white p-4 rounded-2xl shadow-[0_8px_10px_rgba(0,0,0,0.1),0_20px_25px_rgba(0,0,0,0.1)]"
+            class="absolute z-20 right-0 lg:right-2 bottom-[-20px] lg:bottom-[-30px] flex gap-2.5 lg:gap-4 items-center bg-white p-2.5 lg:p-4 rounded-xl lg:rounded-2xl shadow-[0_8px_10px_rgba(0,0,0,0.1),0_20px_25px_rgba(0,0,0,0.1)]"
           >
             <p
-              class="font-inter font-normal text-text-primary text-sm leading-5 whitespace-nowrap"
+              class="font-inter font-normal text-text-primary text-xs lg:text-sm leading-4 lg:leading-5 whitespace-nowrap"
             >
               Powered By
             </p>
             <img
               src="<?php echo esc_url( $ksps_aod ); ?>/sintesa-logo.png"
               alt="Sintesa Resourcing"
-              class="h-[26px] w-[74px] object-contain"
+              class="h-5 w-[58px] lg:h-[26px] lg:w-[74px] object-contain"
               width="74"
               height="26"
             />
@@ -543,53 +543,53 @@ $ksps_aod = get_stylesheet_directory_uri() . '/assets/images/assessment-od';
 
           <div
             class="industry-card flex flex-col gap-1 items-center w-full"
-            data-industry="Manufacture"
+            data-industry="Retail &amp; Distributor"
           >
             <p
               class="font-inter font-semibold text-primary text-xl leading-7 text-center w-full"
             >
-              Manufacture
+              Retail &amp; Distributor
             </p>
             <div class="industry-card-wrapper">
               <div class="industry-card-inner grid-cols-2 grid-rows-3">
                 <div class="relative min-h-0 self-stretch justify-self-stretch">
                   <img
-                    src="<?php echo esc_url( $ksps_aod ); ?>/clients/logo-25.png"
+                    src="<?php echo esc_url( $ksps_aod ); ?>/clients/logo-61.png"
                     alt=""
                     class="absolute inset-0 size-full object-contain"
                   />
                 </div>
                 <div class="relative min-h-0 self-stretch justify-self-stretch">
                   <img
-                    src="<?php echo esc_url( $ksps_aod ); ?>/clients/logo-26.png"
+                    src="<?php echo esc_url( $ksps_aod ); ?>/clients/logo-62.png"
                     alt=""
                     class="absolute inset-0 size-full object-contain"
                   />
                 </div>
                 <div class="relative min-h-0 self-stretch justify-self-stretch">
                   <img
-                    src="<?php echo esc_url( $ksps_aod ); ?>/clients/logo-27.png"
+                    src="<?php echo esc_url( $ksps_aod ); ?>/clients/logo-63.png"
                     alt=""
                     class="absolute inset-0 size-full object-contain"
                   />
                 </div>
                 <div class="relative min-h-0 self-stretch justify-self-stretch">
                   <img
-                    src="<?php echo esc_url( $ksps_aod ); ?>/clients/logo-28.png"
+                    src="<?php echo esc_url( $ksps_aod ); ?>/clients/logo-64.png"
                     alt=""
                     class="absolute inset-0 size-full object-contain"
                   />
                 </div>
                 <div class="relative min-h-0 self-stretch justify-self-stretch">
                   <img
-                    src="<?php echo esc_url( $ksps_aod ); ?>/clients/logo-29.png"
+                    src="<?php echo esc_url( $ksps_aod ); ?>/clients/logo-65.png"
                     alt=""
                     class="absolute inset-0 size-full object-contain"
                   />
                 </div>
                 <div class="relative min-h-0 self-stretch justify-self-stretch">
                   <img
-                    src="<?php echo esc_url( $ksps_aod ); ?>/clients/logo-30.png"
+                    src="<?php echo esc_url( $ksps_aod ); ?>/clients/logo-66.png"
                     alt=""
                     class="absolute inset-0 size-full object-contain"
                   />
@@ -885,53 +885,53 @@ $ksps_aod = get_stylesheet_directory_uri() . '/assets/images/assessment-od';
 
           <div
             class="industry-card flex flex-col gap-1 items-center w-full"
-            data-industry="Retail &amp; Distributor"
+            data-industry="Manufacture"
           >
             <p
               class="font-inter font-semibold text-primary text-xl leading-7 text-center w-full"
             >
-              Retail &amp; Distributor
+              Manufacture
             </p>
             <div class="industry-card-wrapper">
               <div class="industry-card-inner grid-cols-2 grid-rows-3">
                 <div class="relative min-h-0 self-stretch justify-self-stretch">
                   <img
-                    src="<?php echo esc_url( $ksps_aod ); ?>/clients/logo-61.png"
+                    src="<?php echo esc_url( $ksps_aod ); ?>/clients/logo-25.png"
                     alt=""
                     class="absolute inset-0 size-full object-contain"
                   />
                 </div>
                 <div class="relative min-h-0 self-stretch justify-self-stretch">
                   <img
-                    src="<?php echo esc_url( $ksps_aod ); ?>/clients/logo-62.png"
+                    src="<?php echo esc_url( $ksps_aod ); ?>/clients/logo-26.png"
                     alt=""
                     class="absolute inset-0 size-full object-contain"
                   />
                 </div>
                 <div class="relative min-h-0 self-stretch justify-self-stretch">
                   <img
-                    src="<?php echo esc_url( $ksps_aod ); ?>/clients/logo-63.png"
+                    src="<?php echo esc_url( $ksps_aod ); ?>/clients/logo-27.png"
                     alt=""
                     class="absolute inset-0 size-full object-contain"
                   />
                 </div>
                 <div class="relative min-h-0 self-stretch justify-self-stretch">
                   <img
-                    src="<?php echo esc_url( $ksps_aod ); ?>/clients/logo-64.png"
+                    src="<?php echo esc_url( $ksps_aod ); ?>/clients/logo-28.png"
                     alt=""
                     class="absolute inset-0 size-full object-contain"
                   />
                 </div>
                 <div class="relative min-h-0 self-stretch justify-self-stretch">
                   <img
-                    src="<?php echo esc_url( $ksps_aod ); ?>/clients/logo-65.png"
+                    src="<?php echo esc_url( $ksps_aod ); ?>/clients/logo-29.png"
                     alt=""
                     class="absolute inset-0 size-full object-contain"
                   />
                 </div>
                 <div class="relative min-h-0 self-stretch justify-self-stretch">
                   <img
-                    src="<?php echo esc_url( $ksps_aod ); ?>/clients/logo-66.png"
+                    src="<?php echo esc_url( $ksps_aod ); ?>/clients/logo-30.png"
                     alt=""
                     class="absolute inset-0 size-full object-contain"
                   />
@@ -1291,12 +1291,12 @@ $ksps_aod = get_stylesheet_directory_uri() . '/assets/images/assessment-od';
               >
                 <div
                   class="industry-card flex flex-col gap-1 items-center w-full"
-                  data-industry="Manufacture"
+                  data-industry="Retail &amp; Distributor"
                 >
                   <p
                     class="font-inter font-semibold text-primary text-xl leading-7 text-center w-full"
                   >
-                    Manufacture
+                    Retail &amp; Distributor
                   </p>
                   <div class="industry-card-wrapper">
                     <div class="industry-card-inner grid-cols-2 grid-rows-3">
@@ -1304,7 +1304,7 @@ $ksps_aod = get_stylesheet_directory_uri() . '/assets/images/assessment-od';
                         class="relative min-h-0 self-stretch justify-self-stretch"
                       >
                         <img
-                          src="<?php echo esc_url( $ksps_aod ); ?>/clients/logo-25.png"
+                          src="<?php echo esc_url( $ksps_aod ); ?>/clients/logo-61.png"
                           alt=""
                           class="absolute inset-0 size-full object-contain"
                         />
@@ -1313,7 +1313,7 @@ $ksps_aod = get_stylesheet_directory_uri() . '/assets/images/assessment-od';
                         class="relative min-h-0 self-stretch justify-self-stretch"
                       >
                         <img
-                          src="<?php echo esc_url( $ksps_aod ); ?>/clients/logo-26.png"
+                          src="<?php echo esc_url( $ksps_aod ); ?>/clients/logo-62.png"
                           alt=""
                           class="absolute inset-0 size-full object-contain"
                         />
@@ -1322,7 +1322,7 @@ $ksps_aod = get_stylesheet_directory_uri() . '/assets/images/assessment-od';
                         class="relative min-h-0 self-stretch justify-self-stretch"
                       >
                         <img
-                          src="<?php echo esc_url( $ksps_aod ); ?>/clients/logo-27.png"
+                          src="<?php echo esc_url( $ksps_aod ); ?>/clients/logo-63.png"
                           alt=""
                           class="absolute inset-0 size-full object-contain"
                         />
@@ -1331,7 +1331,7 @@ $ksps_aod = get_stylesheet_directory_uri() . '/assets/images/assessment-od';
                         class="relative min-h-0 self-stretch justify-self-stretch"
                       >
                         <img
-                          src="<?php echo esc_url( $ksps_aod ); ?>/clients/logo-28.png"
+                          src="<?php echo esc_url( $ksps_aod ); ?>/clients/logo-64.png"
                           alt=""
                           class="absolute inset-0 size-full object-contain"
                         />
@@ -1340,7 +1340,7 @@ $ksps_aod = get_stylesheet_directory_uri() . '/assets/images/assessment-od';
                         class="relative min-h-0 self-stretch justify-self-stretch"
                       >
                         <img
-                          src="<?php echo esc_url( $ksps_aod ); ?>/clients/logo-29.png"
+                          src="<?php echo esc_url( $ksps_aod ); ?>/clients/logo-65.png"
                           alt=""
                           class="absolute inset-0 size-full object-contain"
                         />
@@ -1349,7 +1349,7 @@ $ksps_aod = get_stylesheet_directory_uri() . '/assets/images/assessment-od';
                         class="relative min-h-0 self-stretch justify-self-stretch"
                       >
                         <img
-                          src="<?php echo esc_url( $ksps_aod ); ?>/clients/logo-30.png"
+                          src="<?php echo esc_url( $ksps_aod ); ?>/clients/logo-66.png"
                           alt=""
                           class="absolute inset-0 size-full object-contain"
                         />
@@ -1709,12 +1709,12 @@ $ksps_aod = get_stylesheet_directory_uri() . '/assets/images/assessment-od';
 
                 <div
                   class="industry-card flex flex-col gap-1 items-center w-full"
-                  data-industry="Retail &amp; Distributor"
+                  data-industry="Manufacture"
                 >
                   <p
                     class="font-inter font-semibold text-primary text-xl leading-7 text-center w-full"
                   >
-                    Retail &amp; Distributor
+                    Manufacture
                   </p>
                   <div class="industry-card-wrapper">
                     <div class="industry-card-inner grid-cols-2 grid-rows-3">
@@ -1722,7 +1722,7 @@ $ksps_aod = get_stylesheet_directory_uri() . '/assets/images/assessment-od';
                         class="relative min-h-0 self-stretch justify-self-stretch"
                       >
                         <img
-                          src="<?php echo esc_url( $ksps_aod ); ?>/clients/logo-61.png"
+                          src="<?php echo esc_url( $ksps_aod ); ?>/clients/logo-25.png"
                           alt=""
                           class="absolute inset-0 size-full object-contain"
                         />
@@ -1731,7 +1731,7 @@ $ksps_aod = get_stylesheet_directory_uri() . '/assets/images/assessment-od';
                         class="relative min-h-0 self-stretch justify-self-stretch"
                       >
                         <img
-                          src="<?php echo esc_url( $ksps_aod ); ?>/clients/logo-62.png"
+                          src="<?php echo esc_url( $ksps_aod ); ?>/clients/logo-26.png"
                           alt=""
                           class="absolute inset-0 size-full object-contain"
                         />
@@ -1740,7 +1740,7 @@ $ksps_aod = get_stylesheet_directory_uri() . '/assets/images/assessment-od';
                         class="relative min-h-0 self-stretch justify-self-stretch"
                       >
                         <img
-                          src="<?php echo esc_url( $ksps_aod ); ?>/clients/logo-63.png"
+                          src="<?php echo esc_url( $ksps_aod ); ?>/clients/logo-27.png"
                           alt=""
                           class="absolute inset-0 size-full object-contain"
                         />
@@ -1749,7 +1749,7 @@ $ksps_aod = get_stylesheet_directory_uri() . '/assets/images/assessment-od';
                         class="relative min-h-0 self-stretch justify-self-stretch"
                       >
                         <img
-                          src="<?php echo esc_url( $ksps_aod ); ?>/clients/logo-64.png"
+                          src="<?php echo esc_url( $ksps_aod ); ?>/clients/logo-28.png"
                           alt=""
                           class="absolute inset-0 size-full object-contain"
                         />
@@ -1758,7 +1758,7 @@ $ksps_aod = get_stylesheet_directory_uri() . '/assets/images/assessment-od';
                         class="relative min-h-0 self-stretch justify-self-stretch"
                       >
                         <img
-                          src="<?php echo esc_url( $ksps_aod ); ?>/clients/logo-65.png"
+                          src="<?php echo esc_url( $ksps_aod ); ?>/clients/logo-29.png"
                           alt=""
                           class="absolute inset-0 size-full object-contain"
                         />
@@ -1767,7 +1767,7 @@ $ksps_aod = get_stylesheet_directory_uri() . '/assets/images/assessment-od';
                         class="relative min-h-0 self-stretch justify-self-stretch"
                       >
                         <img
-                          src="<?php echo esc_url( $ksps_aod ); ?>/clients/logo-66.png"
+                          src="<?php echo esc_url( $ksps_aod ); ?>/clients/logo-30.png"
                           alt=""
                           class="absolute inset-0 size-full object-contain"
                         />
@@ -1892,12 +1892,12 @@ $ksps_aod = get_stylesheet_directory_uri() . '/assets/images/assessment-od';
           >
             Apakah Perusahaan Anda menghadapi Tantangan SDM ini?
           </h2>
-          <p
+          <!-- <p
             class="font-inter font-normal text-[#464553] text-base leading-6 w-full max-w-3xl"
           >
             Pertumbuhan bisnis sering terhambat oleh fondasi internal yang belum
             optimal.
-          </p>
+          </p> -->
         </div>
 
         <div
@@ -2053,7 +2053,7 @@ $ksps_aod = get_stylesheet_directory_uri() . '/assets/images/assessment-od';
       <!-- Organization Development section -->
       <section
         id="od-section"
-        class="bg-primary w-full lg:px-20 px-4 lg:py-16 py-8 flex flex-col gap-6"
+        class="bg-primary w-full lg:px-20 px-4 lg:py-16 py-8 flex flex-col lg:gap-1 gap-6"
       >
         <!-- Badge -->
         <div
@@ -2497,7 +2497,7 @@ $ksps_aod = get_stylesheet_directory_uri() . '/assets/images/assessment-od';
                 <h3
                   class="font-manrope font-bold text-primary text-[24px] lg:text-[28px] leading-8 lg:leading-9 w-full"
                 >
-                  PT Astra Daihatsu Motor
+                  Astra Daihatsu Motor
                 </h3>
                 <div class="flex flex-col gap-4 items-start w-full">
                   <div class="flex flex-col gap-1 items-start w-full">
@@ -2581,13 +2581,13 @@ $ksps_aod = get_stylesheet_directory_uri() . '/assets/images/assessment-od';
                 <div
                   class="absolute right-4 top-4 lg:right-6 lg:top-3.5 flex items-center"
                 >
-                  <img
+                  <!-- <img
                     src="<?php echo esc_url( $ksps_aod ); ?>/case-studies/icon-up.svg"
                     alt=""
                     class="size-8 lg:size-10"
                     width="42"
                     height="39"
-                  />
+                  /> -->
                   <div class="flex flex-col items-end">
                     <span
                       class="font-manrope font-bold text-[#f4a025] text-[22px] lg:text-[28px] leading-7 lg:leading-9"
@@ -2774,13 +2774,13 @@ $ksps_aod = get_stylesheet_directory_uri() . '/assets/images/assessment-od';
             <div
               class="bg-[#e2dfff] flex gap-2 items-center px-3 py-1 rounded-full"
             >
-              <img
+              <!-- <img
                 src="<?php echo esc_url( $ksps_aod ); ?>/assessment/icon-badge.svg"
                 alt=""
                 class="w-[15px] h-3.5 shrink-0"
                 width="15"
                 height="14"
-              />
+              /> -->
               <span
                 class="font-inter font-semibold text-primary text-xs lg:text-sm leading-[18px] lg:leading-5 whitespace-nowrap"
               >
@@ -3376,7 +3376,7 @@ $ksps_aod = get_stylesheet_directory_uri() . '/assets/images/assessment-od';
             >
           </div>
           <h2
-            class="font-manrope font-bold text-text-primary text-[28px] leading-9 lg:text-[36px] lg:leading-11 max-w-3xl w-full"
+            class="font-manrope font-bold text-text-primary text-[28px] leading-9 lg:text-[36px] lg:leading-11 w-full"
           >
             Teruji Memetakan
             <span class="text-secondary lg:text-text-primary">Talenta</span> di
@@ -3750,58 +3750,24 @@ $ksps_aod = get_stylesheet_directory_uri() . '/assets/images/assessment-od';
         id="client-testimonials-section"
         class="relative z-0 w-full lg:px-20 px-4 lg:py-16 py-8 flex flex-col gap-8"
       >
-        <div
-          class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 w-full"
-        >
-          <div class="flex flex-col gap-4 max-w-2xl">
-            <h2
-              class="font-manrope font-bold text-text-primary text-[28px] leading-9 lg:text-[36px] lg:leading-11"
+        <div class="flex flex-col gap-4 max-w-2xl w-full">
+          <h2
+            class="font-manrope font-bold text-text-primary text-[28px] leading-9 lg:text-[36px] lg:leading-11"
+          >
+            Keberhasilan Klien adalah
+            <span class="text-secondary lg:text-text-primary"
+              >Prioritas Kami</span
             >
-              Keberhasilan Klien adalah
-              <span class="text-secondary lg:text-text-primary"
-                >Prioritas Kami</span
-              >
-            </h2>
-            <p class="font-inter text-[#464553] text-base leading-6">
-              Kisah sukses nyata dari transformasi organisasi dan penempatan
-              talenta yang tepat sasaran.
-            </p>
-          </div>
-          <div class="flex items-center justify-end gap-6">
-            <button
-              id="testimonials-prev"
-              type="button"
-              aria-label="Testimoni sebelumnya"
-              class="bg-primary rounded-full p-2.5 flex items-center justify-center cursor-pointer"
-            >
-              <img
-                src="<?php echo esc_url( $ksps_aod ); ?>/testimonials/chevron-left.svg"
-                alt=""
-                class="size-4"
-                width="16"
-                height="16"
-              />
-            </button>
-            <button
-              id="testimonials-next"
-              type="button"
-              aria-label="Testimoni berikutnya"
-              class="bg-primary rounded-full p-2.5 flex items-center justify-center cursor-pointer"
-            >
-              <img
-                src="<?php echo esc_url( $ksps_aod ); ?>/testimonials/chevron-right.svg"
-                alt=""
-                class="size-4"
-                width="16"
-                height="16"
-              />
-            </button>
-          </div>
+          </h2>
+          <p class="font-inter text-[#464553] text-base leading-6">
+            Kisah sukses nyata dari transformasi organisasi dan penempatan
+            talenta yang tepat sasaran.
+          </p>
         </div>
 
         <div
           id="testimonials-viewport"
-          class="flex gap-8 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-8 w-full [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+          class="flex gap-8 overflow-x-auto scroll-smooth snap-x snap-mandatory w-full [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
         >
           <article
             class="testimonial-card snap-start bg-white border border-[#e2e1e6] rounded-3xl p-6 flex flex-col gap-6 justify-between shrink-0 w-full lg:w-[calc((100%-4rem)/3)] min-h-[284px] lg:min-h-[228px]"
@@ -4148,6 +4114,37 @@ $ksps_aod = get_stylesheet_directory_uri() . '/assets/images/assessment-od';
               </div>
             </div>
           </article>
+        </div>
+
+        <div class="flex items-center justify-center gap-6 w-full">
+          <button
+            id="testimonials-prev"
+            type="button"
+            aria-label="Testimoni sebelumnya"
+            class="bg-primary rounded-full p-2.5 flex items-center justify-center cursor-pointer"
+          >
+            <img
+              src="<?php echo esc_url( $ksps_aod ); ?>/testimonials/chevron-left.svg"
+              alt=""
+              class="size-4"
+              width="16"
+              height="16"
+            />
+          </button>
+          <button
+            id="testimonials-next"
+            type="button"
+            aria-label="Testimoni berikutnya"
+            class="bg-primary rounded-full p-2.5 flex items-center justify-center cursor-pointer"
+          >
+            <img
+              src="<?php echo esc_url( $ksps_aod ); ?>/testimonials/chevron-right.svg"
+              alt=""
+              class="size-4"
+              width="16"
+              height="16"
+            />
+          </button>
         </div>
       </section>
 

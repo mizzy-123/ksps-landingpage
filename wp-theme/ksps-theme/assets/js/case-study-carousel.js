@@ -13,6 +13,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const scrollByCard = (dir) => {
     const card = cards[0];
     const amount = card.getBoundingClientRect().width + gap();
+    const maxScroll = viewport.scrollWidth - viewport.clientWidth;
+    const current = viewport.scrollLeft;
+    const epsilon = 2;
+
+    if (dir > 0 && current >= maxScroll - epsilon) {
+      viewport.scrollTo({ left: 0, behavior: "smooth" });
+      return;
+    }
+
+    if (dir < 0 && current <= epsilon) {
+      viewport.scrollTo({ left: maxScroll, behavior: "smooth" });
+      return;
+    }
+
     viewport.scrollBy({ left: dir * amount, behavior: "smooth" });
   };
 

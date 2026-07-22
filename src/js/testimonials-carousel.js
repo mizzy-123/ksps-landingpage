@@ -11,9 +11,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const styles = window.getComputedStyle(viewport);
     const gap = Number.parseFloat(styles.columnGap || styles.gap) || 0;
+    const amount = card.getBoundingClientRect().width + gap;
+    const maxScroll = viewport.scrollWidth - viewport.clientWidth;
+    const current = viewport.scrollLeft;
+    const epsilon = 2;
+
+    if (direction > 0 && current >= maxScroll - epsilon) {
+      viewport.scrollTo({ left: 0, behavior: "smooth" });
+      return;
+    }
+
+    if (direction < 0 && current <= epsilon) {
+      viewport.scrollTo({ left: maxScroll, behavior: "smooth" });
+      return;
+    }
 
     viewport.scrollBy({
-      left: direction * (card.getBoundingClientRect().width + gap),
+      left: direction * amount,
       behavior: "smooth",
     });
   };
